@@ -26,23 +26,19 @@
 <ui-menu xmlns="http://www.efaps.org/xsd"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://www.efaps.org/xsd http://www.efaps.org/xsd/eFaps_1.0.xsd">
-    <uuid>73d20d4f-d7da-4536-88a2-9a10c0793732</uuid>
+    <uuid>f3981661-6bed-4cd4-a571-6b87ced7fb24</uuid>
     <file-application>eFapsApp-Assets</file-application>
     <file-revision>$Rev: 5317 $</file-revision>
     <definition>
         <version-expression>(version==latest)</version-expression>
-        <name>Assets_AssetTree</name>
+        <name>Assets_DepreciationTree</name>
         <!-- targets -->
         <target>
-            <menu>Assets_AssetTree_Menu</menu>
-            <form>Assets_AssetForm</form>
+            <menu>Assets_DepreciationTree_Menu</menu>
+            <form>Assets_DepreciationForm</form>
         </target>
         <!-- type tree for -->
-        <type>Assets_AssetAbstract</type>
-        
-        <childs>
-            <child></child>
-        </childs>
+        <type>Assets_DepreciationAbstract</type>
         <!-- properties -->
         <property name="Target">content</property>
         <property name="TargetMode">view</property>
