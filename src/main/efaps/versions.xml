@@ -63,6 +63,38 @@
         </dependency>
     </dependencies>
     <version number="1" reloadCache="false" login="true" compile="true">
-        <description>Install ERP Assets Modul.</description>
+        <description>Install ERP Assets App.</description>
+                <script type="groovy">
+
+            import org.efaps.admin.runlevel.RunLevel;
+            import org.efaps.db.Context;
+            import org.efaps.db.SearchQuery;
+            import org.efaps.esjp.admin.ui.UIUpdate;
+            import org.efaps.importer.DataImport;
+
+            import java.net.URL
+            import java.io.File;
+
+            EFAPS_LOGGER.info("Importing Data for eFapsApp-Assets");
+
+            SearchQuery query = new SearchQuery();
+            query.setQueryTypes("Admin_User_JAASKey");
+            query.addWhereExprEqValue("Key", "Asssets_Admin");
+            query.addSelect("OID");
+            query.execute();
+            if (!query.next()) {
+
+                RunLevel.init("shell");
+                RunLevel.execute();
+                URL url1 = new URL(EFAPS_ROOTURL, "Data/IMPORT_UserJAASKey.xml");
+                DataImport imp1 = DataImport.readFile(url1);
+                imp1.updateInDB();
+
+            }
+            <!-- Assets_AssetMyDesk, MainToolBar -->
+            UIUpdate update = new UIUpdate();
+            update.add2Menu("0548a469-e66a-4f27-8fec-0affa63c3ba5", "87001cc3-c45c-44de-b8f1-776df507f268", 1);
+
+        </script>
     </version>
 </install>
