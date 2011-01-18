@@ -26,22 +26,37 @@
 <datamodel-type  xmlns="http://www.efaps.org/xsd"
                  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
                  xsi:schemaLocation="http://www.efaps.org/xsd http://www.efaps.org/xsd/eFaps_1.0.xsd">
-    <uuid>3fd292c6-aaa5-45d6-9912-8e6befb9187d</uuid>
-    <file-application>eFapsApp-Accounting</file-application>
+    <uuid>56ca935d-2c19-4de8-ae04-aa024379bb2d</uuid>
+    <file-application>eFapsApp-Assets</file-application>
     <file-revision>$Rev: 5317 $</file-revision>
     <definition>
         <version-expression>(version==latest)</version-expression>
-        <name>Accounting_AssetSimple</name>
-        <parent>Accounting_AssetAbstract</parent>
+        <name>Assets_AssetAbstract</name>
+        <parent>ERP_DocumentAbstract</parent>
+        <purpose abstract="true"/>
         <attribute>
-            <name>Status</name>
-            <type>Status</type>
-            <typelink>Accounting_AssetSimpleStatus</typelink>
-            <sqltable>Accounting_AssetSQLTable</sqltable>
-            <sqlcolumn>STATUS</sqlcolumn>
-            <trigger program="org.efaps.esjp.admin.datamodel.StatusValue"
-                    name="Accounting_AssetAbstract.StatusAbstract.RANGE_VALUE"
-                    event="RANGE_VALUE">
+            <name>AcquisitionValue</name>
+            <type>Decimal</type>
+            <sqltable>Assets_AssetSQLTable</sqltable>
+            <sqlcolumn>AQVALUE</sqlcolumn>
+        </attribute>
+        <attribute>
+            <name>CurrentValue</name>
+            <type>Decimal</type>
+            <sqltable>Assets_AssetSQLTable</sqltable>
+            <sqlcolumn>CURVALUE</sqlcolumn>
+        </attribute>
+        <attribute>
+            <name>CurrencyLink</name>
+            <type>LinkWithRanges</type>
+            <typelink>ERP_Currency</typelink>
+            <sqltable>Assets_AssetSQLTable</sqltable>
+            <sqlcolumn>CURRENCYID</sqlcolumn>
+            <trigger program="org.efaps.esjp.admin.datamodel.RangesValue"
+                name="Assets_AssetAbstract.CurrencyLink.RANGE_VALUE"
+                event="RANGE_VALUE">
+                <property name="Value">Name</property>
+                <property name="Type">ERP_Currency</property>
             </trigger>
         </attribute>
     </definition>
