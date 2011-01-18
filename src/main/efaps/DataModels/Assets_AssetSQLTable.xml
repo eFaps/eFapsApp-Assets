@@ -36,6 +36,7 @@
         <parent>ERP_DocumentAbstractSQLTable</parent>
         <database>
             <table-name>T_ASSASSET</table-name>
+            <parent-table>T_ERPDOC</parent-table>
             <!-- columns -->
             <column name="AQVALUE"      type="DECIMAL"      not-null="true" length="12" scale="2"/>
             <column name="CURVALUE"     type="DECIMAL"      not-null="true" length="12" scale="2"/>

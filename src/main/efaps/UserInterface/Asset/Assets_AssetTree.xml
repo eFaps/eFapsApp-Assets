@@ -39,9 +39,9 @@
         </target>
         <!-- type tree for -->
         <type>Assets_AssetAbstract</type>
-        
+
         <childs>
-            <child></child>
+            <child>Assets_AssetTree_Depreciation</child>
         </childs>
         <!-- properties -->
         <property name="Target">content</property>

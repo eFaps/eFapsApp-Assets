@@ -33,10 +33,6 @@
         <version-expression>(version==latest)</version-expression>
         <name>Assets_AssetForm</name>
         <!-- fields -->
-        <field name="type">
-            <property name="ModeCreate">NONE</property>
-            <property name="Attribute">Type</property>
-        </field>
         <field name="name">
             <property name="ModeCreate">EDITABLE</property>
             <property name="ModeEdit">EDITABLE</property>
