@@ -26,28 +26,23 @@
 <ui-command xmlns="http://www.efaps.org/xsd"
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
             xsi:schemaLocation="http://www.efaps.org/xsd http://www.efaps.org/xsd/eFaps_1.0.xsd">
-    <uuid>600f6b3a-bd8a-4f0f-b475-256d78b17522</uuid>
-    <file-application>eFapsApp-Accounting</file-application>
+    <uuid>759823a0-a6c2-4ee4-a24e-227867271718</uuid>
+    <file-application>eFapsApp-Assets</file-application>
     <file-revision>$Rev: 5317 $</file-revision>
     <definition>
         <version-expression>(version==latest)</version-expression>
-        <name>Accounting_AssetMyDesk_Menu_Action_CreateAssetSimple</name>
+        <name>Assets_AssetTree_Menu_Action_Edit</name>
         <access>
-            <role>Accounting_Admin</role>
+            <role>Assets_Admin</role>
+            <role>Assets_Modifier</role>
         </access>
         <!-- target definitions -->
         <target>
-            <form>Accounting_AssetForm</form>
-            <execute program="org.efaps.esjp.common.uiform.Create">
-                <property name="StatusGroup">Accounting_AssetSimpleStatus</property>
-                <property name="Status">Open</property>
-            </execute>
+            <form>Assets_AssetForm</form>
+            <execute program="org.efaps.esjp.common.uiform.Edit" />
         </target>
         <!-- properties -->
         <property name="Target">modal</property>
-        <property name="TargetCreateType">Accounting_AssetSimple</property>
-        <property name="TargetMode">create</property>
-        <property name="WindowHeight">460</property>
-        <property name="WindowWidth">600</property>
+        <property name="TargetMode">edit</property>
     </definition>
 </ui-command>

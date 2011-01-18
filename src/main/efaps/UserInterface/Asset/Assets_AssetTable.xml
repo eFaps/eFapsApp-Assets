@@ -27,42 +27,47 @@
           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
           xsi:schemaLocation="http://www.efaps.org/xsd http://www.efaps.org/xsd/eFaps_1.0.xsd">
     <uuid>5e814a70-1c5f-45ef-8303-9f9b60d31566</uuid>
-    <file-application>eFapsApp-Accounting</file-application>
+    <file-application>eFapsApp-Assets</file-application>
     <file-revision>$Rev: 5317 $</file-revision>
     <definition>
         <version-expression>(version==latest)</version-expression>
-        <name>Accounting_AssetTable</name>
+        <name>Assets_AssetTable</name>
         <!-- fields -->
         <field name="type">
             <property name="Attribute">Type</property>
-            <property name="Label">Accounting_AssetAbstract/Type.Label</property>
+            <property name="Label">Assets_AssetAbstract/Type.Label</property>
         </field>
         <field name="name">
             <property name="Attribute">Name</property>
-            <property name="Label">Accounting_AssetAbstract/Name.Label</property>
+            <property name="Label">Assets_AssetAbstract/Name.Label</property>
             <property name="HRef">${COMMONURL}/MenuTree.jsp</property>
         </field>
-        <field name="name">
-            <property name="Attribute">Description</property>
-            <property name="Label">Accounting_AssetAbstract/Description.Label</property>
+        <field name="note">
+            <property name="Attribute">Note</property>
+            <property name="Label">Assets_AssetAbstract/Note.Label</property>
         </field>
-        <field name="acquisitionDate">
-            <property name="Attribute">AcquisitionDate</property>
-            <property name="Label">Accounting_AssetAbstract/AcquisitionDate.Label</property>
+        <field name="Date">
+            <property name="Attribute">Date</property>
+            <property name="Label">Assets_AssetAbstract/Date.Label</property>
         </field>
         <field name="acquisitionValue">
             <property name="Attribute">AcquisitionValue</property>
-            <property name="Label">Accounting_AssetAbstract/AcquisitionValue.Label</property>
+            <property name="Label">Assets_AssetAbstract/AcquisitionValue.Label</property>
+            <property name="Align">right</property>
+        </field>
+        <field name="currentValue">
+            <property name="Attribute">CurrentValue</property>
+            <property name="Label">Assets_AssetAbstract/CurrentValue.Label</property>
             <property name="Align">right</property>
         </field>
         <field name="currencyLink">
             <property name="SelectAlternateOID">linkto[CurrencyLink].oid</property>
             <property name="Select">linkto[CurrencyLink].attribute[Name]</property>
-            <property name="Label">Accounting_AssetAbstract/CurrencyLink.Label</property>
+            <property name="Label">Assets_AssetAbstract/CurrencyLink.Label</property>
         </field>
         <field name="status">
             <property name="Attribute">StatusAbstract</property>
-            <property name="Label">Accounting_AssetAbstract/StatusAbstract.Label</property>
+            <property name="Label">Assets_AssetAbstract/StatusAbstract.Label</property>
         </field>
         <field name="buttonOpenInNewWindow">
             <icon>eFapsActionNewWindow</icon>

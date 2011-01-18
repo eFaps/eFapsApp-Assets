@@ -27,18 +27,18 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://www.efaps.org/xsd http://www.efaps.org/xsd/eFaps_1.0.xsd">
     <uuid>73d20d4f-d7da-4536-88a2-9a10c0793732</uuid>
-    <file-application>eFapsApp-Accounting</file-application>
+    <file-application>eFapsApp-Assets</file-application>
     <file-revision>$Rev: 5317 $</file-revision>
     <definition>
         <version-expression>(version==latest)</version-expression>
-        <name>Accounting_AssetTree</name>
+        <name>Assets_AssetTree</name>
         <!-- targets -->
         <target>
-            <menu>Accounting_AssetTree_Menu</menu>
-            <form>Accounting_AssetForm</form>
+            <menu>Assets_AssetTree_Menu</menu>
+            <form>Assets_AssetForm</form>
         </target>
         <!-- type tree for -->
-        <type>Accounting_AssetAbstract</type>
+        <type>Assets_AssetAbstract</type>
         <!-- properties -->
         <property name="Target">content</property>
         <property name="TargetMode">view</property>

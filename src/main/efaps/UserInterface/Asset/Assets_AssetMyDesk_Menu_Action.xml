@@ -26,15 +26,16 @@
 <ui-menu xmlns="http://www.efaps.org/xsd"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://www.efaps.org/xsd http://www.efaps.org/xsd/eFaps_1.0.xsd">
-    <uuid>bb59b957-d326-4431-a9f3-e879adfe6364</uuid>
-    <file-application>eFapsApp-Accounting</file-application>
+    <uuid>05cb3fbd-a26a-42e3-9e69-813cfcc27d90</uuid>
+    <file-application>eFapsApp-Assets</file-application>
     <file-revision>$Rev: 5317 $</file-revision>
     <definition>
         <version-expression>(version==latest)</version-expression>
-        <name>Accounting_AssetTree_Menu_Action</name>
+        <name>Assets_AssetMyDesk_Menu_Action</name>
         <!-- childs -->
         <childs>
-            <child>Accounting_AssetTree_Menu_Action_Edit</child>
+            <child>Assets_AssetMyDesk_Menu_Action_CreateAssetSimple</child>
+            <child>Assets_AssetMyDesk_Menu_Action_Delete</child>
         </childs>
     </definition>
 </ui-menu>

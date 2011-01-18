@@ -27,11 +27,11 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://www.efaps.org/xsd http://www.efaps.org/xsd/eFaps_1.0.xsd">
     <uuid>a059e6c7-f9bb-4539-bba0-f2383be005bf</uuid>
-    <file-application>eFapsApp-Accounting</file-application>
+    <file-application>eFapsApp-Assets</file-application>
     <file-revision>$Rev: 5317 $</file-revision>
     <definition>
         <version-expression>(version==latest)</version-expression>
-        <name>Accounting_AssetForm</name>
+        <name>Assets_AssetForm</name>
         <!-- fields -->
         <field name="type">
             <property name="ModeCreate">NONE</property>
@@ -43,20 +43,26 @@
             <property name="Attribute">Name</property>
             <property name="Required">true</property>
         </field>
-        <field name="description">
+        <field name="note">
             <property name="ModeCreate">EDITABLE</property>
             <property name="ModeEdit">EDITABLE</property>
-            <property name="Attribute">Description</property>
+            <property name="Attribute">Note</property>
             <property name="Required">true</property>
         </field>
-        <field name="acquisitionDate">
-            <property name="Attribute">AcquisitionDate</property>
+        <field name="Date">
+            <property name="Attribute">Date</property>
             <property name="ModeCreate">EDITABLE</property>
             <property name="ModeEdit">EDITABLE</property>
             <property name="Required">true</property>
         </field>
         <field name="acquisitionValue">
             <property name="Attribute">AcquisitionValue</property>
+            <property name="ModeCreate">EDITABLE</property>
+            <property name="ModeEdit">EDITABLE</property>
+            <property name="Required">true</property>
+        </field>
+        <field name="currentValue">
+            <property name="Attribute">CurrentValue</property>
             <property name="ModeCreate">EDITABLE</property>
             <property name="ModeEdit">EDITABLE</property>
             <property name="Required">true</property>

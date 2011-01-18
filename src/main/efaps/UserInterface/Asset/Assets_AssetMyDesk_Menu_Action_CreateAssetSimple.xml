@@ -26,21 +26,29 @@
 <ui-command xmlns="http://www.efaps.org/xsd"
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
             xsi:schemaLocation="http://www.efaps.org/xsd http://www.efaps.org/xsd/eFaps_1.0.xsd">
-    <uuid>08282669-708c-4976-828d-055a3337ddf7</uuid>
-    <file-application>eFapsApp-Accounting</file-application>
+    <uuid>600f6b3a-bd8a-4f0f-b475-256d78b17522</uuid>
+    <file-application>eFapsApp-Assets</file-application>
     <file-revision>$Rev: 5317 $</file-revision>
     <definition>
         <version-expression>(version==latest)</version-expression>
-        <name>Accounting_AssetMyDesk_Menu_Action_Delete</name>
+        <name>Assets_AssetMyDesk_Menu_Action_CreateAssetSimple</name>
         <access>
-            <role>Accounting_Admin</role>
+            <role>Assets_Admin</role>
+            <role>Assets_Modifier</role>
         </access>
         <!-- target definitions -->
         <target>
-            <execute program="org.efaps.esjp.common.uitable.CommonDelete" />
+            <form>Assets_AssetForm</form>
+            <execute program="org.efaps.esjp.common.uiform.Create">
+                <property name="StatusGroup">Assets_AssetSimpleStatus</property>
+                <property name="Status">Open</property>
+            </execute>
         </target>
         <!-- properties -->
-        <property name="AskUser">true</property>
-        <property name="Submit">true</property>
+        <property name="Target">modal</property>
+        <property name="TargetCreateType">Assets_AssetSimple</property>
+        <property name="TargetMode">create</property>
+        <property name="WindowHeight">460</property>
+        <property name="WindowWidth">600</property>
     </definition>
 </ui-command>

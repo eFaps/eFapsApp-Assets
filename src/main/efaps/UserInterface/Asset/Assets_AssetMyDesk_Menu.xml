@@ -23,25 +23,18 @@
 
 -->
 
-<ui-command xmlns="http://www.efaps.org/xsd"
-            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-            xsi:schemaLocation="http://www.efaps.org/xsd http://www.efaps.org/xsd/eFaps_1.0.xsd">
-    <uuid>759823a0-a6c2-4ee4-a24e-227867271718</uuid>
-    <file-application>eFapsApp-Accounting</file-application>
+<ui-menu xmlns="http://www.efaps.org/xsd"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://www.efaps.org/xsd http://www.efaps.org/xsd/eFaps_1.0.xsd">
+    <uuid>9edf5e82-29e9-4e16-b620-b1d3fa00b5fc</uuid>
+    <file-application>eFapsApp-Assets</file-application>
     <file-revision>$Rev: 5317 $</file-revision>
     <definition>
         <version-expression>(version==latest)</version-expression>
-        <name>Accounting_AssetTree_Menu_Action_Edit</name>
-        <access>
-            <role>Accounting_Admin</role>
-        </access>
-        <!-- target definitions -->
-        <target>
-            <form>Accounting_AssetForm</form>
-            <execute program="org.efaps.esjp.common.uiform.Edit" />
-        </target>
-        <!-- properties -->
-        <property name="Target">modal</property>
-        <property name="TargetMode">edit</property>
+        <name>Assets_AssetMyDesk_Menu</name>
+        <!-- childs -->
+        <childs>
+            <child>Assets_AssetMyDesk_Menu_Action</child>
+        </childs>
     </definition>
-</ui-command>
+</ui-menu>
