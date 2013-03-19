@@ -44,6 +44,7 @@
             <child>Assets_AssetTree_Depreciation</child>
             <child>Assets_AssetTree_LifecycleCost</child>
             <child>Assets_AssetTree_Employee</child>
+            <child>Assets_AssetTree_Location</child>
         </childs>
         <!-- properties -->
         <property name="Target">content</property>
