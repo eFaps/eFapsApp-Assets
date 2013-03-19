@@ -21,24 +21,29 @@
  Last Changed By: $Author$
 
 -->
-<ui-command xmlns="http://www.efaps.org/xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+<datamodel-type xmlns="http://www.efaps.org/xsd"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="http://www.efaps.org/xsd http://www.efaps.org/xsd/eFaps_1.0.xsd">
-    <uuid>5c473d5f-6625-423d-bd93-3e661ac6a258</uuid>
+    <uuid>494ec791-aba2-485b-8af6-653651651413</uuid>
     <file-application>eFapsApp-Assets</file-application>
     <file-revision>$Rev$</file-revision>
     <definition>
         <version-expression>(version==latest)</version-expression>
-        <name>Assets_AssetTree_LifecycleCost</name>
-        <target>
-            <menu>Assets_AssetTree_LifecycleCost_Menu</menu>
-            <table>Assets_LifecycleCostTable</table>
-            <evaluate program="org.efaps.esjp.common.uitable.MultiPrint">
-                <property name="Type">Assets_LifecycleCostAbstract</property>
-                <property name="LinkFrom">AssetLinkAbstract</property>
-            </evaluate>
-        </target>
-        <!-- properties -->
-        <property name="Target">content</property>
-        <property name="TargetShowCheckBoxes">true</property>
+        <name>Assets_Employee2Asset</name>
+        <parent>HumanResource_Employee2DocumentAbstract</parent>
+        <attribute>
+            <name>FromLink</name>
+            <type>Link</type>
+            <typelink>HumanResource_Employee</typelink>
+            <sqltable>HumanResource_Employee2DocumentSQLTable</sqltable>
+            <sqlcolumn>FROMID</sqlcolumn>
+        </attribute>
+        <attribute>
+            <name>ToLink</name>
+            <type>Link</type>
+            <typelink>Assets_AssetAbstract</typelink>
+            <sqltable>HumanResource_Employee2DocumentSQLTable</sqltable>
+            <sqlcolumn>TOID</sqlcolumn>
+        </attribute>
     </definition>
-</ui-command>
+</datamodel-type>

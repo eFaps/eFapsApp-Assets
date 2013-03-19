@@ -23,18 +23,18 @@
 -->
 <ui-command xmlns="http://www.efaps.org/xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="http://www.efaps.org/xsd http://www.efaps.org/xsd/eFaps_1.0.xsd">
-    <uuid>5c473d5f-6625-423d-bd93-3e661ac6a258</uuid>
+    <uuid>02cdd89b-c782-4016-852d-d467f14571cc</uuid>
     <file-application>eFapsApp-Assets</file-application>
     <file-revision>$Rev$</file-revision>
     <definition>
         <version-expression>(version==latest)</version-expression>
-        <name>Assets_AssetTree_LifecycleCost</name>
+        <name>Assets_AssetTree_Employee</name>
         <target>
-            <menu>Assets_AssetTree_LifecycleCost_Menu</menu>
-            <table>Assets_LifecycleCostTable</table>
+            <menu>Assets_AssetTree_Employee_Menu</menu>
+            <table>Assets_Employee2AssetTable</table>
             <evaluate program="org.efaps.esjp.common.uitable.MultiPrint">
-                <property name="Type">Assets_LifecycleCostAbstract</property>
-                <property name="LinkFrom">AssetLinkAbstract</property>
+                <property name="Type">Assets_Employee2Asset</property>
+                <property name="LinkFrom">ToLink</property>
             </evaluate>
         </target>
         <!-- properties -->

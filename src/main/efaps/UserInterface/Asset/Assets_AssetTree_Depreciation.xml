@@ -36,8 +36,8 @@
             <menu>Assets_AssetTree_Depreciation_Menu</menu>
             <table>Assets_DepreciationTable</table>
             <evaluate program="org.efaps.esjp.common.uitable.MultiPrint">
-                <property name="Types">Assets_DepreciationAbstract</property>
-                <property name="LinkFroms">AssetLinkAbstract</property>
+                <property name="Type">Assets_DepreciationAbstract</property>
+                <property name="LinkFrom">AssetLinkAbstract</property>
             </evaluate>
         </target>
         <!-- properties -->

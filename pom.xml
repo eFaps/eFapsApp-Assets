@@ -161,5 +161,10 @@
             <artifactId>accounting</artifactId>
             <version>${efaps.app.dependencies}</version>
         </dependency>
+        <dependency>
+            <groupId>org.efaps.apps</groupId>
+            <artifactId>humanresource</artifactId>
+            <version>${efaps.app.dependencies}</version>
+        </dependency>
     </dependencies>
 </project>

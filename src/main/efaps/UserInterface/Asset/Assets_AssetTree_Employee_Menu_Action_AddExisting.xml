@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!--
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><!--
 
  Copyright 2003 - 2013 The eFaps Team
 
@@ -23,22 +22,26 @@
 -->
 <ui-command xmlns="http://www.efaps.org/xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="http://www.efaps.org/xsd http://www.efaps.org/xsd/eFaps_1.0.xsd">
-    <uuid>5c473d5f-6625-423d-bd93-3e661ac6a258</uuid>
+
+    <uuid>2120b63e-0d5b-45c9-b5b7-01b86d98f33f</uuid>
     <file-application>eFapsApp-Assets</file-application>
     <file-revision>$Rev$</file-revision>
+
     <definition>
         <version-expression>(version==latest)</version-expression>
-        <name>Assets_AssetTree_LifecycleCost</name>
+        <name>Assets_AssetTree_Employee_Menu_Action_AddExisting</name>
+        <access>
+            <role>Assets_Admin</role>
+            <role>Assets_Modifier</role>
+        </access>
         <target>
-            <menu>Assets_AssetTree_LifecycleCost_Menu</menu>
-            <table>Assets_LifecycleCostTable</table>
-            <evaluate program="org.efaps.esjp.common.uitable.MultiPrint">
-                <property name="Type">Assets_LifecycleCostAbstract</property>
-                <property name="LinkFrom">AssetLinkAbstract</property>
-            </evaluate>
+            <search>Assets_AssetTree_Employee_Menu_Action_AddExisting_Search</search>
+            <execute program="org.efaps.esjp.common.uisearch.Connect">
+                <property name="ConnectChildAttribute">FromLink</property>
+                <property name="ConnectParentAttribute">ToLink</property>
+                <property name="ConnectType">Assets_Employee2Asset</property>
+            </execute>
         </target>
-        <!-- properties -->
-        <property name="Target">content</property>
-        <property name="TargetShowCheckBoxes">true</property>
+        <property name="Target">modal</property>
     </definition>
 </ui-command>

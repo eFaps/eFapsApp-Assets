@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!--
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><!--
 
  Copyright 2003 - 2013 The eFaps Team
 
@@ -21,24 +20,18 @@
  Last Changed By: $Author$
 
 -->
-<ui-command xmlns="http://www.efaps.org/xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+<ui-menu xmlns="http://www.efaps.org/xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="http://www.efaps.org/xsd http://www.efaps.org/xsd/eFaps_1.0.xsd">
-    <uuid>5c473d5f-6625-423d-bd93-3e661ac6a258</uuid>
+    <uuid>7d6c9a58-0f95-4a6f-b824-88ed47556a3d</uuid>
     <file-application>eFapsApp-Assets</file-application>
     <file-revision>$Rev$</file-revision>
     <definition>
         <version-expression>(version==latest)</version-expression>
-        <name>Assets_AssetTree_LifecycleCost</name>
-        <target>
-            <menu>Assets_AssetTree_LifecycleCost_Menu</menu>
-            <table>Assets_LifecycleCostTable</table>
-            <evaluate program="org.efaps.esjp.common.uitable.MultiPrint">
-                <property name="Type">Assets_LifecycleCostAbstract</property>
-                <property name="LinkFrom">AssetLinkAbstract</property>
-            </evaluate>
-        </target>
-        <!-- properties -->
-        <property name="Target">content</property>
-        <property name="TargetShowCheckBoxes">true</property>
+        <name>Assets_AssetTree_Employee_Menu_Action</name>
+        <!-- childs -->
+        <childs>
+            <child>Assets_AssetTree_Employee_Menu_Action_AddExisting</child>
+            <child>Assets_AssetTree_Employee_Menu_Action_Disconnect</child>
+        </childs>
     </definition>
-</ui-command>
+</ui-menu>
