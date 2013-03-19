@@ -32,6 +32,7 @@
         <!-- fields -->
         <field name="type">
             <property name="Attribute">Type</property>
+            <property name="HRef">TREE</property>
             <property name="Label">Assets_LifecycleCostAbstract/Type.Label</property>
         </field>
         <field name="date">
