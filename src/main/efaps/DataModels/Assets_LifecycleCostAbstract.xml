@@ -106,6 +106,12 @@
                 <property name="Type">ERP_Currency</property>
             </trigger>
         </attribute>
+         <attribute>
+            <name>Rate</name>
+            <type>Rate</type>
+            <sqltable>Assets_LifecycleCostSQLTable</sqltable>
+            <sqlcolumn>RATE,RATEDENOM</sqlcolumn>
+        </attribute>
         <attribute>
             <name>Creator</name>
             <type>CreatorLink</type>

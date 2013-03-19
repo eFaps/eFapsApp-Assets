@@ -58,7 +58,7 @@
             <sqlcolumn>COMPANYID</sqlcolumn>
         </attribute>
         <attribute>
-            <name>AssetAbstractLink</name>
+            <name>AssetLinkAbstract</name>
             <type>Link</type>
             <typelink>Assets_AssetAbstract</typelink>
             <sqltable>Assets_DepreciationSQLTable</sqltable>
