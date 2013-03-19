@@ -50,21 +50,6 @@
             <property name="Attribute">Date</property>
             <property name="Label">Assets_AssetAbstract/Date.Label</property>
         </field>
-        <field name="acquisitionValue">
-            <property name="Attribute">AcquisitionValue</property>
-            <property name="Label">Assets_AssetAbstract/AcquisitionValue.Label</property>
-            <property name="Align">right</property>
-        </field>
-        <field name="currentValue">
-            <property name="Attribute">CurrentValue</property>
-            <property name="Label">Assets_AssetAbstract/CurrentValue.Label</property>
-            <property name="Align">right</property>
-        </field>
-        <field name="currencyLink">
-            <property name="SelectAlternateOID">linkto[CurrencyLink].oid</property>
-            <property name="Select">linkto[CurrencyLink].attribute[Name]</property>
-            <property name="Label">Assets_AssetAbstract/CurrencyLink.Label</property>
-        </field>
         <field name="status">
             <property name="Attribute">StatusAbstract</property>
             <property name="Label">Assets_AssetAbstract/StatusAbstract.Label</property>

@@ -51,23 +51,6 @@
             <property name="ModeEdit">EDITABLE</property>
             <property name="Required">true</property>
         </field>
-        <field name="acquisitionValue">
-            <property name="Attribute">AcquisitionValue</property>
-            <property name="ModeCreate">EDITABLE</property>
-            <property name="ModeEdit">EDITABLE</property>
-            <property name="Required">true</property>
-        </field>
-        <field name="currentValue">
-            <property name="Attribute">CurrentValue</property>
-            <property name="ModeCreate">EDITABLE</property>
-            <property name="ModeEdit">EDITABLE</property>
-            <property name="Required">true</property>
-        </field>
-        <field name="currencyLink">
-            <property name="Attribute">CurrencyLink</property>
-            <property name="ModeCreate">EDITABLE</property>
-            <property name="ModeEdit">EDITABLE</property>
-        </field>
         <field name="status">
             <property name="ModeCreate">NONE</property>
             <property name="ModeEdit">EDITABLE</property>
