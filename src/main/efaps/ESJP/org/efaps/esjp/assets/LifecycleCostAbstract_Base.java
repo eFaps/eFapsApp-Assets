@@ -32,6 +32,7 @@ import org.efaps.admin.common.SystemConfiguration;
 import org.efaps.admin.datamodel.Type;
 import org.efaps.admin.event.Parameter;
 import org.efaps.admin.event.Parameter.ParameterValues;
+import org.efaps.admin.event.Return;
 import org.efaps.admin.program.esjp.EFapsRevision;
 import org.efaps.admin.program.esjp.EFapsUUID;
 import org.efaps.admin.ui.AbstractCommand;
@@ -40,6 +41,8 @@ import org.efaps.db.Insert;
 import org.efaps.db.Instance;
 import org.efaps.esjp.ci.CIAssets;
 import org.efaps.esjp.ci.CIERP;
+import org.efaps.esjp.ci.CISales;
+import org.efaps.esjp.common.uisearch.Connect;
 import org.efaps.util.EFapsException;
 
 
@@ -132,5 +135,34 @@ public abstract class LifecycleCostAbstract_Base
         final DecimalFormat ret = (DecimalFormat) NumberFormat.getInstance(Context.getThreadContext().getLocale());
         ret.setParseBigDecimal(true);
         return ret;
+    }
+
+
+    /**
+     * @param _parameter    parameter as passed by the efaps API
+     * @return empty Return
+     * @throws EFapsException on error
+     */
+    public Return connect(final Parameter _parameter)
+                    throws EFapsException
+    {
+        final Connect connect = new Connect() {
+
+            @Override
+            protected Type getConnectType(final Parameter _parameter,
+                                          final Instance _childInstance)
+                throws EFapsException
+            {
+                Type type = null;
+                final Instance instance = _parameter.getInstance();
+                if (instance.getType().isKindOf(CIAssets.OperationCostConsumables.getType())) {
+                    if (_childInstance.getType().isKindOf(CISales.Invoice.getType())) {
+                        type = CIAssets.OperationCostConsumables2Invoice.getType();
+                    }
+                }
+                return type;
+            }
+        };
+        return connect.execute(_parameter);
     }
 }

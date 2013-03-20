@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?><!--
 
-  Copyright 2003 - 2011 The eFaps Team
+  Copyright 2003 - 2013 The eFaps Team
 
   Licensed under the Apache License, Version 2.0 (the "License");
   you may not use this file except in compliance with the License.
@@ -20,25 +20,29 @@
   Last Changed By: $Author$
 
 -->
-<ui-menu xmlns="http://www.efaps.org/xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+<ui-form xmlns="http://www.efaps.org/xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="http://www.efaps.org/xsd http://www.efaps.org/xsd/eFaps_1.0.xsd">
-    <uuid>ab0e40f5-47b7-4886-9d9d-e47170d159f8</uuid>
+    <uuid>21821ba6-25eb-4595-a1a5-3cffa9db9693</uuid>
     <file-application>eFapsApp-Assets</file-application>
     <file-revision>$Rev$</file-revision>
     <definition>
         <version-expression>(version==latest)</version-expression>
-        <name>Assets_LifecycleCostTree</name>
-        <target>
-            <menu>Assets_LifecycleCostTree_Menu</menu>
-            <form>Assets_LifecycleCostForm</form>
-        </target>
-
-        <type>Assets_LifecycleCostAbstract</type>
-        <childs>
-            <child>Assets_LifecycleCostTree_Documents</child>
-        </childs>
-
-        <property name="Target">content</property>
-        <property name="TargetMode">view</property>
+        <name>Assets_DocumentSearchForm</name>
+        <!-- fields -->
+        <field name="type">
+            <property name="Attribute">Type</property>
+            <property name="Columns">15</property>
+            <property name="ModeSearch">EDITABLE</property>
+            <trigger event="UI_FIELD_VALUE" method="typeFieldValue"
+                name="Assets_DocumentSearchForm.type.UI_FIELD_VALUE"
+                program="org.efaps.esjp.common.uisearch.Search">
+                <property name="Types">ERP_DocumentAbstract</property>
+            </trigger>
+        </field>
+        <field name="name">
+            <property name="Attribute">Name</property>
+            <property name="Columns">15</property>
+            <property name="ModeSearch">EDITABLE</property>
+        </field>
     </definition>
-</ui-menu>
+</ui-form>
