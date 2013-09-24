@@ -91,7 +91,7 @@
             }
             <!-- Assets_MyDesk, MainToolBar -->
             UIUpdate update = new UIUpdate();
-            update.add2Menu("220666bf-a469-4fd7-a817-d4151d5ef364", "87001cc3-c45c-44de-b8f1-776df507f268", 1);
+            update.add2Menu("220666bf-a469-4fd7-a817-d4151d5ef364", "87001cc3-c45c-44de-b8f1-776df507f268", 2);
 
         </script>
     </version>
