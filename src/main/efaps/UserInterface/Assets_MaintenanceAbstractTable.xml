@@ -21,13 +21,13 @@
 
 --><ui-table xmlns="http://www.efaps.org/xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.efaps.org/xsd http://www.efaps.org/xsd/eFaps_1.0.xsd">
 
-    <uuid>e1eb33b6-3e5e-4792-839d-e843e9995d5b</uuid>
+    <uuid>f1cf0221-58ca-47ba-8ac1-e8bc37648766</uuid>
     <file-application>eFapsApp-Assets</file-application>
     <file-revision>$Rev$</file-revision>
 
     <definition>
         <version-expression>(version==latest)</version-expression>
-        <name>Assets_MainteneanceAbstractTable</name>
+        <name>Assets_MaintenanceAbstractTable</name>
         <!-- fields -->
         <field name="type">
             <property name="Attribute">Type</property>

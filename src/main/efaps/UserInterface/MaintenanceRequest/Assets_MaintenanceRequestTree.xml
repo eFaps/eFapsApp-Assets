@@ -22,7 +22,7 @@
 --><ui-menu xmlns="http://www.efaps.org/xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.efaps.org/xsd http://www.efaps.org/xsd/eFaps_1.0.xsd">
 
     <uuid>a96105ef-20fb-4993-aaa6-9517f39a7ad6</uuid>
-    <file-application>eFapsApp-Sales</file-application>
+    <file-application>eFapsApp-Assets</file-application>
     <file-revision>$Rev$</file-revision>
 
     <definition>
@@ -34,9 +34,9 @@
             <form>Assets_MaintenanceRequestForm</form>
         </target>
         <!-- type tree for -->
-        <type>Sales_ProductRequest</type>
+        <type>Assets_MaintenanceRequest</type>
         <childs>
-            <child>Sales_ProductRequestTree_Position</child>
+        <child>Assets_MaintenanceRequestTree_Position</child>
         </childs>
         <!-- properties -->
         <property name="Target">content</property>

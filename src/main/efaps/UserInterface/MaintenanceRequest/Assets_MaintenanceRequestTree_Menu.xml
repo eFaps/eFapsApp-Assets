@@ -30,7 +30,7 @@
         <name>Assets_MaintenanceRequestTree_Menu</name>
         <!-- childs -->
         <childs>
-            <child>Sales_ProductRequestTree_Menu_Action</child>
+            <child>Assets_MaintenanceRequestTree_Menu_Action</child>
         </childs>
     </definition>
 

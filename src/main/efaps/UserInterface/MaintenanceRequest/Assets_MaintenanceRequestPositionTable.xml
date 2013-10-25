@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?><!--
+ <?xml version="1.0" encoding="UTF-8" standalone="no"?><!--
 
  Copyright 2003 - 2012 The eFaps Team
 
@@ -21,7 +21,7 @@
 
 --><ui-table xmlns="http://www.efaps.org/xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.efaps.org/xsd http://www.efaps.org/xsd/eFaps_1.0.xsd">
     <uuid>0938f8eb-d496-45e5-93b5-d6113dbf77a9</uuid>
-    <file-application>eFapsApp-Sales</file-application>
+    <file-application>eFapsApp-Assets</file-application>
     <file-revision>$Rev$</file-revision>
     <definition>
     <version-expression>(version==latest)</version-expression>
@@ -41,15 +41,22 @@
     <field name="productDesc">
         <property name="Columns">90</property>
         <property name="ModeCreate">EDITABLE</property>
-        <property name="Attribute">ProductDesc</property>
-        <property name="Label">Assets_MaintenanceRequestPosition/ProductDesc.Label</property>
+        <property name="Attribute">MaintenanceObs</property>
+        <property name="Label">Assets_MaintenanceRequestPosition/MaintenanceObs.Label</property>
         <property name="Width">10</property>
     </field>
     <field name="uoM">
         <property name="ModeCreate">EDITABLE</property>
         <property name="ModeView">None</property>
-        <property name="Attribute">UoM</property>
+        <property name="Attribute"></property>
         <property name="Label">Assets_MaintenanceRequestPosition/UoM.Label</property>
+    </field>
+    
+    <field name="status">
+        <property name="ModeCreate">EDITABLE</property>
+        <property name="ModeView">None</property>
+        <property name="Default">Pendiente</property>
+        <property name="Label">Assets_MaintenanceRequestPosition/Status.Label</property>
     </field>
     <field name="uom4View">
         <property name="Width">1</property>

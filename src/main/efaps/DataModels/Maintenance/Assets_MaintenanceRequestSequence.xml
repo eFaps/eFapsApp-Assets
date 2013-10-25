@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?><!--
 
- Copyright 2003 - 2012 The eFaps Team
+ Copyright 2013 - 2013 The eFaps Team
 
  Licensed under the Apache License, Version 2.0 (the "License");
  you may not use this file except in compliance with the License.
@@ -19,18 +19,14 @@
  Last Changed:    $Date$
  Last Changed By: $Author$
 
---><ui-menu xmlns="http://www.efaps.org/xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.efaps.org/xsd http://www.efaps.org/xsd/eFaps_1.0.xsd">
-
-    <uuid>33a26327-b403-4e28-bdc7-32d4f94ea6d7</uuid>
-    <file-application>eFapsApp-Sales</file-application>
+--><numbergenerator xmlns="http://www.efaps.org/xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.efaps.org/xsd http://www.efaps.org/xsd/eFaps_1.0.xsd">
+    <uuid>48181024-d9fe-4721-b0e7-4461e685e5f5</uuid>
+    <file-application>eFapsApp-Assets</file-application>
     <file-revision>$Rev$</file-revision>
-
     <definition>
         <version-expression>(version==latest)</version-expression>
-        <name>Assets_MaintenanceRequestTree_Menu_Action</name>
-        <!-- childs -->
-        <childs>
-            <child>Assets_MaintenanceRequestTree_Menu_Action_Edit</child>
-        </childs>
+        <name>Assets_MaintenanceRequestSequence</name>
+        <format>RM-%05d</format>
+        <startvalue>1</startvalue>
     </definition>
-</ui-menu>
+</numbergenerator>

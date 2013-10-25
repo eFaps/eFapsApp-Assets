@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?><!--
 
- Copyright 2003 - 2012 The eFaps Team
+ Copyright 2003 - 2010 The eFaps Team
 
  Licensed under the Apache License, Version 2.0 (the "License");
  you may not use this file except in compliance with the License.
@@ -19,18 +19,23 @@
  Last Changed:    $Date$
  Last Changed By: $Author$
 
---><ui-menu xmlns="http://www.efaps.org/xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.efaps.org/xsd http://www.efaps.org/xsd/eFaps_1.0.xsd">
-
-    <uuid>33a26327-b403-4e28-bdc7-32d4f94ea6d7</uuid>
-    <file-application>eFapsApp-Sales</file-application>
+--><datamodel-statusgroup xmlns="http://www.efaps.org/xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.efaps.org/xsd http://www.efaps.org/xsd/eFaps_1.0.xsd">
+    <uuid>01bd3975-d1e2-4a05-a00d-97ec215aab4a</uuid>
+    <file-application>eFapsApp-Assets</file-application>
     <file-revision>$Rev$</file-revision>
 
     <definition>
         <version-expression>(version==latest)</version-expression>
-        <name>Assets_MaintenanceRequestTree_Menu_Action</name>
-        <!-- childs -->
-        <childs>
-            <child>Assets_MaintenanceRequestTree_Menu_Action_Edit</child>
-        </childs>
+        <name>Assets_MaintenanceRequestStatus</name>
+        <parent>Sales_DocumentStatus</parent>
+        <status key="Open">
+            <description>The products where not delivered yet.</description>
+        </status>
+        <status key="Closed">
+            <description>The products where delivered.</description>
+        </status>
+        <status key="Canceled">
+            <description>The Delivery Note was canceled.</description>
+        </status>
     </definition>
-</ui-menu>
+</datamodel-statusgroup>

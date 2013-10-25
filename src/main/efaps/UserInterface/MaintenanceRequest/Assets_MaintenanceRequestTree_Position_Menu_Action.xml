@@ -22,7 +22,7 @@
 --><ui-menu xmlns="http://www.efaps.org/xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.efaps.org/xsd http://www.efaps.org/xsd/eFaps_1.0.xsd">
 
     <uuid>8057aff2-3e8f-410d-86e6-c1dd12349524</uuid>
-    <file-application>eFapsApp-Sales</file-application>
+    <file-application>eFapsApp-Assets</file-application>
     <file-revision>$Rev$</file-revision>
 
     <definition>
@@ -30,7 +30,7 @@
         <name>Assets_MaintenanceRequestTree_Position_Menu_Action</name>
         <!-- childs -->
         <childs>
-            <child>Sales_ProductRequestTree_Position_Menu_Action_Delete</child>
+            <child>Assets_MaintenanceRequestTree_Position_Menu_Action_Delete</child>
         </childs>
     </definition>
 

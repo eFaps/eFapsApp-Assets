@@ -34,7 +34,7 @@
         <field name="date">
             <property name="Columns">12</property>
             <property name="ModeCreate">EDITABLE</property>
-            <property name="ModeEdit">EDITABLE</property>
+            <property name="ModeEdit">READONLY</property>
             <property name="ModeSearch">EDITABLE</property>
             <property name="Attribute">Date</property>
             <property name="Required">true</property>
@@ -54,7 +54,9 @@
             <property name="ModePrint">NONE</property>
             <property name="ModeView">NONE</property>
             <property name="Required">true</property>
-            <trigger event="UI_FIELD_VALUE" method="getSalesPersonFieldValue" name="Sales_ProductRequestForm.salesperson.UI_FIELD_VALUE" program="org.efaps.esjp.sales.document.ProductRequest">
+            <trigger event="UI_FIELD_VALUE" method="getSalesPersonFieldValue" 
+            name="Sales_ProductRequestForm.salesperson.UI_FIELD_VALUE" 
+            program="org.efaps.esjp.sales.document.ProductRequest">
                 <property name="Type">Admin_User_Person</property>
                 <property name="Phrase">$&lt;attribute[LastName]&gt;, $&lt;attribute[FirstName]&gt;</property>
                 <property name="OrderSelect">attribute[LastName]</property>
@@ -120,34 +122,36 @@
         <field name="contact">
             <property name="SelectAlternateOID">linkto[Contact].oid</property>
             <property name="HRef">${COMMONURL}/MenuTree.jsp</property>
-            <property name="Label">Sales_ProductRequest/Contact.Label</property>
+            <property name="Label">Assets_MaintenanceRequest/Contact.Label</property>
             <property name="Select">linkto[Contact].attribute[Name]</property>
             <property name="ModeCreate">EDITABLE</property>
             <property name="Required">true</property>
-            <trigger event="UI_FIELD_AUTOCOMPLETE" method="autoComplete4Contact" name="Sales_ProductRequestForm.contact.UI_FIELD_AUTOCOMPLETE" program="org.efaps.esjp.sales.document.ProductRequest"/>
+            <!-- <trigger event="UI_FIELD_AUTOCOMPLETE" method="autoComplete4Contact" name="Sales_ProductRequestForm.contact.UI_FIELD_AUTOCOMPLETE" program="org.efaps.esjp.sales.document.ProductRequest"/>
             <trigger event="UI_FIELD_UPDATE" method="updateFields4Contact" name="Sales_ProductRequestForm.contact.UI_FIELD_UPDATE" program="org.efaps.esjp.sales.document.ProductRequest"/>
+             -->
         </field>
         <field name="contactData">
             <property name="ModePrint">NONE</property>
             <property name="ModeView">NONE</property>
-            <property name="Label">Sales_ProductRequestForm.contactData.Label</property>
+            <property name="Label">Assets_MaintenanceRequestForm.contactData.Label</property>
             <property name="ModeEdit">NONE</property>
-            <property name="ModeCreate">READONLY</property>
+            <property name="ModeCreate">EDITABLE</property>/property>
             <property name="ClassNameUI">org.efaps.admin.datamodel.ui.StringUI</property>
+            <property name="Required">true</property>
         </field>
         <field character="Heading" name="headingPosition">
             <property name="Level">2</property>
-            <property name="Label">Sales_ProductRequestForm.headingPosition.Heading</property>
+            <property name="Label">Assets_MaintenanceRequestForm.headingPosition.Heading</property>
             <property name="ModeCreate">READONLY</property>
             <property name="ModeEdit">NONE</property>
         </field>
         <field character="Target" name="positionTable">
             <property name="ModeCreate">EDITABLE</property>
             <property name="ModeEdit">NONE</property>
-            <table>Sales_ProductRequestPositionTable</table>
+            <table>Assets_MaintenanceRequestPositionTable</table>
             <evaluate program="org.efaps.esjp.common.uitable.MultiPrint">
-                <property name="Types">Sales_ProductRequestPosition</property>
-                <property name="LinkFroms">ProductRequestLink</property>
+                <property name="Types">Assets_MaintenanceRequestPosition</property>
+                <property name="LinkFroms">Assets_MaintenanceRequestLink</property>
             </evaluate>
         </field>
         <field name="note">

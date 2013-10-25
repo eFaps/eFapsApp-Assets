@@ -30,8 +30,8 @@
         <name>Assets_MaintenanceRequestMyDesk_Menu_Action</name>
         <!-- childs -->
         <childs>
-            <child>Sales_ProductRequestMyDesk_Menu_Action_Create</child>
-            <child>Sales_ProductRequestMyDesk_Menu_Action_Delete</child>
+            <child>Assets_MaintenanceRequestMyDesk_Menu_Action_Create</child>
+            <child>Assets_MaintenanceRequestMyDesk_Menu_Action_Delete</child>
         </childs>
     </definition>
 

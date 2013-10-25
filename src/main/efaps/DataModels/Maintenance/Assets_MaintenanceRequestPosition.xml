@@ -19,18 +19,22 @@
  Last Changed:    $Date$
  Last Changed By: $Author$
 
---><ui-menu xmlns="http://www.efaps.org/xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.efaps.org/xsd http://www.efaps.org/xsd/eFaps_1.0.xsd">
-
-    <uuid>33a26327-b403-4e28-bdc7-32d4f94ea6d7</uuid>
-    <file-application>eFapsApp-Sales</file-application>
+--><datamodel-type xmlns="http://www.efaps.org/xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.efaps.org/xsd http://www.efaps.org/xsd/eFaps_1.0.xsd">
+    <uuid>316568db-8a7c-4a4f-9d3b-cb4f8986a91d</uuid>
+    <file-application>eFapsApp-Assets</file-application>
     <file-revision>$Rev$</file-revision>
-
     <definition>
         <version-expression>(version==latest)</version-expression>
-        <name>Assets_MaintenanceRequestTree_Menu_Action</name>
-        <!-- childs -->
-        <childs>
-            <child>Assets_MaintenanceRequestTree_Menu_Action_Edit</child>
-        </childs>
+        <name>Assets_MaintenanceRequestPosition</name>
+        <parent>Sales_PositionAbstract</parent>
+        <attribute>
+            <name>Assets_MaintenanceRequestLink</name>
+            <type>Link</type>
+            <typelink>Assets_MaintenanceRequest</typelink>
+            <sqltable>Sales_PositionAbstractSQLTable</sqltable>
+            <sqlcolumn>DOCID</sqlcolumn>
+        </attribute>
     </definition>
-</ui-menu>
+</datamodel-type>
+
+
