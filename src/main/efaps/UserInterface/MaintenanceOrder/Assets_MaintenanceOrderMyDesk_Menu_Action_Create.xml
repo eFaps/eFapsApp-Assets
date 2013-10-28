@@ -35,7 +35,7 @@
         <!-- target definitions -->
         <target>
             <form>Assets_MaintenanceOrderForm</form>
-            <execute method="create" program="org.efaps.esjp.assets.documents.MaintenanceRequest">
+            <execute method="create" program="org.efaps.esjp.assets.documents.MaintenanceOrder">
                 
                 <property name="StatusGroup">Assets_MaintenanceOrdertStatus</property>
                 <property name="PositionType">Assets_MaintenanceOrderPosition</property>

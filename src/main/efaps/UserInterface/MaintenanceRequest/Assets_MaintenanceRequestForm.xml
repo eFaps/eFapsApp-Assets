@@ -126,9 +126,14 @@
             <property name="Select">linkto[Contact].attribute[Name]</property>
             <property name="ModeCreate">EDITABLE</property>
             <property name="Required">true</property>
-            <!-- <trigger event="UI_FIELD_AUTOCOMPLETE" method="autoComplete4Contact" name="Sales_ProductRequestForm.contact.UI_FIELD_AUTOCOMPLETE" program="org.efaps.esjp.sales.document.ProductRequest"/>
-            <trigger event="UI_FIELD_UPDATE" method="updateFields4Contact" name="Sales_ProductRequestForm.contact.UI_FIELD_UPDATE" program="org.efaps.esjp.sales.document.ProductRequest"/>
-             -->
+            <trigger event="UI_FIELD_AUTOCOMPLETE" 
+            method="autoComplete4Contact" 
+            name="Sales_ProductRequestForm.contact.UI_FIELD_AUTOCOMPLETE" 
+            program="org.efaps.esjp.sales.document.ProductRequest"/>
+            <trigger event="UI_FIELD_UPDATE" 
+            method="updateFields4Contact" 
+            name="Sales_ProductRequestForm.contact.UI_FIELD_UPDATE" 
+            program="org.efaps.esjp.sales.document.ProductRequest"/>
         </field>
         <field name="contactData">
             <property name="ModePrint">NONE</property>
@@ -136,8 +141,7 @@
             <property name="Label">Assets_MaintenanceRequestForm.contactData.Label</property>
             <property name="ModeEdit">NONE</property>
             <property name="ModeCreate">EDITABLE</property>/property>
-            <property name="ClassNameUI">org.efaps.admin.datamodel.ui.StringUI1</property>
-            <property name="Required">true</property>
+            <property name="ClassNameUI">org.efaps.admin.datamodel.ui.StringUI</property>
         </field>
         <field character="Heading" name="headingPosition">
             <property name="Level">2</property>
