@@ -18,7 +18,7 @@
  * Last Changed By: $Author$
  */
 
-package org.efaps.esjp.assets.Documents;
+package org.efaps.esjp.assets.documents;
 
 import org.efaps.admin.event.Parameter;
 import org.efaps.admin.event.Return;
@@ -33,12 +33,13 @@ import org.efaps.util.EFapsException;
  * @author The eFaps Team
  * @version $Id$
  */
-@EFapsUUID("3d92d505-3a75-437e-818d-ec1abe052cbe")
+@EFapsUUID("a43fc60f-7096-45cf-9eea-a348025f5a50")
 @EFapsRevision("$Rev$")
-public abstract class MaintenanceOrder_Base
+public abstract class MaintenanceRequest_Base
     extends AbstractProductDocument
 {
-        /**
+
+    /**
      * @param _parameter Parameter as passed from the eFaps API.
      * @return new Return.
      * @throws EFapsException on error.

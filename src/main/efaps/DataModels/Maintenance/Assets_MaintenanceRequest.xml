@@ -41,7 +41,7 @@
         </attribute>
         
         
-        <trigger event="ACCESSCHECK" name="Sales_ProductRequest.ACCESSCHECK"
+        <trigger event="ACCESSCHECK" name="Assets_MaintenanceRequest.ACCESSCHECK"
             program="org.efaps.esjp.admin.access.SimpleAccessCheckOnType" />
     </definition>
 </datamodel-type>

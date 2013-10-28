@@ -4,4 +4,4 @@
  * @author The eFaps Team
  * @version $Id$
  */
-package org.efaps.esjp.assets.Documents;
+package org.efaps.esjp.assets.documents;

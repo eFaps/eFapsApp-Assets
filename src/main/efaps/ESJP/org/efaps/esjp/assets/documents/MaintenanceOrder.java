@@ -19,7 +19,7 @@
  */
 
 
-package org.efaps.esjp.assets.Documents;
+package org.efaps.esjp.assets.documents;
 
 import org.efaps.admin.program.esjp.EFapsRevision;
 import org.efaps.admin.program.esjp.EFapsUUID;
@@ -35,7 +35,8 @@ import org.efaps.admin.program.esjp.EFapsUUID;
  */
 @EFapsUUID("134f7081-d06c-48d0-86bc-4563810ae0a8")
 @EFapsRevision("$Rev$")
-public class MaintenanceOrder    extends MaintenanceOrder_Base
+public class MaintenanceOrder
+    extends MaintenanceOrder_Base
 {
 
 }

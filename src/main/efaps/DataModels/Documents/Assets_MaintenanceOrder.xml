@@ -30,15 +30,15 @@
         <attribute>
             <name>Status</name>
             <type>Status</type>
-            <typelink>Assets_MaintenanceRequestStatus</typelink>
+            <typelink>Assets_MaintenanceOrderStatus</typelink>
             <sqltable>ERP_DocumentAbstractSQLTable</sqltable>
             <sqlcolumn>STATUS</sqlcolumn>
-            <trigger event="RANGE_VALUE" name="Assets_MaintenanceRequest.Status.RANGE_VALUE" program="org.efaps.esjp.admin.datamodel.StatusValue">
+            <trigger event="RANGE_VALUE" name="Assets_MaintenanceOrder.Status.RANGE_VALUE" program="org.efaps.esjp.admin.datamodel.StatusValue">
                 <!-- Sales_ProductRequest.Status.RANGE_VALUE" -->                
             </trigger>
         </attribute>
         
         
-        <trigger event="ACCESSCHECK" name="Sales_ProductRequest.ACCESSCHECK" program="org.efaps.esjp.admin.access.SimpleAccessCheckOnType"/>
+        <trigger event="ACCESSCHECK" name="Assets_MaintenanceOrder.ACCESSCHECK" program="org.efaps.esjp.admin.access.SimpleAccessCheckOnType"/>
     </definition>
 </datamodel-type>

@@ -35,10 +35,10 @@
         <!-- target definitions -->
         <target>
             <form>Assets_MaintenanceOrderForm</form>
-            <execute method="create" program="org.efaps.esjp.assets.Documents.MaintenanceRequest">
+            <execute method="create" program="org.efaps.esjp.assets.documents.MaintenanceRequest">
                 
-                <property name="StatusGroup">Assets_MaintenanceRequestStatus</property>
-                <property name="PositionType">Assets_MaintenanceRequestPosition</property>
+                <property name="StatusGroup">Assets_MaintenanceOrdertStatus</property>
+                <property name="PositionType">Assets_MaintenanceOrderPosition</property>
                 <property name="Status">Open</property>
                 <property name="UseNumberGenerator4Name">true</property>
                 
@@ -63,7 +63,7 @@
         </target>
                 <!-- properties -->
         <property name="Target">modal</property>
-        <property name="TargetCreateType">Assets_MaintenanceRequest</property>
+        <property name="TargetCreateType">Assets_MaintenanceOrder</property>
         <!-- <property name="TargetCreateType">Assets_MaintenanceRequest</property>
              <property name="TargetCreateType">Sales_ProductRequest</property>  -->
         <property name="TargetMode">create</property>
