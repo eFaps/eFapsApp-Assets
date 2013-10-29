@@ -28,7 +28,9 @@
         <version-expression>(version==latest)</version-expression>
         <name>Assets_MaintenanceOrderMyDesk</name>
         <access>
-            <role>Sales_Admin</role>
+            <role>Assets_Admin</role>
+            <role>Assets_Modifier</role>
+            <role>Assets_Reader</role>
         </access>
         <target>
             <menu>Assets_MaintenanceOrderMyDesk_Menu</menu>

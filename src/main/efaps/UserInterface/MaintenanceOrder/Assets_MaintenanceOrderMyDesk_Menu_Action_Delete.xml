@@ -28,10 +28,10 @@
     <definition>
         <version-expression>(version==latest)</version-expression>
         <name>Assets_MaintenanceOrderMyDesk_Menu_Action_Delete</name>
-
         <access>
-            <role>Sales_Admin</role>
             <role>Assets_Admin</role>
+            <role>Assets_Modifier</role>
+            <role>Assets_Reader</role>
         </access>
 
         <!-- target definitions -->

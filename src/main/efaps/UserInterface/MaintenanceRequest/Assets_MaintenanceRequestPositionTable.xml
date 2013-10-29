@@ -36,8 +36,11 @@
         <property name="Select">linkto[Product].attribute[Name]</property>
         <property name="Label">Assets_MaintenanceRequestPosition/Product.Label</property>
         <property name="ModeCreate">EDITABLE</property>
-        <trigger event="UI_FIELD_AUTOCOMPLETE" method="autoComplete4Product" name="Sales_ProductRequestPositionTable.product.UI_FIELD_AUTOCOMPLETE" program="org.efaps.esjp.sales.document.ProductRequest"/>
-    </field>
+        </field>
+        <!--  <trigger event="UI_FIELD_AUTOCOMPLETE" method="autoComplete4Product" 
+        name="Sales_ProductRequestPositionTable.product.UI_FIELD_AUTOCOMPLETE" 
+        program="org.efaps.esjp.sales.document.ProductRequest"/>
+        -->
     <field name="productDesc">
         <property name="Columns">90</property>
         <property name="ModeCreate">EDITABLE</property>
@@ -50,13 +53,6 @@
         <property name="ModeView">None</property>
         <property name="Attribute">UoM</property>
         <property name="Label">Assets_MaintenanceRequestPosition/UoM.Label</property>
-    </field>
-    
-    <field name="status">
-        <property name="ModeCreate">EDITABLE</property>
-        <property name="ModeView">None</property>
-        <property name="Default">Pendiente</property>
-        <property name="Label">Assets_MaintenanceRequestPosition/Status.Label</property>
     </field>
     <field name="uom4View">
         <property name="Width">1</property>

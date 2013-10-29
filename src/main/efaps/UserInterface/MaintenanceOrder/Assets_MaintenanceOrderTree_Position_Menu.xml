@@ -22,7 +22,7 @@
 --><ui-menu xmlns="http://www.efaps.org/xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.efaps.org/xsd http://www.efaps.org/xsd/eFaps_1.0.xsd">
 
     <uuid>ff79aba1-8f5f-46c7-82f3-41472359d9b8</uuid>
-    <file-application>eFapsApp-Sales</file-application>
+    <file-application>eFapsApp-Assets</file-application>
     <file-revision>$Rev$</file-revision>
 
     <definition>

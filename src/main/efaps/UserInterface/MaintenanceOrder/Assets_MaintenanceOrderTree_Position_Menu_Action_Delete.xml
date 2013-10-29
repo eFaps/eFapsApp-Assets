@@ -29,7 +29,8 @@
         <version-expression>(version==latest)</version-expression>
         <name>Assets_MaintenanceOrderTree_Position_Menu_Action_Delete</name>
         <access>
-            <role>Sales_Admin</role>
+            <role>Assets_Admin</role>
+            <role>Assets_Modifier</role>
         </access>
         <!-- target definitions -->
         <target>
@@ -39,5 +40,4 @@
         <property name="AskUser">true</property>
         <property name="Submit">true</property>
     </definition>
-
 </ui-command>

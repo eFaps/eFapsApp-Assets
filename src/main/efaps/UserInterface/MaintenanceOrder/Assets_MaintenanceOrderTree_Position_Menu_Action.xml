@@ -24,7 +24,6 @@
     <uuid>81df4cf7-8afb-4745-bc20-6f69f57e0104</uuid>
     <file-application>eFapsApp-Assets</file-application>
     <file-revision>$Rev$</file-revision>
-
     <definition>
         <version-expression>(version==latest)</version-expression>
         <name>Assets_MaintenanceOrderTree_Position_Menu_Action</name>
@@ -33,5 +32,4 @@
             <child>Assets_MaintenanceOrderTree_Position_Menu_Action_Delete</child>
         </childs>
     </definition>
-
 </ui-menu>

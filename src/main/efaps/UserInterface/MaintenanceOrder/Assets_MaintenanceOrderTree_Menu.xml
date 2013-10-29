@@ -24,7 +24,6 @@
     <uuid>764aabeb-33c5-4c20-beea-9ae9c9eb9908</uuid>
     <file-application>eFapsApp-Sales</file-application>
     <file-revision>$Rev$</file-revision>
-
     <definition>
         <version-expression>(version==latest)</version-expression>
         <name>Assets_MaintenanceOrderTree_Menu</name>

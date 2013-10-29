@@ -22,22 +22,21 @@
 --><ui-command xmlns="http://www.efaps.org/xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.efaps.org/xsd http://www.efaps.org/xsd/eFaps_1.0.xsd">
 
     <uuid>60cef613-9f2b-45fe-8eba-c7fde2de88aa</uuid>
-    <file-application>eFapsApp-Sales</file-application>
+    <file-application>eFapsApp-Assets</file-application>
     <file-revision>$Rev$</file-revision>
 
     <definition>
         <version-expression>(version==latest)</version-expression>
         <name>Assets_MaintenanceOrderTree_Menu_Action_Edit</name>
         <access>
-            <role>Sales_Salesman</role>
-            <role>Sales_Admin</role>
+            <role>Assets_Admin</role>
+            <role>Assets_Modifier</role>
         </access>
         <!-- target definitions -->
         <target>
             <form>Assets_MaintenanceOrderForm</form>
             <execute program="org.efaps.esjp.common.uiform.Edit"/>
         </target>
-
         <!-- properties -->
         <property name="Target">modal</property>
         <property name="TargetMode">edit</property>

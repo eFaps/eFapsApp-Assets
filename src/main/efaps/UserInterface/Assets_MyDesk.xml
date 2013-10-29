@@ -28,9 +28,16 @@
     <file-revision>$Rev$</file-revision>
     <definition>
         <version-expression>(version==latest)</version-expression>
+        <access>
+            <role>Assets_Admin</role>
+            <role>Assets_Modifier</role>
+            <role>Assets_Reader</role>
+        </access>
         <name>Assets_MyDesk</name>
         <childs>
             <child>Assets_AssetMyDesk</child>
+            <child>Assets_MaintenanceRequestMyDesk</child>
+            <child>Assets_MaintenanceOrderMyDesk</child>
         </childs>
     </definition>
 </ui-menu>

@@ -28,14 +28,15 @@
         <version-expression>(version==latest)</version-expression>
         <name>Assets_MaintenanceOrderTree_Position</name>
         <access>
-            <role>Sales_Salesman</role>
-            <role>Sales_Admin</role>
+            <role>Assets_Admin</role>
+            <role>Assets_Modifier</role>
+            <role>Assets_Reader</role>
         </access>
         <target>
             <menu>Assets_MaintenanceOrderTree_Position_Menu</menu>
             <table>Assets_MaintenanceOrderPositionTable</table>
             <evaluate program="org.efaps.esjp.common.uitable.MultiPrint">
-                <property name="Types">Assets_MaintenanceRequestPosition</property>
+                <property name="Types01">Assets_MaintenanceRequestPosition</property>
                 <property name="LinkFroms">MaintenanceRequestLink</property>
             </evaluate>
         </target>

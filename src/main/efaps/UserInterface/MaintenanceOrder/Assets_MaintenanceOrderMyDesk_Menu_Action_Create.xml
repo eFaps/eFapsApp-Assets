@@ -29,44 +29,22 @@
         <version-expression>(version==latest)</version-expression>
         <name>Assets_MaintenanceOrderMyDesk_Menu_Action_Create</name>
         <access>
-            <role>Sales_Admin</role>
+            <role>Assets_Admin</role>
+            <role>Assets_Modifier</role>
         </access>
-
         <!-- target definitions -->
         <target>
             <form>Assets_MaintenanceOrderForm</form>
-            <execute method="create" program="org.efaps.esjp.assets.documents.MaintenanceOrder">
-                
-                <property name="StatusGroup">Assets_MaintenanceOrdertStatus</property>
-                <property name="PositionType">Assets_MaintenanceOrderPosition</property>
+            <execute program="org.efaps.esjp.common.uiform.Create">
+                <property name="StatusGroup">Assets_MaintenanceOrderStatus</property>
                 <property name="Status">Open</property>
-                <property name="UseNumberGenerator4Name">true</property>
-                
-               <!--<property name="PositionType">Assets_MaintenanceRequestPosition</property>
-                
-                
-                <property name="PositionType">Sales_ProductRequestPosition</property>
-                <property name="StatusGroup">Sales_ProductRequestStatus</property>
-                <property name="Status">Open</property>
-                <property name="UseNumberGenerator4Name">true</property>
-                
-                
-                <property name="StatusGroup">Assets_MaintenanceRequestStatus</property>
-                <property name="PositionType">Assets_MaintenanceRequestPosition</property>
-                <property name="Status">Open</property>
-                <property name="UseNumberGenerator4Name">true</property>
-                
-                org.efaps.esjp.assets.Documents.MaintenanceRequest
-                org.efaps.esjp.sales.document.ProductRequest
-                 -->
             </execute>
         </target>
-                <!-- properties -->
+        <!-- properties -->
         <property name="Target">modal</property>
         <property name="TargetCreateType">Assets_MaintenanceOrder</property>
-        <!-- <property name="TargetCreateType">Assets_MaintenanceRequest</property>
-             <property name="TargetCreateType">Sales_ProductRequest</property>  -->
         <property name="TargetMode">create</property>
+        <property name="TargetDefaultMenu">false</property>
         <property name="WindowHeight">660</property>
         <property name="WindowWidth">1200</property>
         <property name="TargetDefaultMenu">none</property>
