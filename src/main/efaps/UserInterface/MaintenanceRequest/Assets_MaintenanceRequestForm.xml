@@ -120,11 +120,11 @@
         </field>
         <field character="Heading" name="headingAssetsDetails">
             <property name="Level">2</property>
-            <property name="Label">Assets_MaintenanceRequestForm.headingClient.Heading</property>
+            <property name="Label">Assets_MaintenanceRequestForm.headingAssetsDetails.Heading</property>
             <property name="ModeCreate">EDITABLE</property>
             <property name="ModeEdit">NONE</property>
         </field>
-        <field character="Target" name="positionTable">
+        <field character="Target" name="positionTable2">
             <property name="ModeCreate">EDITABLE</property>
             <property name="ModeEdit">NONE</property>
             <table>Assets_MaintenanceRequestPositionTable</table>

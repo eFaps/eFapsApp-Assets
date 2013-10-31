@@ -49,7 +49,7 @@
         <property name="Label">Assets_MaintenanceRequestPosition/UoM.Label</property>
     </field>
     <field name="uom4View">
-        <property name="Width"></property>
+        <property name="Width">1</property>
         <property name="ModeCreate">NONE</property>
         <property name="Label">Assets_MaintenanceRequestPosition/UoM.Label</property>
     </field>
