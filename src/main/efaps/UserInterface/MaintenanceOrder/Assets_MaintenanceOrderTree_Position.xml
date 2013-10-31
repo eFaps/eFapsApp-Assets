@@ -36,8 +36,8 @@
             <menu>Assets_MaintenanceOrderTree_Position_Menu</menu>
             <table>Assets_MaintenanceOrderPositionTable</table>
             <evaluate program="org.efaps.esjp.common.uitable.MultiPrint">
-                <property name="Types01">Assets_MaintenanceRequestPosition</property>
-                <property name="LinkFroms">MaintenanceRequestLink</property>
+                <property name="Types01">Assets_MaintenanceOrderPosition</property>
+                <property name="LinkFroms">MaintenanceOrderLink</property>
             </evaluate>
         </target>
         <!-- properties -->

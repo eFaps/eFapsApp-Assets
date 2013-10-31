@@ -29,7 +29,8 @@
         <version-expression>(version==latest)</version-expression>
         <name>Assets_MaintenanceRequestMyDesk_Menu_Action_Create</name>
         <access>
-            <role>Sales_Admin</role>
+            <role>Assets_Admin</role>
+            <role>Assets_Modifier</role>
         </access>
 
         <!-- target definitions -->

@@ -28,7 +28,7 @@
         <version-expression>(version==latest)</version-expression>
         <name>Assets_MaintenanceRequestMyDesk</name>
         <access>
-            <role>Sales_Admin</role>
+            <role>Assets_Admin</role>
         </access>
         <target>
             <menu>Assets_MaintenanceRequestMyDesk_Menu</menu>

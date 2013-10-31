@@ -33,12 +33,9 @@
             <typelink>Assets_MaintenanceOrderStatus</typelink>
             <sqltable>ERP_DocumentAbstractSQLTable</sqltable>
             <sqlcolumn>STATUS</sqlcolumn>
-            <trigger event="RANGE_VALUE" name="Assets_MaintenanceOrder.Status.RANGE_VALUE" 
-            program="org.efaps.esjp.admin.datamodel.StatusValue">
-                <!-- Sales_ProductRequest.Status.RANGE_VALUE" -->                
+            <trigger event="RANGE_VALUE" name="Assets_MaintenanceOrder.Status.RANGE_VALUE" program="org.efaps.esjp.admin.datamodel.StatusValue">
             </trigger>
         </attribute>
-        <trigger event="ACCESSCHECK" name="Assets_MaintenanceOrder.ACCESSCHECK" 
-        program="org.efaps.esjp.admin.access.SimpleAccessCheckOnType"/>
+        <trigger event="ACCESSCHECK" name="Assets_MaintenanceOrder.ACCESSCHECK" program="org.efaps.esjp.admin.access.SimpleAccessCheckOnType" />
     </definition>
 </datamodel-type>

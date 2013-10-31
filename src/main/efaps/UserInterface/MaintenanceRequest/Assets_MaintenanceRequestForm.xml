@@ -46,14 +46,13 @@
             <property name="ModePrint">NONE</property>
             <property name="ModeView">NONE</property>
             <property name="Required">true</property>
-            <trigger event="UI_FIELD_VALUE" method="getSalesPersonFieldValue" 
-            name="Assets_MaintenanceRequestForm.salesperson.UI_FIELD_VALUE" 
-            program="org.efaps.esjp.sales.document.ProductRequest">
-            <property name="Type">Admin_User_Person</property>
-            <property name="Phrase">$&lt;attribute[LastName]&gt;, $&lt;attribute[FirstName]&gt;</property>
-            <property name="OrderSelect">attribute[LastName]</property>
-            <property name="WhereAttrEqValue">Status|true</property>
-            <property name="SelectCurrent">true</property>
+            <trigger event="UI_FIELD_VALUE" method="getSalesPersonFieldValue" name="Assets_MaintenanceRequestForm.salesperson.UI_FIELD_VALUE"
+                program="org.efaps.esjp.sales.document.ProductRequest">
+                <property name="Type">Admin_User_Person</property>
+                <property name="Phrase">$&lt;attribute[LastName]&gt;, $&lt;attribute[FirstName]&gt;</property>
+                <property name="OrderSelect">attribute[LastName]</property>
+                <property name="WhereAttrEqValue">Status|true</property>
+                <property name="SelectCurrent">true</property>
             </trigger>
         </field>
         <field name="salespersonLink">
@@ -68,6 +67,11 @@
         <field character="Group" name="createGroup">
             <property name="GroupCount">2</property>
         </field>
+        <field character="Heading" name="headingAssets">
+            <property name="Level">2</property>
+            <property name="Label">Assets_MaintenanceRequestForm.headingAssets.Heading</property>
+            <property name="ModeCreate">EDITABLE</property>
+        </field>
         <field name="creator">
             <property name="SelectAlternateOID">linkto[Creator].oid</property>
             <property name="Attribute">Creator</property>
@@ -79,7 +83,7 @@
             <property name="Attribute">Created</property>
             <property name="ModeSearch">EDITABLE</property>
         </field>
-        <field character="Group" name="modifyGroup">
+        <field character="Group" name="createGroup">
             <property name="GroupCount">2</property>
         </field>
         <field name="modifier">
@@ -100,29 +104,24 @@
             <property name="ModeEdit">EDITABLE</property>
             <property name="ModeView">READONLY</property>
         </field>
+        <field name="nameGroup" character="Group">
+            <property name="GroupCount">1</property>
+        </field>
         <field name="name">
             <property name="Attribute">Name</property>
             <property name="Columns">15</property>
             <property name="ModeEdit">EDITABLE</property>
             <property name="Required">true</property>
+            <property name="Label">Assets_MaintenanceRequestForm.name.Label</property>
+            <property name="ModeCreate">EDITABLE</property>
+            <property name="Required">true</property>
+            <trigger program="org.efaps.esjp.assets.documents.MaintenanceOrder" method="autoComplete4Assets"
+                name="Assets_MaintenanceRequestForm.name.UI_FIELD_AUTOCOMPLETE" event="UI_FIELD_AUTOCOMPLETE" />
         </field>
-        <field character="Heading" name="headingAssets">
+        <field character="Heading" name="headingAssetsDetails">
             <property name="Level">2</property>
             <property name="Label">Assets_MaintenanceRequestForm.headingClient.Heading</property>
             <property name="ModeCreate">EDITABLE</property>
-        </field>
-        <field name="name">
-            <property name="ModePrint">NONE</property>
-            <property name="ModeView">EDITABLE</property>
-            <property name="Label">Assets_MaintenanceRequestForm.Name.Label</property>
-            <property name="ModeEdit">NONE</property>
-            <property name="ModeCreate">EDITABLE</property>/property>
-            <property name="ClassNameUI">org.efaps.admin.datamodel.ui.StringUI</property>
-        </field>
-        <field character="Heading" name="headingPosition">
-            <property name="Level">2</property>
-            <property name="Label">Assets_MaintenanceRequestForm.headingPosition.Heading</property>
-            <property name="ModeCreate">READONLY</property>
             <property name="ModeEdit">NONE</property>
         </field>
         <field character="Target" name="positionTable">

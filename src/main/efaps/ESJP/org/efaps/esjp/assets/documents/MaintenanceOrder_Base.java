@@ -24,7 +24,6 @@ import org.efaps.admin.event.Parameter;
 import org.efaps.admin.event.Return;
 import org.efaps.admin.program.esjp.EFapsRevision;
 import org.efaps.admin.program.esjp.EFapsUUID;
-import org.efaps.esjp.sales.document.AbstractProductDocument;
 import org.efaps.util.EFapsException;
 
 /**
@@ -36,7 +35,7 @@ import org.efaps.util.EFapsException;
 @EFapsUUID("3d92d505-3a75-437e-818d-ec1abe052cbe")
 @EFapsRevision("$Rev$")
 public abstract class MaintenanceOrder_Base
-    extends AbstractProductDocument
+    extends AbstractAssetsDocument
 {
         /**
      * @param _parameter Parameter as passed from the eFaps API.

@@ -30,7 +30,7 @@
         <name>Assets_MaintenanceRequestTree</name>
         <!-- targets -->
         <target>
-            <menu>Assets_MaintenancetRequestTree_Menu</menu>
+            <menu>Assets_MaintenanceRequestTree_Menu</menu>
             <form>Assets_MaintenanceRequestForm</form>
         </target>
         <!-- type tree for -->

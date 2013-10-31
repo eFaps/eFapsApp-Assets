@@ -26,22 +26,16 @@
     <definition>
         <version-expression>(version==latest)</version-expression>
         <name>Assets_MaintenanceRequest</name>
-        <parent>Sales_DocumentStockAbstract</parent>
+        <parent>ERP_DocumentAbstract</parent>
         <attribute>
             <name>Status</name>
             <type>Status</type>
             <typelink>Assets_MaintenanceRequestStatus</typelink>
             <sqltable>ERP_DocumentAbstractSQLTable</sqltable>
             <sqlcolumn>STATUS</sqlcolumn>
-            <trigger event="RANGE_VALUE"
-                name="Assets_MaintenanceRequest.Status.RANGE_VALUE"
-                program="org.efaps.esjp.admin.datamodel.StatusValue">
-                <!-- Sales_ProductRequest.Status.RANGE_VALUE" -->                
+            <trigger event="RANGE_VALUE" name="Assets_MaintenanceRequest.Status.RANGE_VALUE" program="org.efaps.esjp.admin.datamodel.StatusValue">
             </trigger>
         </attribute>
-        
-        
-        <trigger event="ACCESSCHECK" name="Assets_MaintenanceRequest.ACCESSCHECK"
-            program="org.efaps.esjp.admin.access.SimpleAccessCheckOnType" />
+        <trigger event="ACCESSCHECK" name="Assets_MaintenanceRequest.ACCESSCHECK" program="org.efaps.esjp.admin.access.SimpleAccessCheckOnType" />
     </definition>
 </datamodel-type>
