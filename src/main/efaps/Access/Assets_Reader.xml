@@ -19,20 +19,20 @@
  Last Changed:    $Date$
  Last Changed By: $Author$
 
---><datamodel-statusgroup xmlns="http://www.efaps.org/xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.efaps.org/xsd http://www.efaps.org/xsd/eFaps_1.0.xsd">
-    <uuid>01bd3975-d1e2-4a05-a00d-97ec215aab4a</uuid>
+--><access-set xmlns="http://www.efaps.org/xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.efaps.org/xsd http://www.efaps.org/xsd/eFaps_1.0.xsd">
+    <uuid>19922d00-e004-44ef-98f9-2bab3eeda055</uuid>
     <file-application>eFapsApp-Assets</file-application>
     <file-revision>$Rev$</file-revision>
-
     <definition>
         <version-expression>(version==latest)</version-expression>
-        <name>Assets_MaintenanceRequestStatus</name>
-        <parent>Sales_DocumentStatus</parent>
-        <status key="Approved">
-            <description>The maintenance where not delivered yet.</description>
-        </status>
-        <status key="Slope">
-            <description>The maintenance where delivered.</description>
-        </status>
+        <name>Assets_Reader</name>
+        <access-type>show</access-type>
+        <access-type>read</access-type>
+
+        <type>Assets_Maintenance_Order</type>
+        <type>Assets_Maintenance_Request</type>
+        <type>Assets_Maintenance_Simple</type>
+        
+        <role>Assets_Reader</role>
     </definition>
-</datamodel-statusgroup>
+</access-set>

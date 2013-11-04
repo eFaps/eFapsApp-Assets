@@ -28,14 +28,11 @@
         <version-expression>(version==latest)</version-expression>
         <name>Assets_MaintenanceOrderStatus</name>
         <parent>Sales_DocumentStatus</parent>
-        <status key="Open">
+        <status key="Approved">
             <description>The maintenance where not delivered yet.</description>
         </status>
-        <status key="Closed">
+        <status key="Slope">
             <description>The maintenance where delivered.</description>
-        </status>
-        <status key="Canceled">
-            <description>The maintenance Note was canceled.</description>
         </status>
     </definition>
 </datamodel-statusgroup>
