@@ -47,8 +47,8 @@ public abstract class MaintenanceRequest_Base
         throws EFapsException
     {
         final CreatedDoc createdDoc = createDoc(_parameter);
-        createPositions(_parameter, createdDoc);
-        executeProcess(_parameter, createdDoc);
+        //createPositions(_parameter, createdDoc);
+        //executeProcess(_parameter, createdDoc);
         return new Return();
     }
 }

@@ -107,8 +107,7 @@
         <field name="nameGroup" character="Group">
             <property name="GroupCount">1</property>
         </field>
-        <field name="name">
-            <property name="Attribute">Name</property>
+        <field name="activo">
             <property name="Columns">15</property>
             <property name="ModeEdit">EDITABLE</property>
             <property name="Required">true</property>
@@ -129,7 +128,7 @@
             <property name="ModeEdit">NONE</property>
             <table>Assets_MaintenanceRequestPositionTable</table>
             <evaluate program="org.efaps.esjp.common.uitable.MultiPrint">
-                <property name="Types">Assets_MaintenanceRequestPosition</property>
+                <property name="Type01">Assets_MaintenanceRequestPosition</property>
                 <property name="LinkFroms">Assets_MaintenanceRequestLink</property>
             </evaluate>
         </field>

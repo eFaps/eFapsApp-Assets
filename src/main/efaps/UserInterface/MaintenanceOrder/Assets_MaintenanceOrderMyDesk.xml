@@ -27,16 +27,16 @@
     <definition>
         <version-expression>(version==latest)</version-expression>
         <name>Assets_MaintenanceOrderMyDesk</name>
-        <access>
+<!--         <access>
             <role>Assets_Admin</role>
             <role>Assets_Modifier</role>
             <role>Assets_Reader</role>
-        </access>
+        </access> -->
         <target>
             <menu>Assets_MaintenanceOrderMyDesk_Menu</menu>
             <table>Sales_DocumentAbstractTable</table>
             <evaluate program="org.efaps.esjp.common.uitable.MultiPrint">
-                <property name="Type03">Assets_MaintenanceOrder</property>
+                <property name="Type01">Assets_MaintenanceOrder</property>
                 <!--<property name="Types">Sales_ProductRequest</property> -->
             </evaluate>
         </target>

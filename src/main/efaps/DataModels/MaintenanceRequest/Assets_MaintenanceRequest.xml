@@ -36,6 +36,7 @@
             <trigger event="RANGE_VALUE" name="Assets_MaintenanceRequest.Status.RANGE_VALUE" program="org.efaps.esjp.admin.datamodel.StatusValue">
             </trigger>
         </attribute>
-        <trigger event="ACCESSCHECK" name="Assets_MaintenanceRequest.ACCESSCHECK" program="org.efaps.esjp.admin.access.SimpleAccessCheckOnType" />
+        <!-- <trigger event="ACCESSCHECK" name="Assets_MaintenanceRequest.ACCESSCHECK" program="org.efaps.esjp.admin.access.SimpleAccessCheckOnType" />
+         -->
     </definition>
 </datamodel-type>

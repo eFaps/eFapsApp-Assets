@@ -26,7 +26,7 @@
     <definition>
         <version-expression>(version==latest)</version-expression>
         <name>Assets_MaintenanceOrderSequence</name>
-        <format>RM-%05d</format>
+        <format>MO-%05d</format>
         <startvalue>1</startvalue>
     </definition>
 </numbergenerator>

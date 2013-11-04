@@ -108,10 +108,8 @@
         <field name="nameGroup" character="Group">
             <property name="GroupCount">1</property>
         </field>
-        <field name="name">
-            <property name="Attribute">Name</property>
+        <field name="activos">
             <property name="Columns">15</property>
-            <property name="ModeEdit">EDITABLE</property>
             <property name="Required">true</property>
             <property name="Label">Assets_MaintenanceOrderForm.name.Label</property>
             <property name="ModeCreate">EDITABLE</property>
