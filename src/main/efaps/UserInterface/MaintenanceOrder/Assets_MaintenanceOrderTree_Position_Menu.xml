@@ -30,7 +30,7 @@
         <name>Assets_MaintenanceOrderTree_Position_Menu</name>
         <!-- childs -->
         <childs>
-            <child>Assets_MaintenanceRequestTree_Position_Menu_Action</child>
+            <child>Assets_MaintenanceOrderTree_Position_Menu_Action</child>
         </childs>
     </definition>
 

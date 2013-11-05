@@ -108,14 +108,21 @@
         <field name="nameGroup" character="Group">
             <property name="GroupCount">1</property>
         </field>
-        <field name="activos">
+        <field name="assets">
             <property name="Columns">15</property>
             <property name="Required">true</property>
             <property name="Label">Assets_MaintenanceOrderForm.name.Label</property>
             <property name="ModeCreate">EDITABLE</property>
-            <property name="Required">true</property>
+            <property name="ModeView">NONE</property>
+            <property name="ModeEdit">NONE</property>            
             <trigger program="org.efaps.esjp.assets.documents.MaintenanceOrder" method="autoComplete4Assets"
                 name="Assets_MaintenanceOrderForm.name.UI_FIELD_AUTOCOMPLETE" event="UI_FIELD_AUTOCOMPLETE"/>
+        </field>
+        <field name="assets4View">
+            <property name="ModeCreate">NONE</property>
+            <property name="ModeEdit">READONLY</property>
+            <property name="ModeView">READONLY</property>
+            <property name="Select">linkto[Asset].attribute[Name]</property>
         </field>
         <field character="Heading" name="headingAssetsDetails">
             <property name="Level">2</property>
@@ -131,6 +138,12 @@
                 <property name="Types">Assets_MaintenanceOrderPosition</property>
                 <property name="LinkFroms">Assets_MaintenanceOrderLink</property>
             </evaluate>
+        </field>
+        <field character="Heading" name="headingAssetsNote">
+            <property name="Level">2</property>
+            <property name="Label">Assets_MaintenanceOrderForm.headingAssetsNote.Heading</property>
+            <property name="ModeCreate">EDITABLE</property>
+            <property name="ModeEdit">NONE</property>
         </field>
         <field name="note">
             <property name="ModeCreate">EDITABLE</property>

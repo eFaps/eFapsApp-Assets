@@ -36,6 +36,13 @@
             <trigger event="RANGE_VALUE" name="Assets_MaintenanceOrder.Status.RANGE_VALUE" program="org.efaps.esjp.admin.datamodel.StatusValue">
             </trigger>
         </attribute>
+        <attribute>
+            <name>Asset</name>
+            <type>Link</type>
+            <typelink>Assets_AssetSimple</typelink>
+            <sqltable>Sales_DocumentExtendSQLTable</sqltable>
+            <sqlcolumn>INTEGER1</sqlcolumn>
+        </attribute>
         <!-- <trigger event="ACCESSCHECK" name="Assets_MaintenanceOrder.ACCESSCHECK" program="org.efaps.esjp.admin.access.SimpleAccessCheckOnType" /> -->
     </definition>
 </datamodel-type>
