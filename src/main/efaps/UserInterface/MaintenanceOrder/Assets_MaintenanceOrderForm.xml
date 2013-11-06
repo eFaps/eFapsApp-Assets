@@ -1,25 +1,10 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?><!--
-
- Copyright 2003 - 2012 The eFaps Team
-
- Licensed under the Apache License, Version 2.0 (the "License");
- you may not use this file except in compliance with the License.
- You may obtain a copy of the License at
-
-      http://www.apache.org/licenses/LICENSE-2.0
-
- Unless required by applicable law or agreed to in writing, software
- distributed under the License is distributed on an "AS IS" BASIS,
- WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- See the License for the specific language governing permissions and
- limitations under the License.
-
- Author:          The eFaps Team
- Revision:        $Rev$
- Last Changed:    $Date$
- Last Changed By: $Author$
- 
---><ui-form xmlns="http://www.efaps.org/xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.efaps.org/xsd http://www.efaps.org/xsd/eFaps_1.0.xsd">
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><!-- Copyright 2003 - 2012 The eFaps Team Licensed under the Apache License, Version 2.0 
+    (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at http://www.apache.org/licenses/LICENSE-2.0 
+    Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an "AS IS" BASIS, WITHOUT 
+    WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations 
+    under the License. Author: The eFaps Team Revision: $Rev$ Last Changed: $Date$ Last Changed 
+    By: $Author$ -->
+<ui-form xmlns="http://www.efaps.org/xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.efaps.org/xsd http://www.efaps.org/xsd/eFaps_1.0.xsd">
     <uuid>8c84ce6b-42a5-479b-9ee2-a1e90462e2df</uuid>
     <file-application>eFapsApp-Assets</file-application>
     <file-revision>$Rev$</file-revision>
@@ -46,8 +31,7 @@
             <property name="ModePrint">NONE</property>
             <property name="ModeView">NONE</property>
             <property name="Required">true</property>
-            <trigger event="UI_FIELD_VALUE" method="getSalesPersonFieldValue" 
-            name="Assets_MaintenanceOrderForm.salesperson.UI_FIELD_VALUE"
+            <trigger event="UI_FIELD_VALUE" method="getSalesPersonFieldValue" name="Assets_MaintenanceOrderForm.salesperson.UI_FIELD_VALUE"
                 program="org.efaps.esjp.sales.document.ProductRequest">
                 <property name="Type">Admin_User_Person</property>
                 <property name="Phrase">$&lt;attribute[LastName]&gt;, $&lt;attribute[FirstName]&gt;</property>
@@ -109,20 +93,23 @@
             <property name="GroupCount">1</property>
         </field>
         <field name="assets">
+            <property name="Select">linkto[Product].attribute[Name]</property>
             <property name="Columns">15</property>
             <property name="Required">true</property>
-            <property name="Label">Assets_MaintenanceOrderForm.name.Label</property>
+            <property name="HRef">${COMMONURL}/MenuTree.jsp</property>
+            <property name="Label">Assets_MaintenanceOrderForm.asset.Label</property>
             <property name="ModeCreate">EDITABLE</property>
             <property name="ModeView">NONE</property>
-            <property name="ModeEdit">NONE</property>            
+            <property name="ModeEdit">NONE</property>
             <trigger program="org.efaps.esjp.assets.documents.MaintenanceOrder" method="autoComplete4Assets"
-                name="Assets_MaintenanceOrderForm.name.UI_FIELD_AUTOCOMPLETE" event="UI_FIELD_AUTOCOMPLETE"/>
+                name="Assets_MaintenanceOrderForm.name.UI_FIELD_AUTOCOMPLETE" event="UI_FIELD_AUTOCOMPLETE" />
         </field>
         <field name="assets4View">
             <property name="ModeCreate">NONE</property>
             <property name="ModeEdit">READONLY</property>
             <property name="ModeView">READONLY</property>
             <property name="Select">linkto[Asset].attribute[Name]</property>
+            <property name="HRef">${COMMONURL}/MenuTree.jsp</property>
         </field>
         <field character="Heading" name="headingAssetsDetails">
             <property name="Level">2</property>

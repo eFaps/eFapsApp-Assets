@@ -107,15 +107,24 @@
         <field name="nameGroup" character="Group">
             <property name="GroupCount">1</property>
         </field>
-        <field name="activo">
+        <field name="assets">
+            <property name="Select">linkto[Product].attribute[Name]</property>
             <property name="Columns">15</property>
-            <property name="ModeEdit">EDITABLE</property>
             <property name="Required">true</property>
-            <property name="Label">Assets_MaintenanceRequestForm.name.Label</property>
+            <property name="HRef">${COMMONURL}/MenuTree.jsp</property>
+            <property name="Label">Assets_MaintenanceOrderForm.asset.Label</property>
             <property name="ModeCreate">EDITABLE</property>
-            <property name="Required">true</property>
-            <trigger program="org.efaps.esjp.assets.documents.MaintenanceOrder" method="autoComplete4Assets"
+            <property name="ModeView">NONE</property>
+            <property name="ModeEdit">NONE</property>
+            <trigger program="org.efaps.esjp.assets.documents.MaintenanceRequest" method="autoComplete4Assets"
                 name="Assets_MaintenanceRequestForm.name.UI_FIELD_AUTOCOMPLETE" event="UI_FIELD_AUTOCOMPLETE" />
+        </field>
+        <field name="assets4View">
+            <property name="ModeCreate">NONE</property>
+            <property name="ModeEdit">READONLY</property>
+            <property name="ModeView">READONLY</property>
+            <property name="Select">linkto[Asset].attribute[Name]</property>
+            <property name="HRef">${COMMONURL}/MenuTree.jsp</property>
         </field>
         <field character="Heading" name="headingAssetsDetails">
             <property name="Level">2</property>

@@ -63,7 +63,7 @@ public abstract class MaintenanceOrder_Base
                                  final CreatedDoc _createdDoc)
         throws EFapsException
     {
-        final Instance asset = Instance.get(_parameter.getParameterValue(CIFormAssets.Assets_MaintenanceOrderForm.assets.name ));
+        final Instance asset = Instance.get(_parameter.getParameterValue(CIFormAssets.Assets_MaintenanceRequestForm.assets.name ));
                         //ISales.DocumentStockAbstract.Date.name));
         if (asset.isValid()) {
             _insert.add(CIAssets.MaintenanceOrder.Asset, asset);
