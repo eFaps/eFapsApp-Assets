@@ -56,15 +56,14 @@ public abstract class MaintenanceOrder_Base
     }
 
 
-
     @Override
     protected void add2DocCreate(final Parameter _parameter,
                                  final Insert _insert,
                                  final CreatedDoc _createdDoc)
         throws EFapsException
     {
-        final Instance asset = Instance.get(_parameter.getParameterValue(CIFormAssets.Assets_MaintenanceRequestForm.assets.name ));
-                        //ISales.DocumentStockAbstract.Date.name));
+        final Instance asset = Instance.get(_parameter.getParameterValue(CIFormAssets.Assets_MaintenanceOrderForm.assets.name ));
+                        //ISales.DocumentStockAbstract.Date.name)); CIFormAssets.Assets_MaintenanceRequestForm.assets.name
         if (asset.isValid()) {
             _insert.add(CIAssets.MaintenanceOrder.Asset, asset);
             _createdDoc.getValues().put(CIAssets.MaintenanceOrder.Asset.name, asset);
