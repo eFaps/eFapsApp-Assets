@@ -107,11 +107,9 @@
         <field name="nameGroup" character="Group">
             <property name="GroupCount">1</property>
         </field>
-        <field name="assets">
-            <property name="Select">linkto[Product].attribute[Name]</property>
+        <field name="assets">            
             <property name="Columns">15</property>
-            <property name="Required">true</property>
-            <property name="HRef">${COMMONURL}/MenuTree.jsp</property>
+            <property name="Required">true</property>            
             <property name="Label">Assets_MaintenanceOrderForm.asset.Label</property>
             <property name="ModeCreate">EDITABLE</property>
             <property name="ModeView">NONE</property>
@@ -120,6 +118,7 @@
                 name="Assets_MaintenanceRequestForm.name.UI_FIELD_AUTOCOMPLETE" event="UI_FIELD_AUTOCOMPLETE" />
         </field>
         <field name="assets4View">
+            <property name="SelectAlternateOID">linkto[Asset].oid</property>
             <property name="ModeCreate">NONE</property>
             <property name="ModeEdit">READONLY</property>
             <property name="ModeView">READONLY</property>
