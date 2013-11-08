@@ -24,10 +24,7 @@ import org.efaps.admin.event.Parameter;
 import org.efaps.admin.event.Return;
 import org.efaps.admin.program.esjp.EFapsRevision;
 import org.efaps.admin.program.esjp.EFapsUUID;
-import org.efaps.db.Insert;
-import org.efaps.db.Instance;
 import org.efaps.esjp.ci.CIAssets;
-import org.efaps.esjp.ci.CIFormAssets;
 import org.efaps.util.EFapsException;
 
 /**
@@ -51,25 +48,9 @@ public abstract class MaintenanceRequest_Base
         throws EFapsException
     {
         final CreatedDoc createdDoc = createDoc(_parameter);
-        //createPositions(_parameter, createdDoc);
-        //executeProcess(_parameter, createdDoc);
+        connectAsset2Document(_parameter, createdDoc, CIAssets.Assets2MaintenanceRequest);
         return new Return();
     }
 
 
-    @Override
-    protected void add2DocCreate(final Parameter _parameter,
-                                 final Insert _insert,
-                                 final CreatedDoc _createdDoc)
-        throws EFapsException
-    {
-        final Instance asset = Instance.get(_parameter.getParameterValue(CIFormAssets.Assets_MaintenanceRequestForm.assets.name));
-                        //ISales.DocumentStockAbstract.Date.name));
-        if (asset.isValid()) {
-            _insert.add(CIAssets.MaintenanceRequest.Asset, asset);
-            _createdDoc.getValues().put(CIAssets.MaintenanceRequest.Asset.name, asset);
-            //insert.add(CISales..Date, date);
-            //createdDoc.getValues().put(CISales.DocumentStockAbstract.Date.name, date);
-        }
-    }
 }

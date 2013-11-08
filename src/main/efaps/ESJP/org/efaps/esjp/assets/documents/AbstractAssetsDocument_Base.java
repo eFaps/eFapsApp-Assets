@@ -26,7 +26,11 @@ import org.efaps.admin.event.Parameter;
 import org.efaps.admin.event.Return;
 import org.efaps.admin.program.esjp.EFapsRevision;
 import org.efaps.admin.program.esjp.EFapsUUID;
+import org.efaps.ci.CIType;
+import org.efaps.db.Insert;
+import org.efaps.db.Instance;
 import org.efaps.esjp.ci.CIAssets;
+import org.efaps.esjp.ci.CIFormAssets;
 import org.efaps.esjp.sales.document.AbstractProductDocument;
 import org.efaps.util.EFapsException;
 //import target.generated-sources.efaps.org.efaps.esjp.ci.CIAssets;
@@ -64,8 +68,73 @@ public abstract class AbstractAssetsDocument_Base
     public Return autoComplete4Assets(final Parameter _parameter)
         throws EFapsException
     {
-        return autoComplete4Doc(_parameter,CIAssets.AssetSimple.uuid ,(Status[]) null);
+        return autoComplete4Doc(_parameter, CIAssets.AssetSimple.uuid, (Status[]) null);
     }
+
+
+    protected void connectAsset2Document(final Parameter _parameter,
+                                         final CreatedDoc _doc,
+                                         final CIType _ci)
+
+        throws EFapsException
+    {
+        final Instance instDocType = Instance.get(_parameter.getParameterValue(CIFormAssets.Assets_MaintenanceRequestForm.assets.name));    //"assets"));  CIFormAssets.Assets_MaintenanceRequestForm.assets.name));    //CIFormSales.Sales_IncomingInvoiceForm.documentType.name));
+        if (instDocType.isValid() && _doc.getInstance().isValid()) {                                                                        //_instance.isValid()) {
+            final Insert insert = new Insert(_ci);
+            insert.add(CIAssets.Assets2DocumentAbstract.FromAbstractLink, instDocType);
+            insert.add(CIAssets.Assets2DocumentAbstract.ToAbstractLink, _doc.getInstance());
+            insert.execute();
+        }
+    }
+
+
+    /*
+     *  *
+
+            protected void zzconnectAsset2Document(final Parameter _parameter,
+                                                 final CreatedDoc _createdDoc)
+          throws EFapsException
+        {
+          final Instance instDocType = Instance.get(_parameter.getParameterValue("documentType"));
+          if (instDocType.isValid() && _createdDoc.getInstance().isValid()) {
+              final Insert insert = new Insert(CISales.Document2DocumentType); //CISales.Document2DocumentType
+              insert.add(CISales.Document2DocumentType.DocumentLink, _createdDoc.getInstance());
+              insert.add(CISales.Document2DocumentType.DocumentTypeLink, instDocType);
+              insert.execute();
+          }
+        }
+
+
+
+    protected void WconnectAsset2Document(final Parameter _parameter,
+                                        final Instance _instance)
+        throws EFapsException
+    {
+        final Instance instDocType = Instance.get(_parameter
+                        .getParameterValue(CIFormSales.Sales_IncomingCreditNoteForm.documentType.name));
+        if (instDocType.isValid() && _instance.isValid()) {
+            final Insert insert = new Insert(CISales.Document2DocumentType);
+            insert.add(CISales.Document2DocumentType.DocumentLink, _instance);
+            insert.add(CISales.Document2DocumentType.DocumentTypeLink, instDocType);
+            insert.execute();
+        }
+    }
+
+
+    protected void connect2ProductDocumentType(final Parameter _parameter,
+                                               final CreatedDoc _createdDoc)
+        throws EFapsException
+    {
+        final Instance instDocType = Instance.get(_parameter.getParameterValue("documentType"));
+        if (instDocType.isValid() && _createdDoc.getInstance().isValid()) {
+            final Insert insert = new Insert(CISales.Document2DocumentType);
+            insert.add(CISales.Document2DocumentType.DocumentLink, _createdDoc.getInstance());
+            insert.add(CISales.Document2DocumentType.DocumentTypeLink, instDocType);
+            insert.execute();
+        }
+    }
+
+   */
 
 
 }

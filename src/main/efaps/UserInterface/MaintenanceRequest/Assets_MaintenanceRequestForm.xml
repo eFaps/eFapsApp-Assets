@@ -117,14 +117,14 @@
             <trigger program="org.efaps.esjp.assets.documents.MaintenanceRequest" method="autoComplete4Assets"
                 name="Assets_MaintenanceRequestForm.name.UI_FIELD_AUTOCOMPLETE" event="UI_FIELD_AUTOCOMPLETE" />
         </field>
-        <field name="assets4View">
-            <property name="SelectAlternateOID">linkto[Asset].oid</property>
+        <field name="assets4View">            
             <property name="ModeCreate">NONE</property>
             <property name="ModeEdit">READONLY</property>
             <property name="ModeView">READONLY</property>
-            <property name="Select">linkto[Asset].attribute[Name]</property>
+            <property name="Select">linkfrom[Assets_Assets2MaintenanceRequest#ToLink].linkto[FromLink].attribute[Name]</property>
             <property name="HRef">${COMMONURL}/MenuTree.jsp</property>
-        </field>
+            <property name="SelectAlternateOID">linkfrom[Assets_Assets2MaintenanceRequest#ToLink].linkto[FromLink].oid</property>
+        </field>     
         <field character="Heading" name="headingAssetsDetails">
             <property name="Level">2</property>
             <property name="Label">Assets_MaintenanceRequestForm.headingAssetsDetails.Heading</property>

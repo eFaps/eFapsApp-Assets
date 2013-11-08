@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?><!--
 
- Copyright 2003 - 2012 The eFaps Team
+ Copyright 2003 - 2010 The eFaps Team
 
  Licensed under the Apache License, Version 2.0 (the "License");
  you may not use this file except in compliance with the License.
@@ -19,23 +19,29 @@
  Last Changed:    $Date$
  Last Changed By: $Author$
 
---><datamodel-type xmlns="http://www.efaps.org/xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xsi:schemaLocation="http://www.efaps.org/xsd http://www.efaps.org/xsd/eFaps_1.0.xsd">
-    <uuid>a301a7d9-13cd-4efb-985a-c6983a5913aa</uuid>
+--><datamodel-type xmlns="http://www.efaps.org/xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.efaps.org/xsd http://www.efaps.org/xsd/eFaps_1.0.xsd">
+    <uuid>bcb3d3e7-710c-4398-831c-f90c2a742a70</uuid>
     <file-application>eFapsApp-Assets</file-application>
     <file-revision>$Rev$</file-revision>
     <definition>
         <version-expression>(version==latest)</version-expression>
-        <name>Assets_MaintenanceOrder</name>
-        <parent>ERP_DocumentAbstract</parent>
+        <name>Assets_Assets2MaintenanceOrder</name>
+        <parent>Assets_Assets2DocumentAbstract</parent>
         <attribute>
-            <name>Status</name>
-            <type>Status</type>
-            <typelink>Assets_MaintenanceOrderStatus</typelink>
-            <sqltable>ERP_DocumentAbstractSQLTable</sqltable>
-            <sqlcolumn>STATUS</sqlcolumn>
-            <trigger event="RANGE_VALUE" name="Assets_MaintenanceOrder.Status.RANGE_VALUE" program="org.efaps.esjp.admin.datamodel.StatusValue">
-            </trigger>
+            <name>FromLink</name>
+            <type>Link</type>
+            <typelink>Assets_AssetAbstract</typelink>
+            <sqltable>ERP_Document2DocumentAbstractSQLTable</sqltable>
+            <sqlcolumn>FROMID</sqlcolumn>
         </attribute>
+        <attribute>
+            <name>ToLink</name>
+            <type>Link</type>
+            <typelink>Assets_MaintenanceOrder</typelink>
+            <sqltable>ERP_Document2DocumentAbstractSQLTable</sqltable>
+            <sqlcolumn>TOID</sqlcolumn>
+        </attribute>
+        
     </definition>
+    
 </datamodel-type>

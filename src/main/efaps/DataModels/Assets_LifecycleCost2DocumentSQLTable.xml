@@ -20,8 +20,7 @@
  Last Changed By: $Author$
 
 -->
-<datamodel-sqltable xmlns="http://www.efaps.org/xsd"
-    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+<datamodel-sqltable xmlns="http://www.efaps.org/xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="http://www.efaps.org/xsd http://www.efaps.org/xsd/eFaps_1.0.xsd">
     <uuid>2339dae5-e790-4fe1-83dc-9ab5925a0665</uuid>
     <file-application>eFapsApp-Assets</file-application>
@@ -33,16 +32,16 @@
         <database>
             <table-name>T_ASS2DOC</table-name>
             <!-- columns -->
-            <column name="TYPEID"   not-null="true" type="INTEGER"/>
-            <column name="FROMID"   not-null="true" type="INTEGER"/>
-            <column name="TOID"     not-null="true" type="INTEGER"/>
-            <column name="CREATOR"  not-null="true" type="INTEGER"/>
-            <column name="CREATED"  not-null="true" type="DATETIME"/>
-            <column name="MODIFIER" not-null="true" type="INTEGER"/>
-            <column name="MODIFIED" not-null="true" type="DATETIME"/>
+            <column name="TYPEID" not-null="true" type="INTEGER" />
+            <column name="FROMID" not-null="true" type="INTEGER" />
+            <column name="TOID" not-null="true" type="INTEGER" />
+            <column name="CREATOR" not-null="true" type="INTEGER" />
+            <column name="CREATED" not-null="true" type="DATETIME" />
+            <column name="MODIFIER" not-null="true" type="INTEGER" />
+            <column name="MODIFIED" not-null="true" type="DATETIME" />
             <!-- foreign keys -->
-            <foreign key="CREATOR"  name="T_ASS2DOC_FK_CRTR" reference="T_USERPERSON(ID)"/>
-            <foreign key="MODIFIER" name="T_ASS2DOC_FK_MDFR" reference="T_USERPERSON(ID)"/>
+            <foreign key="CREATOR" name="T_ASS2DOC_FK_CRTR" reference="T_USERPERSON(ID)" />
+            <foreign key="MODIFIER" name="T_ASS2DOC_FK_MDFR" reference="T_USERPERSON(ID)" />
         </database>
     </definition>
 </datamodel-sqltable>
