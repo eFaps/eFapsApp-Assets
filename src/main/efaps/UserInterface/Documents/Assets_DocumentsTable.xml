@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?><!--
 
- Copyright 2003 - 2009 The eFaps Team
+ Copyright 2003 - 2011 The eFaps Team
 
  Licensed under the Apache License, Version 2.0 (the "License");
  you may not use this file except in compliance with the License.
@@ -20,16 +20,15 @@
  Last Changed By: $Author$
 
 --><ui-table xmlns="http://www.efaps.org/xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.efaps.org/xsd http://www.efaps.org/xsd/eFaps_1.0.xsd">
-
-    <uuid>e7401911-b6ad-4bb7-b28f-f1c35b2b8fa2</uuid>
-    <file-application>eFapsApp-Sales</file-application>
+    <uuid>91d7c643-e353-42b7-8050-c1387a65caf2</uuid>
+    <file-application>eFapsApp-Assets</file-application>
     <file-revision>$Rev$</file-revision>
-
     <definition>
         <version-expression>(version==latest)</version-expression>
-        <name>Assets_MaintenanceRequestTable</name>
+        <name>Assets_DocumentsTable</name>
         <!-- fields -->
-        <field name="type">
+        
+         <field name="type">
             <property name="Attribute">Type</property>
             <property name="HRef">${COMMONURL}/MenuTree.jsp</property>
             <property name="Label">Assets_MaintenanceRequestTable/Type.Label</property>
@@ -54,7 +53,7 @@
             <property name="Label">Assets_MaintenanceRequestTable/Date.Label</property>
         </field>
         <field name="vendorLink">
-            <property name="Attribute">Saleserson</property>
+            <property name="Attribute">Salesperson</property>
             <property name="Label">Assets_MaintenanceRequestTable/Salesperson.Label</property>
         </field>
         
@@ -69,6 +68,6 @@
             <property name="Target">popup</property>
             <property name="SortAble">false</property>
             <property name="Width">15px</property>
-        </field>
+        </field>        
     </definition>
 </ui-table>
