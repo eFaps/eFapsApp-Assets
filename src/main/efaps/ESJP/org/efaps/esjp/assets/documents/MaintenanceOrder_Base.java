@@ -48,7 +48,7 @@ public abstract class MaintenanceOrder_Base
     {
         final CreatedDoc createdDoc = createDoc(_parameter);
         connectAsset2Document(_parameter, createdDoc, CIAssets.Assets2MaintenanceOrder);
-        // createPositions(_parameter, createdDoc);
+        createPositions(_parameter, createdDoc);
         // executeProcess(_parameter, createdDoc);
         return new Return();
     }

@@ -32,7 +32,7 @@
         </access>
         <target>
             <menu>Assets_MaintenanceRequestMyDesk_Menu</menu>
-            <table>Sales_DocumentAbstractTable</table>
+            <table>Assets_MaintenanceRequestTable</table>
             <evaluate program="org.efaps.esjp.common.uitable.MultiPrint">
                 <property name="Type01">Assets_MaintenanceRequest</property>
                 <!--<property name="Types">Sales_ProductRequest</property> -->
