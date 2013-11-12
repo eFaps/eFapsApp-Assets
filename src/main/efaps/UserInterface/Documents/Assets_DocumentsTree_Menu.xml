@@ -28,7 +28,7 @@
         <name>Assets_DocumentsTree_Menu</name>
         <!-- childs -->
         <childs>
-            <child>Assets_DepreciationTree_Menu_Action</child>
+            <child>Assets_DocumentsTree_Menu_Action</child>
         </childs>
     </definition>
 </ui-menu>

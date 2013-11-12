@@ -27,15 +27,16 @@
         <version-expression>(version==latest)</version-expression>
         <name>Assets_AssetTree_Documents</name>
         <target>
-            <menu>Assets_AssetTree_Depreciation_Menu</menu>
+            <menu>Assets_DocumentsTree_Menu</menu>
             <table>Assets_DocumentsTable</table>
             <evaluate program="org.efaps.esjp.common.uitable.MultiPrint">
-                <property name="Type">Assets_DepreciationAbstract</property>
-                <property name="LinkFrom">AssetLinkAbstract</property>
+                <property name="Types">Assets_Assets2DocumentAbstract</property>
+                <property name="LinkFroms">FromAbstractLink</property>
             </evaluate>
+            <!-- <help>org.efaps.wiki.projects.Showprojects.wiki</help> -->
         </target>
         <!-- properties -->
         <property name="Target">content</property>
         <property name="TargetShowCheckBoxes">true</property>
-    </definition>
+    </definition>    
 </ui-command>
