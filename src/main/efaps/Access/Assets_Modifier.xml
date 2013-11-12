@@ -26,7 +26,7 @@
     <definition>
         <version-expression>(version==latest)</version-expression>
         <name>Assets_Modifier</name>
-        <access-type>show</access-type>
+      <!--  <access-type>show</access-type>
         <access-type>read</access-type>
         <access-type>modify</access-type>
         <access-type>checkout</access-type>
@@ -53,6 +53,6 @@
             <key>Depreciated</key>
             <key>Sold</key>
         </status>
-        <role>Assets_Modifier</role>
+        <role>Assets_Modifier</role>-->
     </definition>
 </access-set>

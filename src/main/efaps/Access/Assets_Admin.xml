@@ -26,7 +26,7 @@
     <definition>
     <version-expression>(version==latest)</version-expression>
     <name>Assets_Admin</name>
-    <access-type>show</access-type>
+   <!--  <access-type>show</access-type>
     <access-type>read</access-type>
     <access-type>modify</access-type>
     <access-type>checkout</access-type>
@@ -57,6 +57,6 @@
 
 
 
-    <role>Assets_Admin</role>
+    <role>Assets_Admin</role>  -->
     </definition>
 </access-set>
