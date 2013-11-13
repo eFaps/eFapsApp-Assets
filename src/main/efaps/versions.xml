@@ -38,25 +38,30 @@
         </dependency>
         <dependency order="2">
             <groupId>org.efaps.apps</groupId>
-            <artifactId>contacts</artifactId>
+            <artifactId>locations</artifactId>
             <version>3.2.0-SNAPSHOT</version>
         </dependency>
         <dependency order="3">
             <groupId>org.efaps.apps</groupId>
-            <artifactId>commons</artifactId>
+            <artifactId>contacts</artifactId>
             <version>3.2.0-SNAPSHOT</version>
         </dependency>
         <dependency order="4">
             <groupId>org.efaps.apps</groupId>
-            <artifactId>products</artifactId>
+            <artifactId>commons</artifactId>
             <version>3.2.0-SNAPSHOT</version>
         </dependency>
         <dependency order="5">
             <groupId>org.efaps.apps</groupId>
-            <artifactId>sales</artifactId>
+            <artifactId>products</artifactId>
             <version>3.2.0-SNAPSHOT</version>
         </dependency>
         <dependency order="6">
+            <groupId>org.efaps.apps</groupId>
+            <artifactId>sales</artifactId>
+            <version>3.2.0-SNAPSHOT</version>
+        </dependency>
+        <dependency order="7">
             <groupId>org.efaps.apps</groupId>
             <artifactId>accounting</artifactId>
             <version>3.2.0-SNAPSHOT</version>
@@ -64,7 +69,7 @@
     </dependencies>
     <version number="1" reloadCache="false" login="true" compile="true">
         <description>Install ERP Assets App.</description>
-                <script type="groovy">
+        <script type="groovy">
             import java.io.File;
             import java.util.UUID;
             import org.efaps.admin.runlevel.RunLevel;
@@ -74,7 +79,7 @@
             import org.efaps.db.QueryBuilder;
             import org.efaps.db.InstanceQuery;
             import org.efaps.esjp.admin.ui.UIUpdate;
-            
+
             EFAPS_LOGGER.info("Importing Data for eFapsApp-Assets");
 
             RunLevel.init("shell");
@@ -82,7 +87,8 @@
 
             <!-- Assets_MyDesk, MainToolBar -->
             UIUpdate update = new UIUpdate();
-            update.add2Menu("220666bf-a469-4fd7-a817-d4151d5ef364", "87001cc3-c45c-44de-b8f1-776df507f268", 2);
+            update.add2Menu("220666bf-a469-4fd7-a817-d4151d5ef364", "87001cc3-c45c-44de-b8f1-776df507f268",
+            2);
 
         </script>
     </version>
