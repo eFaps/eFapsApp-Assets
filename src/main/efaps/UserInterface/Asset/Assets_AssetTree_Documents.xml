@@ -26,14 +26,12 @@
     <definition>
         <version-expression>(version==latest)</version-expression>
         <name>Assets_AssetTree_Documents</name>
-        <target>
-            <menu>Assets_DocumentsTree_Menu</menu>
+        <target>            
             <table>Assets_DocumentsTable</table>
             <evaluate program="org.efaps.esjp.common.uitable.MultiPrint">
                 <property name="Types">Assets_Assets2DocumentAbstract</property>
                 <property name="LinkFroms">FromAbstractLink</property>
-            </evaluate>
-            <!-- <help>org.efaps.wiki.projects.Showprojects.wiki</help> -->
+            </evaluate>           
         </target>
         <!-- properties -->
         <property name="Target">content</property>
