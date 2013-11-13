@@ -35,7 +35,7 @@
         <!-- type tree for -->
         <type>Assets_MaintenanceRequest</type>
         <childs>
-        <child>Assets_MaintenanceRequestTree_Position</child>
+        <!-- <child>Assets_MaintenanceRequestTree_Position</child> -->
         </childs>
         <!-- properties -->
         <property name="Target">content</property>
