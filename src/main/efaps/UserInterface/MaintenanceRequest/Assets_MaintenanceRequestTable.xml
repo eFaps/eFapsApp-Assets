@@ -54,7 +54,7 @@
             <property name="Label">Assets_MaintenanceRequestTable/Date.Label</property>
         </field>
         <field name="vendorLink">
-            <property name="Attribute">Saleserson</property>
+            <property name="Attribute">Salesperson</property>
             <property name="Label">Assets_MaintenanceRequestTable/Salesperson.Label</property>
         </field>
         
