@@ -24,7 +24,6 @@
     <uuid>a96105ef-20fb-4993-aaa6-9517f39a7ad6</uuid>
     <file-application>eFapsApp-Assets</file-application>
     <file-revision>$Rev$</file-revision>
-
     <definition>
         <version-expression>(version==latest)</version-expression>
         <name>Assets_MaintenanceRequestTree</name>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?><!--
 
- Copyright 2003 - 2011 The eFaps Team
+ Copyright 2003 - 2013 The eFaps Team
 
  Licensed under the Apache License, Version 2.0 (the "License");
  you may not use this file except in compliance with the License.
@@ -20,22 +20,21 @@
  Last Changed By: $Author$
 
 --><ui-command xmlns="http://www.efaps.org/xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.efaps.org/xsd http://www.efaps.org/xsd/eFaps_1.0.xsd">
-    <uuid>ab4fc2cb-7579-4ec7-b8cb-44fc192d7b66</uuid>
+    <uuid>f853250c-2859-410e-ab79-126a7f5bf60d</uuid>
     <file-application>eFapsApp-Assets</file-application>
     <file-revision>$Rev$</file-revision>
     <definition>
         <version-expression>(version==latest)</version-expression>
-        <name>Assets_AssetTree_Documents</name>
+        <name>Assets_AssetTree_Documents_Menu_Action_Disconnect</name>
+        <access>
+            <role>Assets_Admin</role>
+        </access>
+        <!-- target definitions -->
         <target>
-            <menu>Assets_AssetTree_Documents_Menu</menu>
-            <table>Assets_DocumentsTable</table>
-            <evaluate program="org.efaps.esjp.common.uitable.MultiPrint">
-                <property name="Types">Assets_Assets2DocumentAbstract</property>
-                <property name="LinkFroms">FromAbstractLink</property>
-            </evaluate>           
+            <execute program="org.efaps.esjp.common.uitable.CommonDelete"/>
         </target>
         <!-- properties -->
-        <property name="Target">content</property>
-        <property name="TargetShowCheckBoxes">true</property>
-    </definition>    
+        <property name="AskUser">true</property>
+        <property name="Submit">true</property>
+    </definition>
 </ui-command>

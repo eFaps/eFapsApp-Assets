@@ -27,41 +27,36 @@
 
     <definition>
         <version-expression>(version==latest)</version-expression>
-        <name>Assets_MaintenanceAbstractTable</name>
-        <!-- fields -->
-        <field name="type">
-            <property name="Attribute">Type</property>
-            <property name="HRef">${COMMONURL}/MenuTree.jsp</property>
-            <property name="Label">Assets_MaintenanceAbstract/Type.Label</property>
+        <name>Assets_DocumentsTable</name>
+        <!-- fields -->        
+         <field name="type">
+           <property name="Select">linkto[ToAbstractLink].type.label</property>            
+            <property name="Label">Assets_DocumentsTable/Type.Label</property>
             <property name="ShowTypeIcon">true</property>
         </field>
         <field name="name">
-            <property name="Attribute">Name</property>
-            <property name="Label">Assets_MaintenanceAbstract/Name.Label</property>
+            <property name="Select">linkto[ToAbstractLink].attribute[Name]</property>
+            <property name="SelectAlternateOID">linkto[ToAbstractLink].oid</property>
+            <property name="HRef">${COMMONURL}/MenuTree.jsp</property>
+            <property name="Label">Assets_DocumentsTable/Name.Label</property>
         </field>
         <field name="date">
+            <property name="Select">linkto[ToAbstractLink].attribute[Date]</property>
             <property name="FilterType">FREETEXT</property>
             <property name="FilterRequired">TRUE</property>
             <property name="FilterBase">DATABASE</property>
-            <property name="FilterDefault">WEEK</property>
-            <property name="Attribute">Date</property>
-            <property name="Label">Assets_MaintenanceAbstract/Date.Label</property>
+            <property name="FilterDefault">MONTH</property>
+            <property name="Label">Assets_DocumentsTable/Date.Label</property>
+            <property name="ClassNameUI">org.efaps.admin.datamodel.ui.DateUI</property>
         </field>
-        <field name="vendorLink">
-            <property name="Attribute">Salesperson</property>
-            <property name="Label">Assets_MaintenanceAbstract/Salesperson.Label</property>
-        </field>
+        <field name="vendorLink">           
+            <property name="Select">linkto[ToAbstractLink].attribute[Salesperson]</property>
+            <property name="Label">Assets_DocumentsTable/Salesperson.Label</property>
+        </field>        
         <field name="status">
-            <property name="FilterType">PICKLIST</property>
-            <property name="Attribute">StatusAbstract</property>
-            <property name="Label">Assets_MaintenanceAbstract/Status.Label</property>
-        </field>
-        <field name="buttonOpenInNewWindow">
-            <icon>eFapsActionNewWindow</icon>
-            <property name="HRef">${COMMONURL}/MenuTree.jsp</property>
-            <property name="Target">popup</property>
-            <property name="SortAble">false</property>
-            <property name="Width">15px</property>
-        </field>
+            <property name="FilterType">PICKLIST</property>            
+             <property name="Select">linkto[ToAbstractLink].attribute[StatusAbstract]</property>
+            <property name="Label">Assets_DocumentsTable/Status.Label</property>
+        </field>          
     </definition>
 </ui-table>
