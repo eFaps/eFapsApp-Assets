@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?><!--
 
- Copyright 2003 - 2013 The eFaps Team
+ Copyright 2003 - 2010 The eFaps Team
 
  Licensed under the Apache License, Version 2.0 (the "License");
  you may not use this file except in compliance with the License.
@@ -19,17 +19,20 @@
  Last Changed:    $Date$
  Last Changed By: $Author$
 
---><ui-menu xmlns="http://www.efaps.org/xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.efaps.org/xsd http://www.efaps.org/xsd/eFaps_1.0.xsd">
-    <uuid>eabb1fa8-6389-4b73-94a4-a1969318f0c1</uuid>
+--><ui-search xmlns="http://www.efaps.org/xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.efaps.org/xsd http://www.efaps.org/xsd/eFaps_1.0.xsd">
+    <uuid>359d6491-8021-4590-8f72-dd7d28068e05</uuid>
     <file-application>eFapsApp-Assets</file-application>
     <file-revision>$Rev$</file-revision>
     <definition>
         <version-expression>(version==latest)</version-expression>
-        <name>Assets_AssetTreeDocuments_Menu_Action</name>
+        <name>Assets_AssetTree_Documents_Menu_Action_AddExisting_Search</name>
+        <!-- defaults -->
+        <default>
+            <command>Accounting_LabelSearch</command>
+        </default>
         <!-- childs -->
         <childs>
-            <child>Assets_AssetTree_Documents_Menu_Action_AddExisting</child>
-            <child>Assets_AssetTree_Documents_Menu_Action_Disconnect</child>
+            <child>Accounting_LabelSearch</child>
         </childs>
     </definition>
-</ui-menu>
+</ui-search>
