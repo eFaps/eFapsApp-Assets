@@ -46,9 +46,9 @@ public abstract class AquisitionCost_Base
      * @throws EFapsException on error
      */
     public Return create(final Parameter _parameter)
-        throws EFapsException
-    {
-        createCost(_parameter);
-        return new Return();
-    }
+                    throws EFapsException
+       {
+                    createCost(_parameter);
+                    return new Return();
+       }
 }
