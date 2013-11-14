@@ -25,10 +25,8 @@ import java.math.BigDecimal;
 import java.text.DecimalFormat;
 import java.text.NumberFormat;
 import java.text.ParseException;
-import java.util.UUID;
 
 import org.apache.commons.lang3.StringUtils;
-import org.efaps.admin.common.SystemConfiguration;
 import org.efaps.admin.datamodel.Type;
 import org.efaps.admin.event.Parameter;
 import org.efaps.admin.event.Parameter.ParameterValues;
@@ -43,6 +41,8 @@ import org.efaps.esjp.ci.CIAssets;
 import org.efaps.esjp.ci.CIERP;
 import org.efaps.esjp.ci.CISales;
 import org.efaps.esjp.common.uisearch.Connect;
+import org.efaps.esjp.sales.util.Sales;
+import org.efaps.esjp.sales.util.SalesSettings;
 import org.efaps.util.EFapsException;
 
 
@@ -61,8 +61,7 @@ public abstract class LifecycleCostAbstract_Base
         throws EFapsException
     {
         // Sales-Configuration
-        final Instance baseCurrInst = SystemConfiguration.get(
-                        UUID.fromString("c9a1cbc3-fd35-4463-80d2-412422a3802f")).getLink("CurrencyBase");
+        final Instance baseCurrInst = Sales.getSysConfig().getLink(SalesSettings.CURRENCYBASE);
 
         final Instance rateCurrInst = _parameter.getParameterValue("rateCurrencyLink") == null
                         ? baseCurrInst
