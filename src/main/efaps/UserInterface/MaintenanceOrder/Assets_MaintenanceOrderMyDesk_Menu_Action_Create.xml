@@ -36,9 +36,9 @@
         <target>
             <form>Assets_MaintenanceOrderForm</form>
             <execute method="create" program="org.efaps.esjp.assets.documents.MaintenanceOrder">
-                <property name="StatusGroup">Assets_MaintenanceRequestStatus</property>
-                <property name="PositionType">Assets_MaintenanceRequestPosition</property>
-                <property name="Status">Open</property>
+                <property name="StatusGroup">Assets_MaintenanceOrderStatus</property>
+                <property name="PositionType">Assets_MaintenanceOrderPosition</property>
+                <property name="Status">Slope</property>
                 <property name="UseNumberGenerator4Name">true</property>
             </execute>
         </target>
