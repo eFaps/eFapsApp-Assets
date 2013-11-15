@@ -30,10 +30,9 @@
         <target>
             <search>Assets_AssetTree_Documents_Menu_Action_AddExisting_Search</search>
             <execute program="org.efaps.esjp.common.uisearch.Connect">
-                <property name="ConnectChildAttribute">ToLink</property>
-                <property name="ConnectParentAttribute">FromLink</property>
-                <property name="ConnectType">Assets_Assets2MaintenanceOrder</property>
-                <property name="ConnectType">Assets_Assets2MaintenanceRequest</property>
+                <property name="ConnectChildAttribute">ToAbstractLink</property>
+                <property name="ConnectParentAttribute">FromAbstractLink</property>
+                <property name="ConnectType">ERP_Document2DocumentAbstract</property>                
             </execute>
         </target>
         <!-- properties -->
