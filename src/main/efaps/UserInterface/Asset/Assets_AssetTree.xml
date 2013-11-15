@@ -46,6 +46,7 @@
             <child>Assets_AssetTree_Employee</child>
             <child>Assets_AssetTree_Location</child>
             <child>Assets_AssetTree_Documents</child>
+            <child>Assets_AssetTree_File</child>
         </childs>
         <!-- properties -->
         <property name="Target">content</property>
