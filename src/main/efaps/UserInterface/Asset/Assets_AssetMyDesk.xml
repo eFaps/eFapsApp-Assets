@@ -41,7 +41,7 @@
             <menu>Assets_AssetMyDesk_Menu</menu>
             <table>Assets_AssetTable</table>
             <evaluate program="org.efaps.esjp.common.uitable.MultiPrint">
-                <property name="Types">Assets_AssetAbstract</property>
+                <property name="Type">Assets_AssetAbstract</property>
             </evaluate>
         </target>
         <!-- properties -->

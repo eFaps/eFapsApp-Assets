@@ -28,11 +28,11 @@
         <name>Assets_AssetTree_Documents_Menu_Action_AddExisting_Search</name>
         <!-- defaults -->
         <default>
-            <command>Assets_DocumentSearch</command>
+            <command>Assets_AssetsDocumentSearch</command>
         </default>
         <!-- childs -->
         <childs>
-            <child>Assets_DocumentSearch</child>
+            <child>Assets_AssetsDocumentSearch</child>
         </childs>
     </definition>
 </ui-search>

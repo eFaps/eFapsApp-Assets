@@ -32,7 +32,10 @@
             <execute program="org.efaps.esjp.common.uisearch.Connect">
                 <property name="ConnectChildAttribute">ToAbstractLink</property>
                 <property name="ConnectParentAttribute">FromAbstractLink</property>
-                <property name="ConnectType">ERP_Document2DocumentAbstract</property>                
+                <!--Assets_MaintenanceRequest;Assets_Assets2MaintenanceRequest -->                
+                <property name="ConnectTypeMap">48181024-d9fe-4721-b0e7-4461e685e5f5;12713805-fc55-4fe4-8e73-a85510237680</property>                
+                <!--Assets_MaintenanceOrder;Assets_Assets2MaintenanceOrder -->     
+                <property name="ConnectTypeMap01">a301a7d9-13cd-4efb-985a-c6983a5913aa;bcb3d3e7-710c-4398-831c-f90c2a742a70</property>                
             </execute>
         </target>
         <!-- properties -->
