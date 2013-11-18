@@ -31,6 +31,35 @@
     <file-revision>$Rev: 5317 $</file-revision>
     <definition>
         <version-expression>(version==latest)</version-expression>
+        <profiles>
+            <profile name="eFaps" />
+        </profiles>
+        <name>Assets_AssetTree</name>
+        <!-- targets -->
+        <target>
+            <menu>Assets_AssetTree_Menu</menu>
+            <form>Assets_AssetForm</form>
+        </target>
+        <!-- type tree for -->
+        <type>Assets_AssetAbstract</type>
+
+        <childs>
+            <child>Assets_AssetTree_Depreciation</child>
+            <child>Assets_AssetTree_LifecycleCost</child>
+            <child>Assets_AssetTree_Employee</child>
+            <child>Assets_AssetTree_Location</child>
+            <child>Assets_AssetTree_Documents</child>
+        </childs>
+        <!-- properties -->
+        <property name="Target">content</property>
+        <property name="TargetMode">view</property>
+    </definition>
+
+    <definition>
+        <version-expression>(version==latest)</version-expression>
+        <profiles>
+            <profile name="archives" />
+        </profiles>
         <name>Assets_AssetTree</name>
         <!-- targets -->
         <target>

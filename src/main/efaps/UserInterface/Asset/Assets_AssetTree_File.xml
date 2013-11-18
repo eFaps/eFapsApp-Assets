@@ -14,10 +14,31 @@
 
 --><ui-command xmlns="http://www.efaps.org/xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.efaps.org/xsd http://www.efaps.org/xsd/eFaps_1.0.xsd">
     <uuid>7ac72ad8-1c3a-4b09-957f-58545b1f4c3b</uuid>
-    <file-application>G y G</file-application>
+    <file-application>eFapsApp-Assets</file-application>
     <file-revision>$Rev$</file-revision>
+
     <definition>
         <version-expression>(version==latest)</version-expression>
+        <profiles>
+            <profile name="eFaps" />
+        </profiles>
+        <name>Assets_AssetTree_File</name>
+        <!-- target definitions -->
+        <target>
+            <menu>Assets_AssetTree_File_Menu</menu>
+            <table>Archives_ArchiveTable</table>
+        </target>
+        <!-- properties -->
+        <property name="Target">content</property>
+        <property name="TargetShowCheckBoxes">true</property>
+        <property name="TargetStructurBrowserField">name</property>
+    </definition>
+
+    <definition>
+        <version-expression>(version==latest)</version-expression>
+        <profiles>
+            <profile name="archives" />
+        </profiles>
         <name>Assets_AssetTree_File</name>
         <!-- target definitions -->
         <target>
@@ -36,4 +57,5 @@
         <property name="TargetShowCheckBoxes">true</property>
         <property name="TargetStructurBrowserField">name</property>
     </definition>
+
 </ui-command>

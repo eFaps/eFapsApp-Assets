@@ -14,10 +14,38 @@
 
 --><ui-command xmlns="http://www.efaps.org/xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.efaps.org/xsd http://www.efaps.org/xsd/eFaps_1.0.xsd">
     <uuid>5ee7a5c7-e062-4d91-8155-6deed93caa10</uuid>
-        <file-application>G y G</file-application>
+        <file-application>eFapsApp-Assets</file-application>
     <file-revision>$Rev$</file-revision>
+
     <definition>
         <version-expression>(version==latest)</version-expression>
+        <profiles>
+            <profile name="eFaps" />
+        </profiles>
+        <name>Assets_AssetTree_File_Menu_Action_CreateRoot</name>
+        <access>
+            <role>Archives_Admin</role>
+            <role>Archives_Modifier</role>
+        </access>
+
+        <!-- target definitions -->
+        <target>
+            <form>Archives_ArchiveRootForm</form>
+        </target>
+
+        <!-- properties -->
+        <property name="Target">modal</property>
+        <property name="TargetCreateType">Archives_ArchiveRoot</property>
+        <property name="TargetMode">create</property>
+        <property name="WindowHeight">460</property>
+        <property name="WindowWidth">515</property>
+    </definition>
+
+    <definition>
+        <version-expression>(version==latest)</version-expression>
+        <profiles>
+            <profile name="archives" />
+        </profiles>
         <name>Assets_AssetTree_File_Menu_Action_CreateRoot</name>
         <access>
             <role>Archives_Admin</role>
@@ -48,4 +76,5 @@
         <property name="WindowHeight">460</property>
         <property name="WindowWidth">515</property>
     </definition>
+
 </ui-command>
