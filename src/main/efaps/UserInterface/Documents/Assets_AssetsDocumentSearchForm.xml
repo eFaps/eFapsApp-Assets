@@ -22,7 +22,7 @@
 -->
 <ui-form xmlns="http://www.efaps.org/xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="http://www.efaps.org/xsd http://www.efaps.org/xsd/eFaps_1.0.xsd">
-    <uuid>21821ba6-25eb-4595-a1a5-3cffa9db9693</uuid>
+    <uuid>a102ff8a-a4fd-4bcb-98b7-32ff1e005aa8</uuid>
     <file-application>eFapsApp-Assets</file-application>
     <file-revision>$Rev$</file-revision>
     <definition>
