@@ -28,8 +28,8 @@
         <name>Assets_AssetsDocumentSearch</name>
         <!-- target definitions -->
         <target>
-            <form>Assets_DocumentSearchForm</form>
-            <table>ERP_DocumentAbstractTable</table>           
+            <form>Assets_AssetsDocumentSearchForm</form>
+            <table>ERP_DocumentAbstractTable</table>
             <evaluate program="org.efaps.esjp.common.uisearch.Search">
                 <property name="Type">Assets_MaintenanceRequest</property>
                 <property name="Type01">Assets_MaintenanceOrder</property>

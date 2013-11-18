@@ -27,22 +27,21 @@
     <file-revision>$Rev$</file-revision>
     <definition>
         <version-expression>(version==latest)</version-expression>
-        <name>Assets_DocumentSearchForm</name>
+        <name>Assets_AssetsDocumentSearchForm</name>
         <!-- fields -->
          <field name="type">
             <property name="Attribute">Type</property>
-            <property name="Label">Assets_DocumentSearchForm.type.Label</property>
+            <property name="Label">Assets_AssetsDocumentSearchForm.type.Label</property>
             <property name="Columns">15</property>
             <property name="ModeSearch">EDITABLE</property>
-            <trigger event="UI_FIELD_VALUE" method="typeFieldValue"
-                name="Assets_DocumentSearchForm.type.UI_FIELD_VALUE"
-                program="org.efaps.esjp.common.uisearch.Search">
+            <trigger program="org.efaps.esjp.common.uisearch.Search" method="typeFieldValue"
+                name="Assets_AssetsDocumentSearchForm.type.UI_FIELD_VALUE" event="UI_FIELD_VALUE">
                 <property name="Types">ERP_DocumentAbstract</property>
             </trigger>
         </field>
         <field name="name">
             <property name="Attribute">Name</property>
-            <property name="Label">Assets_DocumentSearchForm.name.Label</property>
+            <property name="Label">Assets_AssetsDocumentSearchForm.name.Label</property>
             <property name="Columns">15</property>
             <property name="ModeSearch">EDITABLE</property>
         </field>
