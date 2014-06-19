@@ -47,16 +47,6 @@ import org.efaps.util.EFapsException;
 public abstract class AbstractAssetsDocument_Base
     extends AbstractProductDocument
 {
-
-    /**
-     * Method to create the basic Document. The method checks for the Type to be
-     * created for every attribute if a related field is in the parameters.
-     *
-     * @param _parameter Parameter as passed from the eFaps API.
-     * @return Instance of the document.
-     * @throws EFapsException on error.
-     */
-
     /**
      * Used by the AutoCompleteField used in the select doc form for
      * DeliveryNote.

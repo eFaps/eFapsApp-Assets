@@ -49,6 +49,7 @@
             <child>Assets_AssetTree_Employee</child>
             <child>Assets_AssetTree_Location</child>
             <child>Assets_AssetTree_Documents</child>
+            <child>Assets_AssetTree_Products</child>
         </childs>
         <!-- properties -->
         <property name="Target">content</property>
@@ -76,6 +77,7 @@
             <child>Assets_AssetTree_Location</child>
             <child>Assets_AssetTree_Documents</child>
             <child>Assets_AssetTree_File</child>
+            <child>Assets_AssetTree_Products</child>
         </childs>
         <!-- properties -->
         <property name="Target">content</property>

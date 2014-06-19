@@ -32,7 +32,16 @@
     <definition>
         <version-expression>(version==latest)</version-expression>
         <name>Assets_AssetForm</name>
-        <!-- fields -->
+        <field name="jsLinkField">
+            <property name="ModeCreate">HIDDEN</property>
+            <property name="ModeEdit">NONE</property>
+            <property name="ModeView">NONE</property>
+            <trigger event="UI_FIELD_VALUE" method="getJSLinkField"
+                name="Assets_AssetForm.jsLinkField.UI_FIELD_VALUE"
+                program="org.efaps.esjp.common.uiform.Field">
+                <property name="link">/servlet/static/org.efaps.ui.wicket.behaviors.FieldUpdate.js?</property>
+            </trigger>
+        </field>
         <field name="name">
             <property name="ModeCreate">EDITABLE</property>
             <property name="ModeEdit">EDITABLE</property>
@@ -83,6 +92,15 @@
         <field name="modified">
             <property name="Attribute">Modified</property>
             <property name="ModeSearch">EDITABLE</property>
+        </field>
+        <field name="javaScript">
+            <property name="ModePrint">NONE</property>
+            <property name="ModeCreate">HIDDEN</property>
+            <property name="ModeView">NONE</property>
+            <trigger program="org.efaps.esjp.assets.documents.Asset"
+                method="getJavaScriptUIValue"
+                name="Asset_AssetForm.javaScript.UI_FIELD_VALUE"
+                event="UI_FIELD_VALUE" />
         </field>
     </definition>
 </ui-form>
