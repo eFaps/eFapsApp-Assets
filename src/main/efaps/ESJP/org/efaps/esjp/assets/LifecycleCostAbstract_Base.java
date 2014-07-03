@@ -25,6 +25,7 @@ import java.math.BigDecimal;
 import java.text.DecimalFormat;
 import java.text.NumberFormat;
 import java.text.ParseException;
+import java.util.Map;
 
 import org.apache.commons.lang3.StringUtils;
 import org.efaps.admin.datamodel.Type;
@@ -149,13 +150,15 @@ public abstract class LifecycleCostAbstract_Base
 
             @Override
             protected Type getConnectType(final Parameter _parameter,
-                                          final Instance _childInstance)
+                                          final Instance _childInst,
+                                          final Map<Integer, String> _childTypes,
+                                          final Map<Integer, String> _types)
                 throws EFapsException
             {
                 Type type = null;
                 final Instance instance = _parameter.getInstance();
                 if (instance.getType().isKindOf(CIAssets.OperationCostConsumables.getType())) {
-                    if (_childInstance.getType().isKindOf(CISales.Invoice.getType())) {
+                    if (_childInst.getType().isKindOf(CISales.Invoice.getType())) {
                         type = CIAssets.OperationCostConsumables2Invoice.getType();
                     }
                 }
