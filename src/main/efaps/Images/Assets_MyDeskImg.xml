@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!--
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><!--
 
  Copyright 2003 - 2013 The eFaps Team
 
@@ -19,26 +18,22 @@
  Revision:        $Rev$
  Last Changed:    $Date$
  Last Changed By: $Author$
+ Original Author: Aha-Soft
+ Original Name:   Equipment.png
+ Original Web:    www.aha-soft.com
+                  [ http://www.small-icons.com/stock-icons/16x16-free-application-icons.htm ]
+ Original License:Creative Commons Attribution 3.0 License
+                  [ http://creativecommons.org/licenses/by/3.0/us/ ]
 
 -->
-<ui-menu xmlns="http://www.efaps.org/xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+<ui-image xmlns="http://www.efaps.org/xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="http://www.efaps.org/xsd http://www.efaps.org/xsd/eFaps_1.0.xsd">
-    <uuid>220666bf-a469-4fd7-a817-d4151d5ef364</uuid>
-    <file-application>eFapsApp-Assets</file-application>
+    <uuid>4b5d35ed-61e1-4c4e-92c8-9901da002a9a</uuid>
+    <file-application>eFaps-Assets</file-application>
     <file-revision>$Rev$</file-revision>
     <definition>
         <version-expression>(version==latest)</version-expression>
-        <name>Assets_MyDesk</name>
-        <icon>Assets_MyDeskImg</icon>
-        <access>
-            <role>Assets_Admin</role>
-            <role>Assets_Modifier</role>
-            <role>Assets_Reader</role>
-        </access>
-        <childs>
-            <child>Assets_AssetMyDesk</child>
-            <child>Assets_MaintenanceRequestMyDesk</child>
-            <child>Assets_MaintenanceOrderMyDesk</child>
-        </childs>
+        <name>Assets_MyDeskImg</name>
+        <file>Assets_MyDeskImg.png</file>
     </definition>
-</ui-menu>
+</ui-image>
