@@ -25,7 +25,6 @@ import java.math.BigDecimal;
 import java.text.DecimalFormat;
 import java.text.NumberFormat;
 import java.text.ParseException;
-import java.util.Map;
 
 import org.apache.commons.lang3.StringUtils;
 import org.efaps.admin.datamodel.Type;
@@ -144,25 +143,35 @@ public abstract class LifecycleCostAbstract_Base
      * @throws EFapsException on error
      */
     public Return connect(final Parameter _parameter)
-                    throws EFapsException
+        throws EFapsException
     {
-        final Connect connect = new Connect() {
+        final Connect connect = new Connect()
+        {
 
             @Override
-            protected Type getConnectType(final Parameter _parameter,
-                                          final Instance _childInst,
-                                          final Map<Integer, String> _childTypes,
-                                          final Map<Integer, String> _types)
+            protected TypeWA getTypeWithAttribute(final Parameter _parameter,
+                                                  final Instance _childInst,
+                                                  final int _idx)
                 throws EFapsException
             {
-                Type type = null;
-                final Instance instance = _parameter.getInstance();
-                if (instance.getType().isKindOf(CIAssets.OperationCostConsumables.getType())) {
+                final String parentAttr = getProperty(_parameter, "ConnectParentAttribute");
+                final String childAttr = getProperty(_parameter, "ConnectChildAttribute");
+
+                TypeWA ret = null;
+                if (_parameter.getInstance().getType().isKindOf(CIAssets.OperationCostConsumables.getType())) {
                     if (_childInst.getType().isKindOf(CISales.Invoice.getType())) {
-                        type = CIAssets.OperationCostConsumables2Invoice.getType();
+                        final Type type = CIAssets.OperationCostConsumables2Invoice.getType();
+
+                        ret = new TypeWA();
+                        ret.setType(type);
+                        ret.setParentAttr(type.getAttribute(parentAttr));
+                        ret.setChildAttr(type.getAttribute(childAttr));
                     }
+                } else {
+                    ret = super.getTypeWithAttribute(_parameter, _childInst, _idx);
                 }
-                return type;
+
+                return ret;
             }
         };
         return connect.execute(_parameter);
