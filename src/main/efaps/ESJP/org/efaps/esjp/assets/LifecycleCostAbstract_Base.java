@@ -41,8 +41,7 @@ import org.efaps.esjp.ci.CIAssets;
 import org.efaps.esjp.ci.CIERP;
 import org.efaps.esjp.ci.CISales;
 import org.efaps.esjp.common.uisearch.Connect;
-import org.efaps.esjp.sales.util.Sales;
-import org.efaps.esjp.sales.util.SalesSettings;
+import org.efaps.esjp.erp.Currency;
 import org.efaps.util.EFapsException;
 
 
@@ -61,7 +60,7 @@ public abstract class LifecycleCostAbstract_Base
         throws EFapsException
     {
         // Sales-Configuration
-        final Instance baseCurrInst = Sales.getSysConfig().getLink(SalesSettings.CURRENCYBASE);
+        final Instance baseCurrInst = Currency.getBaseCurrency();
 
         final Instance rateCurrInst = _parameter.getParameterValue("rateCurrencyLink") == null
                         ? baseCurrInst
