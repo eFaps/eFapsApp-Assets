@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?><!--
 
- Copyright 2003 - 2012 The eFaps Team
+ Copyright 2003 - 2015 The eFaps Team
 
  Licensed under the Apache License, Version 2.0 (the "License");
  you may not use this file except in compliance with the License.
@@ -14,33 +14,29 @@
  See the License for the specific language governing permissions and
  limitations under the License.
 
- Author:          The eFaps Team
- Revision:        $Rev$
- Last Changed:    $Date$
- Last Changed By: $Author$
-
---><ui-command xmlns="http://www.efaps.org/xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.efaps.org/xsd http://www.efaps.org/xsd/eFaps_1.0.xsd">
-
+-->
+<ui-command xmlns="http://www.efaps.org/xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.efaps.org/xsd http://www.efaps.org/xsd/eFaps_1.0.xsd">
     <uuid>8c501798-6eb0-4917-b388-c6b8b860e865</uuid>
     <file-application>eFapsApp-Assets</file-application>
-    <file-revision>$Rev$</file-revision>
     <definition>
         <version-expression>(version==latest)</version-expression>
         <name>Assets_MaintenanceOrderMyDesk</name>
-<!--         <access>
-            <role>Assets_Admin</role>
-            <role>Assets_Modifier</role>
-            <role>Assets_Reader</role>
-        </access> -->
         <target>
             <menu>Assets_MaintenanceOrderMyDesk_Menu</menu>
             <table>Assets_MaintenanceOrderTable</table>
             <evaluate program="org.efaps.esjp.common.uitable.MultiPrint">
                 <property name="Type01">Assets_MaintenanceOrder</property>
-                <!--<property name="Types">Sales_ProductRequest</property> -->
             </evaluate>
+            <trigger program="org.efaps.esjp.admin.access.AccessCheck4UI"
+                method="configCheck"
+                name="Assets_MaintenanceOrderMyDesk.UI_ACCESSCHECK"
+                event="UI_ACCESSCHECK">
+                <!-- Assets-Configuration -->
+                <property name="SystemConfig">f61b83cf-347e-4c94-b75a-6bf10858923c</property>
+                <property name="Attribute">org.efaps.assets.MaintenanceOrder.Activate</property>
+            </trigger>
         </target>
-        <!-- properties -->
         <property name="Target">content</property>
         <property name="TargetShowCheckBoxes">true</property>
     </definition>

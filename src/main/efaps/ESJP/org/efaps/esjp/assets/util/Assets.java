@@ -1,5 +1,5 @@
 /*
- * Copyright 2003 - 2013 The eFaps Team
+ * Copyright 2003 - 2015 The eFaps Team
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -13,9 +13,6 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * Revision:        $Rev$
- * Last Changed:    $Date$
- * Last Changed By: $Author$
  */
 
 package org.efaps.esjp.assets.util;
@@ -23,20 +20,57 @@ package org.efaps.esjp.assets.util;
 import java.util.UUID;
 
 import org.efaps.admin.common.SystemConfiguration;
-import org.efaps.admin.program.esjp.EFapsRevision;
+import org.efaps.admin.program.esjp.EFapsApplication;
 import org.efaps.admin.program.esjp.EFapsUUID;
+import org.efaps.api.annotation.EFapsSysConfAttribute;
+import org.efaps.api.annotation.EFapsSystemConfiguration;
+import org.efaps.esjp.admin.common.systemconfiguration.BooleanSysConfAttribute;
 import org.efaps.util.cache.CacheReloadException;
 
 /**
  * TODO comment!
  *
  * @author The eFaps Team
- * @version $Id$
  */
 @EFapsUUID("6bf8791a-a1d1-47d1-ac63-7cd93e6df22a")
-@EFapsRevision("$Rev$")
+@EFapsApplication("eFapsApp-Assets")
+@EFapsSystemConfiguration("f61b83cf-347e-4c94-b75a-6bf10858923c")
 public final class Assets
 {
+    /** The base. */
+    public static final String BASE = "org.efaps.assets.";
+
+    /** Commons-Configuration. */
+    public static final UUID SYSCONFUUID = UUID.fromString("f61b83cf-347e-4c94-b75a-6bf10858923c");
+
+    /** See description. */
+    @EFapsSysConfAttribute
+    public static final BooleanSysConfAttribute MAINTORACTIVATE = new BooleanSysConfAttribute()
+                    .sysConfUUID(SYSCONFUUID)
+                    .key(BASE + "MaintenanceOrder.Activate")
+                    .description("Activate Maintenance Order.");
+
+    /** See description. */
+    @EFapsSysConfAttribute
+    public static final BooleanSysConfAttribute MAINTREQACTIVATE = new BooleanSysConfAttribute()
+                    .sysConfUUID(SYSCONFUUID)
+                    .key(BASE + "MaintenanceRequest.Activate")
+                    .description("Activate Maintenance Order.");
+
+    /** See description. */
+    @EFapsSysConfAttribute
+    public static final BooleanSysConfAttribute LIFECYCLECOSTACTIVATE = new BooleanSysConfAttribute()
+                    .sysConfUUID(SYSCONFUUID)
+                    .key(BASE + "LifecycleCost.Activate")
+                    .description("Activate Maintenance Order.");
+    /** See description. */
+    @EFapsSysConfAttribute
+    public static final BooleanSysConfAttribute DEPRACTIVATE = new BooleanSysConfAttribute()
+                    .sysConfUUID(SYSCONFUUID)
+                    .key(BASE + "Depreciation.Activate")
+                    .description("Activate Maintenance Order.");
+
+
     /**
      * Singelton.
      */
@@ -52,6 +86,6 @@ public final class Assets
         throws CacheReloadException
     {
         // Assets-Configuration
-        return SystemConfiguration.get(UUID.fromString("f61b83cf-347e-4c94-b75a-6bf10858923c"));
+        return SystemConfiguration.get(Assets.SYSCONFUUID);
     }
 }
