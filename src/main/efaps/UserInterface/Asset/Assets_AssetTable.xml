@@ -28,31 +28,38 @@
         <field name="type">
             <property name="Attribute">Type</property>
             <property name="Label">Assets_AssetAbstract/Type.Label</property>
+            <property name="ModeSearch">READONLY</property>
         </field>
         <field name="name">
             <property name="Attribute">Name</property>
             <property name="Label">Assets_AssetAbstract/Name.Label</property>
             <property name="HRef">${COMMONURL}/MenuTree.jsp</property>
+            <property name="ModeSearch">READONLY</property>
         </field>
         <field name="remark">
             <property name="Attribute">Remark</property>
             <property name="Label">Assets_AssetAbstract/Remark.Label</property>
+            <property name="ModeSearch">READONLY</property>
         </field>
          <field name="serialNumber">
             <property name="Attribute">SerialNumber</property>
             <property name="Label">Assets_AssetAbstract/SerialNumber.Label</property>
+            <property name="ModeSearch">READONLY</property>
         </field>
         <field name="note">
             <property name="Attribute">Note</property>
             <property name="Label">Assets_AssetAbstract/Note.Label</property>
+            <property name="ModeSearch">READONLY</property>
         </field>
         <field name="Date">
             <property name="Attribute">Date</property>
             <property name="Label">Assets_AssetAbstract/Date.Label</property>
+            <property name="ModeSearch">READONLY</property>
         </field>
         <field name="status">
             <property name="Attribute">StatusAbstract</property>
             <property name="Label">Assets_AssetAbstract/StatusAbstract.Label</property>
+            <property name="ModeSearch">READONLY</property>
         </field>
         <field name="buttonOpenInNewWindow">
             <icon>eFapsActionNewWindow</icon>
