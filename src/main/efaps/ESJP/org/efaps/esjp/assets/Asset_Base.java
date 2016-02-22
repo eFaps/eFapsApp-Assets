@@ -26,8 +26,8 @@ import org.efaps.admin.ui.AbstractCommand;
 import org.efaps.db.Insert;
 import org.efaps.esjp.assets.util.Assets;
 import org.efaps.esjp.ci.CIAssets;
-import org.efaps.esjp.common.AbstractCommon;
 import org.efaps.esjp.common.uiform.Create;
+import org.efaps.esjp.erp.CommonDocument;
 import org.efaps.esjp.erp.Naming;
 import org.efaps.util.EFapsException;
 
@@ -39,7 +39,7 @@ import org.efaps.util.EFapsException;
 @EFapsUUID("1959a1a4-349f-41e1-b8ef-cd3df9a882b8")
 @EFapsApplication("eFapsApp-Assets")
 public abstract class Asset_Base
-    extends AbstractCommon
+    extends CommonDocument
 {
 
     /**

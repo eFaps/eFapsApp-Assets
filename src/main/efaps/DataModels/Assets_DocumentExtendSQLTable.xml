@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!--
+
+ Copyright 2003 - 2016 The eFaps Team
+
+ Licensed under the Apache License, Version 2.0 (the "License");
+ you may not use this file except in compliance with the License.
+ You may obtain a copy of the License at
+
+      http://www.apache.org/licenses/LICENSE-2.0
+
+ Unless required by applicable law or agreed to in writing, software
+ distributed under the License is distributed on an "AS IS" BASIS,
+ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ See the License for the specific language governing permissions and
+ limitations under the License.
+
+-->
+<datamodel-sqltable xmlns="http://www.efaps.org/xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.efaps.org/xsd http://www.efaps.org/xsd/eFaps_1.0.xsd">
+    <uuid>15de3bd7-46c3-42ac-a0db-32ea2a97fc4a</uuid>
+    <file-application>eFapsApp-Sales</file-application>
+    <definition>
+        <version-expression>(version==latest)</version-expression>
+        <name>Assets_DocumentExtendSQLTable</name>
+        <parent>ERP_DocumentAbstractSQLTable</parent>
+        <database>
+            <table-name>T_ASSDOCEXT</table-name>
+            <parent-table>T_ERPDOC</parent-table>
+            <column length="256" name="STRING1" type="STRING_SHORT"/>
+        </database>
+    </definition>
+</datamodel-sqltable>

@@ -50,10 +50,15 @@
                 <property name="Inverse">true</property>
             </trigger>
         </field>
-        <field name="note">
+        <field name="serialNumber">
             <property name="ModeCreate">EDITABLE</property>
             <property name="ModeEdit">EDITABLE</property>
-            <property name="Attribute">Note</property>
+            <property name="Attribute">SerialNumber</property>
+        </field>
+        <field name="remark">
+            <property name="ModeCreate">EDITABLE</property>
+            <property name="ModeEdit">EDITABLE</property>
+            <property name="Attribute">Remark</property>
             <property name="Required">true</property>
         </field>
          <field name="dateGroup" character="Group">
@@ -99,6 +104,13 @@
         <field name="modified">
             <property name="Attribute">Modified</property>
             <property name="ModeSearch">EDITABLE</property>
+        </field>
+         <field name="note">
+            <property name="ModeCreate">EDITABLE</property>
+            <property name="ModeEdit">EDITABLE</property>
+            <property name="Attribute">Note</property>
+            <property name="Columns">80</property>
+            <property name="Rows">5</property>
         </field>
         <field name="javaScript">
             <property name="ModePrint">NONE</property>

@@ -39,7 +39,7 @@
         <property name="TargetCreateType">Assets_AssetSimple</property>
         <property name="TargetMode">create</property>
         <property name="TargetDefaultMenu">false</property>
-        <property name="WindowHeight">460</property>
-        <property name="WindowWidth">600</property>
+        <property name="WindowHeight">600</property>
+        <property name="WindowWidth">900</property>
     </definition>
 </ui-command>
