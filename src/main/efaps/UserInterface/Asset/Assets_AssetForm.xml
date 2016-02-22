@@ -35,6 +35,18 @@
                 <property name="link">/servlet/static/org.efaps.ui.wicket.behaviors.FieldUpdate.js?</property>
             </trigger>
         </field>
+        <field name="classification" character="Classification">
+            <property name="Classification">Assets_AssetClass</property>
+            <property name="ModeCreate">EDITABLE</property>
+            <property name="ModeEdit">EDITABLE</property>
+            <trigger event="UI_ACCESSCHECK" method="configCheck"
+                name="Assets_AssetForm.classification.UI_ACCESSCHECK"
+                program="org.efaps.esjp.admin.access.AccessCheck4UI">
+                <!-- Assets-Configuration -->
+                <property name="SystemConfig">f61b83cf-347e-4c94-b75a-6bf10858923c</property>
+                <property name="Attribute">org.efaps.assets.Asset.ActivateClassification</property>
+            </trigger>
+        </field>
         <field name="name">
             <property name="ModeCreate">EDITABLE</property>
             <property name="ModeEdit">EDITABLE</property>

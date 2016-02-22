@@ -30,7 +30,7 @@
         </access>
         <target>
             <form>Assets_AssetForm</form>
-            <execute program="org.efaps.esjp.assets.Asset" method="create">
+            <execute program="org.efaps.esjp.assets.documents.Asset" method="create">
                 <property name="StatusGroup">Assets_AssetSimpleStatus</property>
                 <property name="Status">Open</property>
             </execute>

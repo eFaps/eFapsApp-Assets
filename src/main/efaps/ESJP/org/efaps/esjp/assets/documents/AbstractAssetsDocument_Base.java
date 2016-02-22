@@ -1,5 +1,5 @@
 /*
- * Copyright 2003 - 2012 The eFaps Team
+ * Copyright 2003 - 2016 The eFaps Team
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -13,9 +13,6 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * Revision:        $Rev$
- * Last Changed:    $Date$
- * Last Changed By: $Author$
  */
 
 
@@ -24,7 +21,7 @@ package org.efaps.esjp.assets.documents;
 import org.efaps.admin.datamodel.Status;
 import org.efaps.admin.event.Parameter;
 import org.efaps.admin.event.Return;
-import org.efaps.admin.program.esjp.EFapsRevision;
+import org.efaps.admin.program.esjp.EFapsApplication;
 import org.efaps.admin.program.esjp.EFapsUUID;
 import org.efaps.ci.CIType;
 import org.efaps.db.Insert;
@@ -33,17 +30,15 @@ import org.efaps.esjp.ci.CIAssets;
 import org.efaps.esjp.ci.CIFormAssets;
 import org.efaps.esjp.sales.document.AbstractProductDocument;
 import org.efaps.util.EFapsException;
-//import target.generated-sources.efaps.org.efaps.esjp.ci.CIAssets;
 
 
 /**
  * basic class for documents that do not have prices.
  *
  * @author The eFaps Team
- * @version $Id: AbstractDocument_Base.java 3674 2010-01-28 18:52:35Z jan.moxter$
  */
 @EFapsUUID("148fb288-7ca8-45ee-abb7-7c304e76272d")
-@EFapsRevision("$Rev$")
+@EFapsApplication("eFapsApp-Assets")
 public abstract class AbstractAssetsDocument_Base
     extends AbstractProductDocument
 {
@@ -61,6 +56,14 @@ public abstract class AbstractAssetsDocument_Base
         return autoComplete4Doc(_parameter, CIAssets.AssetSimple.uuid, (Status[]) null);
     }
 
+    /**
+     * Connect asset2 document.
+     *
+     * @param _parameter the _parameter
+     * @param _doc the _doc
+     * @param _ci the _ci
+     * @throws EFapsException the e faps exception
+     */
     protected void connectAsset2Document(final Parameter _parameter,
                                          final CreatedDoc _doc,
                                          final CIType _ci)

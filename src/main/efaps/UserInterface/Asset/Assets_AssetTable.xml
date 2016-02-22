@@ -56,6 +56,24 @@
             <property name="Label">Assets_AssetAbstract/Date.Label</property>
             <property name="ModeSearch">READONLY</property>
         </field>
+          <field name="classification">
+            <property name="Select">class.type</property>
+            <property name="Label">Assets_AssetTable.classification.Label</property>
+            <property name="FilterType">CLASSIFICATION</property>
+            <property name="FilterRequired">true</property>
+            <property name="FilterBase">DATABASE</property>
+            <property name="Classification">Assets_AssetClass</property>
+            <trigger event="UI_FIELD_FORMAT" method="classificationFieldFormat"
+                name="Assets_AssetTable.classification"
+                program="org.efaps.esjp.common.uiform.Field" />
+            <trigger event="UI_ACCESSCHECK" method="configCheck"
+                name="Assets_AssetTable.classification.UI_ACCESSCHECK.1"
+                program="org.efaps.esjp.admin.access.AccessCheck4UI">
+                <!-- Assets-Configuration -->
+                <property name="SystemConfig">f61b83cf-347e-4c94-b75a-6bf10858923c</property>
+                <property name="Attribute">org.efaps.assets.Asset.ActivateClassification</property>
+            </trigger>
+        </field>
         <field name="status">
             <property name="Attribute">StatusAbstract</property>
             <property name="Label">Assets_AssetAbstract/StatusAbstract.Label</property>

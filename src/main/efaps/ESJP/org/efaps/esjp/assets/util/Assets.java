@@ -78,6 +78,14 @@ public final class Assets
                     .key(BASE + "Asset.UseNumberGenerator4Name")
                     .description("Use a NumberGenerator for Asset creation. (Needs Configuration of NG in Commons).");
 
+
+    /** See description. */
+    @EFapsSysConfAttribute
+    public static final BooleanSysConfAttribute ASSETACTIVATECLASS = new BooleanSysConfAttribute()
+                    .sysConfUUID(SYSCONFUUID)
+                    .key(BASE + "Asset.ActivateClassification")
+                    .description("Activate the Classification for Assets.");
+
     /**
      * Singelton.
      */
