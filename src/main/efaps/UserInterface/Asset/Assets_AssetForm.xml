@@ -2,7 +2,7 @@
 
 <!--
 
-  Copyright 2003 - 2015 The eFaps Team
+  Copyright 2003 - 216 The eFaps Team
 
   Licensed under the Apache License, Version 2.0 (the "License");
   you may not use this file except in compliance with the License.
@@ -40,6 +40,15 @@
             <property name="ModeEdit">EDITABLE</property>
             <property name="Attribute">Name</property>
             <property name="Required">true</property>
+            <trigger program="org.efaps.esjp.admin.access.AccessCheck4UI"
+                method="configCheck"
+                name="Assets_AssetForm.name.UI_ACCESSCHECK"
+                event="UI_ACCESSCHECK" >
+                <!-- Assets-Configuration -->
+                <property name="SystemConfig">f61b83cf-347e-4c94-b75a-6bf10858923c</property>
+                <property name="Attribute">org.efaps.assets.Asset.UseNumberGenerator4Name</property>
+                <property name="Inverse">true</property>
+            </trigger>
         </field>
         <field name="note">
             <property name="ModeCreate">EDITABLE</property>

@@ -40,7 +40,7 @@ public final class Assets
     /** The base. */
     public static final String BASE = "org.efaps.assets.";
 
-    /** Commons-Configuration. */
+    /** Assets-Configuration. */
     public static final UUID SYSCONFUUID = UUID.fromString("f61b83cf-347e-4c94-b75a-6bf10858923c");
 
     /** See description. */
@@ -63,6 +63,7 @@ public final class Assets
                     .sysConfUUID(SYSCONFUUID)
                     .key(BASE + "LifecycleCost.Activate")
                     .description("Activate Maintenance Order.");
+
     /** See description. */
     @EFapsSysConfAttribute
     public static final BooleanSysConfAttribute DEPRACTIVATE = new BooleanSysConfAttribute()
@@ -70,6 +71,12 @@ public final class Assets
                     .key(BASE + "Depreciation.Activate")
                     .description("Activate Maintenance Order.");
 
+    /** See description. */
+    @EFapsSysConfAttribute
+    public static final BooleanSysConfAttribute ASSETUSENUMBERGEN = new BooleanSysConfAttribute()
+                    .sysConfUUID(SYSCONFUUID)
+                    .key(BASE + "Asset.UseNumberGenerator4Name")
+                    .description("Use a NumberGenerator for Asset creation. (Needs Configuration of NG in Commons).");
 
     /**
      * Singelton.
