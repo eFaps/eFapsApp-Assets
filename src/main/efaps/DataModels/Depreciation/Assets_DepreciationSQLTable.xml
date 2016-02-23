@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
 <!--
 
- Copyright 2003 - 2011 The eFaps Team
+ Copyright 2003 - 2016 The eFaps Team
 
  Licensed under the Apache License, Version 2.0 (the "License");
  you may not use this file except in compliance with the License.
@@ -16,27 +15,17 @@
  See the License for the specific language governing permissions and
  limitations under the License.
 
- Author:          The eFaps Team
- Revision:        $Rev: 5317 $
- Last Changed:    $Date: 2010-08-16 11:43:42 -0500 (Mon, 16 Aug 2010) $
- Last Changed By: $Author: miguel.a.aranya $
-
 -->
-
-<datamodel-sqltable  xmlns="http://www.efaps.org/xsd"
-                     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-                     xsi:schemaLocation="http://www.efaps.org/xsd http://www.efaps.org/xsd/eFaps_1.0.xsd">
+<datamodel-sqltable  xmlns="http://www.efaps.org/xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.efaps.org/xsd http://www.efaps.org/xsd/eFaps_1.0.xsd">
     <uuid>d9950ac4-b33f-4647-8c03-5860b11e640a</uuid>
     <file-application>eFapsApp-Assets</file-application>
-    <file-revision>$Rev: 5317 $</file-revision>
-
-    <definition>
+       <definition>
         <version-expression>(version==latest)</version-expression>
         <name>Assets_DepreciationSQLTable</name>
         <typeid-column>TYPEID</typeid-column>
         <database>
             <table-name>T_ASSDEPR</table-name>
-            <!-- columns -->
             <column name="TYPEID"       type="INTEGER"      not-null="true"/>
             <column name="COMPANYID"    type="INTEGER"      not-null="true"/>
             <column name="STATUS"       type="INTEGER"      not-null="true"/>
@@ -44,6 +33,8 @@
             <column name="DATE"         type="DATETIME"     not-null="true"/>
             <column name="WOVALUE"      type="DECIMAL"      not-null="true" length="12" scale="2"/>
             <column name="BVALUE"       type="DECIMAL"      not-null="true" length="12" scale="2"/>
+            <column name="PERCENTAGE"   type="DECIMAL"                      length="6"  scale="2"/>
+            <column name="ACCOUNT"      type="STRING_SHORT"                 length="64"/>
             <column name="CURRENCYID"   type="INTEGER"      not-null="true" />
             <foreign name="T_ASSDEPR_FK_COMPANYID" key="COMPANYID"     reference="T_USERABSTRACT(ID)"/>
         </database>

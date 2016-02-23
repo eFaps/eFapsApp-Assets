@@ -27,7 +27,7 @@
         <purpose abstract="true" classification="true">
             <LinkColumn>AssetLink</LinkColumn>
         </purpose>
-         <classifies multipleSelect="true"
+         <classifies multipleSelect="false"
             relLinkAttribute="AssetLink"
             relType="Assets_Asset2Class"
             relTypeAttribute="ClassTypeId"

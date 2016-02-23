@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
 <!--
 
- Copyright 2003 - 2011 The eFaps Team
+ Copyright 2003 - 2016 The eFaps Team
 
  Licensed under the Apache License, Version 2.0 (the "License");
  you may not use this file except in compliance with the License.
@@ -16,28 +15,20 @@
  See the License for the specific language governing permissions and
  limitations under the License.
 
- Author:          The eFaps Team
- Revision:        $Rev: 5898 $
- Last Changed:    $Date: 2010-12-01 12:03:15 -0500 (Wed, 01 Dec 2010) $
- Last Changed By: $Author: jan@moxter.net $
-
 -->
 
-<datamodel-statusgroup  xmlns="http://www.efaps.org/xsd"
-                 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-                 xsi:schemaLocation="http://www.efaps.org/xsd http://www.efaps.org/xsd/eFaps_1.0.xsd">
+<datamodel-statusgroup  xmlns="http://www.efaps.org/xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://www.efaps.org/xsd http://www.efaps.org/xsd/eFaps_1.0.xsd">
     <uuid>d73890fe-86e2-4881-9382-00e7283b8142</uuid>
     <file-application>eFapsApp-Assets</file-application>
-    <file-revision>$Rev: 5898 $</file-revision>
-
     <definition>
         <version-expression>(version==latest)</version-expression>
         <name>Assets_DepreciationStandartStatus</name>
         <parent>Assets_DepreciationStatus</parent>
-        <status key="Planed">
+        <status key="Active">
             <description>Depreciation is planned for future execution.</description>
         </status>
-        <status key="Depriciated">
+        <status key="Inactive">
             <description>Depreciation was done.</description>
         </status>
     </definition>

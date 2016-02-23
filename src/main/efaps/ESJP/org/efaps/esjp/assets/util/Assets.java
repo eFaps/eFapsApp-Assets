@@ -69,7 +69,7 @@ public final class Assets
     public static final BooleanSysConfAttribute DEPRACTIVATE = new BooleanSysConfAttribute()
                     .sysConfUUID(SYSCONFUUID)
                     .key(BASE + "Depreciation.Activate")
-                    .description("Activate Maintenance Order.");
+                    .description("Activate the mechanism for Depreciation.");
 
     /** See description. */
     @EFapsSysConfAttribute

@@ -18,21 +18,26 @@
 -->
 <ui-command xmlns="http://www.efaps.org/xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="http://www.efaps.org/xsd http://www.efaps.org/xsd/eFaps_1.0.xsd">
-    <uuid>ce93a97b-2bea-4614-b5e3-8c500be7fd07</uuid>
+    <uuid>2d407ff4-e2a0-471b-a6bd-c4deac2d2f55</uuid>
     <file-application>eFapsApp-Assets</file-application>
     <definition>
         <version-expression>(version==latest)</version-expression>
-        <name>Assets_Employee2AssetTree_Menu_Action_Edit</name>
+        <name>Assets_AssetTree_Depreciation_Menu_Action_CreateStandart</name>
         <access>
             <role>Assets_Admin</role>
             <role>Assets_Modifier</role>
         </access>
         <target>
-            <form>Assets_Employee2AssetForm</form>
-            <execute program="org.efaps.esjp.common.uiform.Edit" />
+            <form>Assets_DepreciationForm</form>
+            <execute method="create" program="org.efaps.esjp.assets.Depreciation">
+                <property name="StatusGroup">Assets_DepreciationStandartStatus</property>
+                <property name="Status">Active</property>
+            </execute>
         </target>
         <property name="Target">modal</property>
-        <property name="TargetMode">edit</property>
+        <property name="TargetCreateType">Assets_DepreciationStandart</property>
+        <property name="TargetConnectAttribute">Assets_DepreciationAbstract/AssetLinkAbstract</property>
+        <property name="TargetMode">create</property>
         <property name="TargetDefaultMenu">false</property>
         <property name="WindowHeight">600</property>
         <property name="WindowWidth">1100</property>

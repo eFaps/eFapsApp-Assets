@@ -16,30 +16,20 @@
   See the License for the specific language governing permissions and
   limitations under the License.
 
-  Author:          The eFaps Team
-  Revision:        $Rev: 5317 $
-  Last Changed:    $Date: 2010-08-16 11:43:42 -0500 (Mon, 16 Aug 2010) $
-  Last Changed By: $Author: miguel.a.aranya $
-
 -->
 
-<ui-menu xmlns="http://www.efaps.org/xsd"
-         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://www.efaps.org/xsd http://www.efaps.org/xsd/eFaps_1.0.xsd">
+<ui-menu xmlns="http://www.efaps.org/xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.efaps.org/xsd http://www.efaps.org/xsd/eFaps_1.0.xsd">
     <uuid>f3981661-6bed-4cd4-a571-6b87ced7fb24</uuid>
     <file-application>eFapsApp-Assets</file-application>
-    <file-revision>$Rev: 5317 $</file-revision>
     <definition>
         <version-expression>(version==latest)</version-expression>
         <name>Assets_DepreciationTree</name>
-        <!-- targets -->
         <target>
             <menu>Assets_DepreciationTree_Menu</menu>
             <form>Assets_DepreciationForm</form>
         </target>
-        <!-- type tree for -->
         <type>Assets_DepreciationAbstract</type>
-        <!-- properties -->
         <property name="Target">content</property>
         <property name="TargetMode">view</property>
     </definition>
