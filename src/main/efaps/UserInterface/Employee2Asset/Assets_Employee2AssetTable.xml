@@ -40,6 +40,7 @@
         <field name="fromdate">
             <property name="Attribute">FromDate</property>
             <property name="Label">Assets_Employee2Asset/FromDate.Label</property>
+            <property name="HRef">TREE</property>
         </field>
          <field name="todate">
             <property name="Attribute">ToDate</property>

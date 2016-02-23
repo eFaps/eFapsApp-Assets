@@ -26,8 +26,8 @@
         <database>
             <table-name>T_ASSEMPLOYEE2DOCEXT</table-name>
             <parent-table>T_HREMPLOYEE2DOC</parent-table>
-            <column name="FROMDATE"           type="DATETIME"     not-null="true" />
-            <column name="TODATE"             type="DATETIME"     not-null="true" />
+            <column name="FROMDATE"           type="DATETIME"/>
+            <column name="TODATE"             type="DATETIME"/>
             <column name="STATUS"             type="INTEGER"      not-null="true"/>
         </database>
     </definition>

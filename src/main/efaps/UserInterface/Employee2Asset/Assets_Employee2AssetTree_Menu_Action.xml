@@ -16,23 +16,15 @@
  limitations under the License.
 
 -->
-<ui-command xmlns="http://www.efaps.org/xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+<ui-menu xmlns="http://www.efaps.org/xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="http://www.efaps.org/xsd http://www.efaps.org/xsd/eFaps_1.0.xsd">
-    <uuid>02cdd89b-c782-4016-852d-d467f14571cc</uuid>
+    <uuid>db528304-ddd0-4821-86e7-03493b2b7e59</uuid>
     <file-application>eFapsApp-Assets</file-application>
     <definition>
         <version-expression>(version==latest)</version-expression>
-        <name>Assets_AssetTree_Employee</name>
-        <target>
-            <menu>Assets_AssetTree_Employee_Menu</menu>
-            <table>Assets_Employee2AssetTable</table>
-            <evaluate program="org.efaps.esjp.common.uitable.MultiPrint">
-                <property name="Type">Assets_Employee2Asset</property>
-                <property name="LinkFrom">ToLink</property>
-            </evaluate>
-        </target>
-        <!-- properties -->
-        <property name="Target">content</property>
-        <property name="TargetShowCheckBoxes">true</property>
+        <name>Assets_Employee2AssetTree_Menu_Action</name>
+        <childs>
+            <child>Assets_Employee2AssetTree_Menu_Action_Edit</child>
+        </childs>
     </definition>
-</ui-command>
+</ui-menu>

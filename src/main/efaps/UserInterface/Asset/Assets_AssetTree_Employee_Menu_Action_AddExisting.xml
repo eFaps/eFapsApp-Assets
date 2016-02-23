@@ -1,6 +1,7 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?><!--
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!--
 
- Copyright 2003 - 2013 The eFaps Team
+ Copyright 2003 - 2016 The eFaps Team
 
  Licensed under the Apache License, Version 2.0 (the "License");
  you may not use this file except in compliance with the License.
@@ -14,19 +15,11 @@
  See the License for the specific language governing permissions and
  limitations under the License.
 
- Author:          The eFaps Team
- Revision:        $Rev$
- Last Changed:    $Date$
- Last Changed By: $Author$
-
 -->
 <ui-command xmlns="http://www.efaps.org/xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="http://www.efaps.org/xsd http://www.efaps.org/xsd/eFaps_1.0.xsd">
-
     <uuid>2120b63e-0d5b-45c9-b5b7-01b86d98f33f</uuid>
     <file-application>eFapsApp-Assets</file-application>
-    <file-revision>$Rev$</file-revision>
-
     <definition>
         <version-expression>(version==latest)</version-expression>
         <name>Assets_AssetTree_Employee_Menu_Action_AddExisting</name>
@@ -36,10 +29,12 @@
         </access>
         <target>
             <search>Assets_AssetTree_Employee_Menu_Action_AddExisting_Search</search>
-            <execute program="org.efaps.esjp.common.uisearch.Connect">
+            <execute program="org.efaps.esjp.assets.documents.Asset" method="connectEmployee">
                 <property name="ConnectChildAttribute">FromLink</property>
                 <property name="ConnectParentAttribute">ToLink</property>
                 <property name="ConnectType">Assets_Employee2Asset</property>
+                <property name="StatusGroup">Assets_Employee2AssetStatus</property>
+                <property name="Status">Active</property>
             </execute>
         </target>
         <property name="Target">modal</property>

@@ -33,8 +33,10 @@ import org.efaps.esjp.ci.CIAssets;
 import org.efaps.esjp.ci.CIFormAssets;
 import org.efaps.esjp.ci.CIProducts;
 import org.efaps.esjp.common.uiform.Create;
+import org.efaps.esjp.common.uisearch.Connect;
 import org.efaps.esjp.erp.Naming;
 import org.efaps.util.EFapsException;
+import org.joda.time.DateTime;
 
 /**
  * TODO comment!
@@ -126,5 +128,30 @@ public abstract class Asset_Base
             retVal = super.getJavaScriptUIValue(_parameter);
         }
         return retVal;
+    }
+
+
+    /**
+     * Connect employee.
+     *
+     * @param _parameter Parameter as passed by the eFaps API
+     * @return the return
+     * @throws EFapsException on error
+     */
+    public Return connectEmployee(final Parameter _parameter)
+        throws EFapsException
+    {
+        final Connect connect = new Connect()
+        {
+            @Override
+            protected void addInsertConnect(final Parameter _parameter,
+                                            final Insert _insert)
+                throws EFapsException
+            {
+                super.addInsertConnect(_parameter, _insert);
+                _insert.add(CIAssets.Employee2Asset.FromDate, new DateTime());
+            }
+        };
+        return connect.execute(_parameter);
     }
 }

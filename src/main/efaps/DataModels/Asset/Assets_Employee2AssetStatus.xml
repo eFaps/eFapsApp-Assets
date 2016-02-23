@@ -23,7 +23,7 @@
     <definition>
         <version-expression>(version==latest)</version-expression>
         <name>Assets_Employee2AssetStatus</name>
-         <parent>Assets_AssetStatus</parent>
+        <parent>Assets_AssetStatus</parent>
         <status key="Active">
             <description>Employee has the Asset.</description>
         </status>

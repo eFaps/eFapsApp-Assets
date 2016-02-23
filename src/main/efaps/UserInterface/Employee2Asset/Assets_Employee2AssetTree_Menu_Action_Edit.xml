@@ -18,21 +18,23 @@
 -->
 <ui-command xmlns="http://www.efaps.org/xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="http://www.efaps.org/xsd http://www.efaps.org/xsd/eFaps_1.0.xsd">
-    <uuid>02cdd89b-c782-4016-852d-d467f14571cc</uuid>
+    <uuid>ce93a97b-2bea-4614-b5e3-8c500be7fd07</uuid>
     <file-application>eFapsApp-Assets</file-application>
     <definition>
         <version-expression>(version==latest)</version-expression>
-        <name>Assets_AssetTree_Employee</name>
+        <name>Assets_Employee2AssetTree_Menu_Action_Edit</name>
+        <access>
+            <role>Assets_Admin</role>
+            <role>Assets_Modifier</role>
+        </access>
         <target>
-            <menu>Assets_AssetTree_Employee_Menu</menu>
-            <table>Assets_Employee2AssetTable</table>
-            <evaluate program="org.efaps.esjp.common.uitable.MultiPrint">
-                <property name="Type">Assets_Employee2Asset</property>
-                <property name="LinkFrom">ToLink</property>
-            </evaluate>
+            <form>Assets_Employee2AssetForm</form>
+            <execute program="org.efaps.esjp.common.uiform.Edit" />
         </target>
-        <!-- properties -->
-        <property name="Target">content</property>
-        <property name="TargetShowCheckBoxes">true</property>
+        <property name="Target">modal</property>
+        <property name="TargetMode">edit</property>
+        <property name="TargetDefaultMenu">false</property>
+        <property name="WindowHeight">600</property>
+        <property name="WindowWidth">900</property>
     </definition>
 </ui-command>

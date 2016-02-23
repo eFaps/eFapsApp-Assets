@@ -30,6 +30,8 @@
             <typelink>Assets_Employee2AssetStatus</typelink>
             <sqltable>Assets_Employee2DocumentExtendSQLTable</sqltable>
             <sqlcolumn>STATUS</sqlcolumn>
+            <trigger program="org.efaps.esjp.admin.datamodel.StatusValue"
+                name="Assets_Employee2Asset.Status.RANGE_VALUE" event="RANGE_VALUE"/>
         </attribute>
         <attribute>
             <name>FromLink</name>
