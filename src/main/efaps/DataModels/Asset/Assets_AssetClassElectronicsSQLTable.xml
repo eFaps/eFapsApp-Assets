@@ -1,4 +1,5 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?><!--
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!--
 
  Copyright 2003 - 2016 The eFaps Team
 
@@ -15,17 +16,19 @@
  limitations under the License.
 
 -->
-<datamodel-type xmlns="http://www.efaps.org/xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-        xsi:schemaLocation="http://www.efaps.org/xsd http://www.efaps.org/xsd/eFaps_1.0.xsd">
-    <uuid>d5ca92ce-37ec-43fa-8499-71d14e99405d</uuid>
+<datamodel-sqltable xmlns="http://www.efaps.org/xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.efaps.org/xsd http://www.efaps.org/xsd/eFaps_1.0.xsd">
+    <uuid>0c643f6a-8a7c-4c4d-9292-d18ccbe759d3</uuid>
     <file-application>eFapsApp-Assets</file-application>
     <definition>
         <version-expression>(version==latest)</version-expression>
-        <name>Assets_AssetClassElectronics_Printers</name>
-        <parent>Assets_AssetClassBase</parent>
-        <purpose classification="true">
-            <LinkColumn>AssetLink</LinkColumn>
-            <parent>Assets_AssetClassElectronics</parent>
-        </purpose>
+        <name>Assets_AssetClassElectronicsSQLTable</name>
+        <parent>Assets_AssetClassBaseSQLTable</parent>
+        <database>
+            <table-name>T_ASSASSCLASSELE</table-name>
+            <parent-table>T_ASSASSCLASSBASE</parent-table>
+            <column name="BRANDID"  type="INTEGER" />
+            <column name="MODEL"    type="STRING_SHORT" length="255"/>
+        </database>
     </definition>
-</datamodel-type>
+</datamodel-sqltable>

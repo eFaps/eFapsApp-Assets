@@ -16,22 +16,12 @@
 
 -->
 <ui-form xmlns="http://www.efaps.org/xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-        xsi:schemaLocation="http://www.efaps.org/xsd http://www.efaps.org/xsd/eFaps_1.0.xsd">
-    <uuid>a40ebc08-e2cb-466c-8b71-83be7f2923b2</uuid>
+    xsi:schemaLocation="http://www.efaps.org/xsd http://www.efaps.org/xsd/eFaps_1.0.xsd">
+    <uuid>83dab110-3485-4b74-8510-24ed9b6c5dec</uuid>
     <file-application>eFapsApp-Assets</file-application>
     <definition>
         <version-expression>(version==latest)</version-expression>
-        <name>Assets_AssetClassElectronicsForm</name>
-        <type>Assets_AssetClassElectronics</type>
-        <field name="brandLink">
-            <property name="Attribute">BrandLink</property>
-            <property name="ModeCreate">EDITABLE</property>
-            <property name="ModeEdit">EDITABLE</property>
-        </field>
-         <field name="model">
-            <property name="Attribute">Model</property>
-            <property name="ModeCreate">EDITABLE</property>
-            <property name="ModeEdit">EDITABLE</property>
-        </field>
+        <name>Assets_AssetClassElectronics_ComputersForm</name>
+        <type>Assets_AssetClassElectronics_Computers</type>
     </definition>
 </ui-form>
