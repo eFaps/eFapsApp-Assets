@@ -17,15 +17,15 @@
 -->
 <datamodel-type xmlns="http://www.efaps.org/xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="http://www.efaps.org/xsd http://www.efaps.org/xsd/eFaps_1.0.xsd">
-    <uuid>4451e573-ae37-4260-b1e2-a6501edfbdd1</uuid>
+    <uuid>ba17d5e1-1a49-494d-a455-84217e7af0d1</uuid>
     <file-application>eFapsApp-Assets</file-application>
     <definition>
         <version-expression>(version==latest)</version-expression>
-        <name>Assets_AssetClassElectronics_Computers</name>
+        <name>Assets_AssetClassBuilding</name>
         <parent>Assets_AssetClassBase</parent>
         <purpose classification="true">
             <LinkColumn>AssetLink</LinkColumn>
-            <parent>Assets_AssetClassElectronics</parent>
+            <parent>Assets_AssetClass</parent>
         </purpose>
     </definition>
 </datamodel-type>

@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!--
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><!--
 
   Copyright 2003 - 2016 The eFaps Team
 
@@ -17,12 +16,12 @@
 
 -->
 <ui-form xmlns="http://www.efaps.org/xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-        xsi:schemaLocation="http://www.efaps.org/xsd http://www.efaps.org/xsd/eFaps_1.0.xsd">
-    <uuid>99f3c721-6c5d-4216-aead-cc0644897827</uuid>
+    xsi:schemaLocation="http://www.efaps.org/xsd http://www.efaps.org/xsd/eFaps_1.0.xsd">
+    <uuid>16ee0771-eea5-4be6-a0e4-7c08fd61bb53</uuid>
     <file-application>eFapsApp-Assets</file-application>
     <definition>
         <version-expression>(version==latest)</version-expression>
-        <name>Assets_AssetClassElectronics_PrintersForm</name>
-        <type>Assets_AssetClassElectronics_Printers</type>
+        <name>Assets_AssetClassMachineryForm</name>
+        <type>Assets_AssetClassMachinery</type>
     </definition>
 </ui-form>

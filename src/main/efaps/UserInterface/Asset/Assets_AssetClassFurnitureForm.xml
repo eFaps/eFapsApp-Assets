@@ -24,9 +24,5 @@
         <version-expression>(version==latest)</version-expression>
         <name>Assets_AssetClassFurnitureForm</name>
         <type>Assets_AssetClassFurniture</type>
-        <field character="Heading" name="furnitureHeading">
-            <property name="Level">3</property>
-            <property name="Label">Assets_AssetClassFurnitureForm.furnitureHeading.Heading</property>
-        </field>
     </definition>
 </ui-form>

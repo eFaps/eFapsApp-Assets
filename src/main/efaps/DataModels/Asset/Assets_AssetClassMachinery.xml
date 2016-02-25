@@ -16,16 +16,16 @@
 
 -->
 <datamodel-type xmlns="http://www.efaps.org/xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-        xsi:schemaLocation="http://www.efaps.org/xsd http://www.efaps.org/xsd/eFaps_1.0.xsd">
-    <uuid>d5ca92ce-37ec-43fa-8499-71d14e99405d</uuid>
+    xsi:schemaLocation="http://www.efaps.org/xsd http://www.efaps.org/xsd/eFaps_1.0.xsd">
+    <uuid>9647fe25-c378-4f6a-add6-6037425abef3</uuid>
     <file-application>eFapsApp-Assets</file-application>
     <definition>
         <version-expression>(version==latest)</version-expression>
-        <name>Assets_AssetClassElectronics_Printers</name>
+        <name>Assets_AssetClassMachinery</name>
         <parent>Assets_AssetClassBase</parent>
         <purpose classification="true">
             <LinkColumn>AssetLink</LinkColumn>
-            <parent>Assets_AssetClassElectronics</parent>
+            <parent>Assets_AssetClass</parent>
         </purpose>
     </definition>
 </datamodel-type>

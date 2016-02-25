@@ -17,11 +17,11 @@
 -->
 <ui-form xmlns="http://www.efaps.org/xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="http://www.efaps.org/xsd http://www.efaps.org/xsd/eFaps_1.0.xsd">
-    <uuid>83dab110-3485-4b74-8510-24ed9b6c5dec</uuid>
+    <uuid>ca1cbf4b-e3c1-4cc9-8b88-21acacab5c00</uuid>
     <file-application>eFapsApp-Assets</file-application>
     <definition>
         <version-expression>(version==latest)</version-expression>
-        <name>Assets_AssetClassElectronics_ComputersForm</name>
-        <type>Assets_AssetClassElectronics_Computers</type>
+        <name>Assets_AssetClassBuildingForm</name>
+        <type>Assets_AssetClassBuilding</type>
     </definition>
 </ui-form>
