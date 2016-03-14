@@ -148,26 +148,25 @@ public abstract class LifecycleCostAbstract_Base
         {
 
             @Override
-            protected TypeWA getTypeWithAttribute(final Parameter _parameter,
-                                                  final Instance _childInst,
-                                                  final int _idx)
+            protected ConnectType getConnectType(final Parameter _parameter,
+                                                 final Instance _childInst,
+                                                 final int _idx)
                 throws EFapsException
             {
                 final String parentAttr = getProperty(_parameter, "ConnectParentAttribute");
                 final String childAttr = getProperty(_parameter, "ConnectChildAttribute");
 
-                TypeWA ret = null;
+                ConnectType ret = null;
                 if (_parameter.getInstance().getType().isKindOf(CIAssets.OperationCostConsumables.getType())) {
                     if (_childInst.getType().isKindOf(CISales.Invoice.getType())) {
                         final Type type = CIAssets.OperationCostConsumables2Invoice.getType();
-
-                        ret = new TypeWA();
+                        ret = new ConnectType();
                         ret.setType(type);
                         ret.setParentAttr(type.getAttribute(parentAttr));
                         ret.setChildAttr(type.getAttribute(childAttr));
                     }
                 } else {
-                    ret = super.getTypeWithAttribute(_parameter, _childInst, _idx);
+                    ret = super.getConnectType(_parameter, _childInst, _idx);
                 }
 
                 return ret;
