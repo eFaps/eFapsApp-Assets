@@ -23,5 +23,15 @@
         <version-expression>(version==latest)</version-expression>
         <name>Assets_AssetClassMachineryForm</name>
         <type>Assets_AssetClassMachinery</type>
+        <field name="brandLink">
+            <property name="Attribute">BrandLink</property>
+            <property name="ModeCreate">EDITABLE</property>
+            <property name="ModeEdit">EDITABLE</property>
+        </field>
+        <field name="model">
+            <property name="Attribute">Model</property>
+            <property name="ModeCreate">EDITABLE</property>
+            <property name="ModeEdit">EDITABLE</property>
+        </field>
     </definition>
 </ui-form>
