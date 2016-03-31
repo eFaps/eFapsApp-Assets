@@ -27,5 +27,25 @@
             <LinkColumn>AssetLink</LinkColumn>
             <parent>Assets_AssetClass</parent>
         </purpose>
+         <attribute>
+            <name>BrandLink</name>
+            <type>LinkWithRanges</type>
+            <typelink>Assets_AttributeDefinitionMachineryBrand</typelink>
+            <sqltable>Assets_AssetClassMachinerySQLTable</sqltable>
+            <sqlcolumn>BRANDID</sqlcolumn>
+            <trigger program="org.efaps.esjp.admin.datamodel.RangesValue"
+               name="Assets_AssetClassMachinery.BrandLink.RANGE_VALUE"
+               event="RANGE_VALUE">
+                <property name="EmptyValue">true</property>
+                <property name="Type">Assets_AttributeDefinitionMachineryBrand</property>
+                <property name="Value">Value</property>
+            </trigger>
+        </attribute>
+         <attribute>
+            <name>Model</name>
+            <type>String</type>
+            <sqltable>Assets_AssetClassMachinerySQLTable</sqltable>
+            <sqlcolumn>MODEL</sqlcolumn>
+        </attribute>
     </definition>
 </datamodel-type>

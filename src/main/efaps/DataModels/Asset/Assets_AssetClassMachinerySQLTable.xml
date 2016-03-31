@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!--
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><!--
 
  Copyright 2003 - 2016 The eFaps Team
 
@@ -16,20 +15,19 @@
  limitations under the License.
 
 -->
-<ui-menu xmlns="http://www.efaps.org/xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+<datamodel-sqltable xmlns="http://www.efaps.org/xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="http://www.efaps.org/xsd http://www.efaps.org/xsd/eFaps_1.0.xsd">
-    <uuid>648e3fe2-1c69-4cfd-b398-8b1239894ff2</uuid>
+    <uuid>d7ed7f49-1fa4-428e-8eaa-2faf8018b0ba</uuid>
     <file-application>eFapsApp-Assets</file-application>
     <definition>
         <version-expression>(version==latest)</version-expression>
-        <name>Assets_AttributeDefinitionMyDesk_Menu_Action</name>
-        <childs>
-            <child>Assets_AttributeDefinitionMyDesk_Menu_Action_CreateElectronicsBrandAttr</child>
-            <child>Assets_AttributeDefinitionMyDesk_Menu_Action_CreateVehicleBrandAttr</child>
-            <child>Assets_AttributeDefinitionMyDesk_Menu_Action_CreateMachineryBrandAttr</child>
-        </childs>
-        <parents>
-            <parent>ERP_AttributeDefinitionMyDesk_Menu</parent>
-        </parents>
+        <name>Assets_AssetClassMachinerySQLTable</name>
+        <parent>Assets_AssetClassBaseSQLTable</parent>
+        <database>
+            <table-name>T_ASSASSCLASSMACH</table-name>
+            <parent-table>T_ASSASSCLASSBASE</parent-table>
+            <column name="BRANDID"  type="INTEGER"/>
+            <column name="MODEL"    type="STRING_SHORT"     length="255"/>
+        </database>
     </definition>
-</ui-menu>
+</datamodel-sqltable>
