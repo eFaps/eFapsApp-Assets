@@ -21,7 +21,7 @@
 
 package org.efaps.esjp.assets;
 
-import org.efaps.admin.program.esjp.EFapsRevision;
+import org.efaps.admin.program.esjp.EFapsApplication;
 import org.efaps.admin.program.esjp.EFapsUUID;
 
 
@@ -34,7 +34,7 @@ import org.efaps.admin.program.esjp.EFapsUUID;
  * @version $Id$
  */
 @EFapsUUID("8c63d986-b148-452f-8e62-3338dec28b47")
-@EFapsRevision("$Rev$")
+@EFapsApplication("eFapsApp-Assets")
 public class MaintenanceCost
     extends MaintenanceCost_Base
 {

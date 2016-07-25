@@ -21,7 +21,7 @@
 
 package org.efaps.esjp.assets;
 
-import org.efaps.admin.program.esjp.EFapsRevision;
+import org.efaps.admin.program.esjp.EFapsApplication;
 import org.efaps.admin.program.esjp.EFapsUUID;
 
 
@@ -34,7 +34,7 @@ import org.efaps.admin.program.esjp.EFapsUUID;
  * @version $Id$
  */
 @EFapsUUID("fa8dfaa9-a391-4bde-b0cc-c941888e586a")
-@EFapsRevision("$Rev$")
+@EFapsApplication("eFapsApp-Assets")
 public class AquisitionCost
     extends AquisitionCost_Base
 {

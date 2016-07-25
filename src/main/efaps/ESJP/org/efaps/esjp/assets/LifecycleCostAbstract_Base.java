@@ -31,7 +31,7 @@ import org.efaps.admin.datamodel.Type;
 import org.efaps.admin.event.Parameter;
 import org.efaps.admin.event.Parameter.ParameterValues;
 import org.efaps.admin.event.Return;
-import org.efaps.admin.program.esjp.EFapsRevision;
+import org.efaps.admin.program.esjp.EFapsApplication;
 import org.efaps.admin.program.esjp.EFapsUUID;
 import org.efaps.admin.ui.AbstractCommand;
 import org.efaps.db.Context;
@@ -52,7 +52,7 @@ import org.efaps.util.EFapsException;
  * @version $Id$
  */
 @EFapsUUID("dcb681d5-5eef-4b72-b002-0dbb0361f599")
-@EFapsRevision("$Rev$")
+@EFapsApplication("eFapsApp-Assets")
 public abstract class LifecycleCostAbstract_Base
 {
 

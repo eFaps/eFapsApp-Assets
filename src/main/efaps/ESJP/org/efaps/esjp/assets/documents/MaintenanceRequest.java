@@ -21,7 +21,7 @@
 
 package org.efaps.esjp.assets.documents;
 
-import org.efaps.admin.program.esjp.EFapsRevision;
+import org.efaps.admin.program.esjp.EFapsApplication;
 import org.efaps.admin.program.esjp.EFapsUUID;
 
 
@@ -34,7 +34,7 @@ import org.efaps.admin.program.esjp.EFapsUUID;
  * @version $Id$
  */
 @EFapsUUID("fe3d53c3-dd04-41b7-8839-3487b927f1e8")
-@EFapsRevision("$Rev$")
+@EFapsApplication("eFapsApp-Assets")
 public class MaintenanceRequest
     extends MaintenanceRequest_Base
 {

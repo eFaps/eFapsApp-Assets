@@ -21,7 +21,7 @@
 
 package org.efaps.esjp.assets;
 
-import org.efaps.admin.program.esjp.EFapsRevision;
+import org.efaps.admin.program.esjp.EFapsApplication;
 import org.efaps.admin.program.esjp.EFapsUUID;
 
 
@@ -34,7 +34,7 @@ import org.efaps.admin.program.esjp.EFapsUUID;
  * @version $Id$
  */
 @EFapsUUID("4270b577-c8f4-45d4-9bbe-88acec9a2e28")
-@EFapsRevision("$Rev$")
+@EFapsApplication("eFapsApp-Assets")
 public abstract class LifecycleCostAbstract
     extends LifecycleCostAbstract_Base
 {

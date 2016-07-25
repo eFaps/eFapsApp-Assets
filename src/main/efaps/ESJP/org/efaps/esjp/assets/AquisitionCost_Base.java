@@ -23,7 +23,7 @@ package org.efaps.esjp.assets;
 
 import org.efaps.admin.event.Parameter;
 import org.efaps.admin.event.Return;
-import org.efaps.admin.program.esjp.EFapsRevision;
+import org.efaps.admin.program.esjp.EFapsApplication;
 import org.efaps.admin.program.esjp.EFapsUUID;
 import org.efaps.util.EFapsException;
 
@@ -35,7 +35,7 @@ import org.efaps.util.EFapsException;
  * @version $Id$
  */
 @EFapsUUID("ccfb2ff9-29cb-4f58-bce8-31c9436dbb8e")
-@EFapsRevision("$Rev$")
+@EFapsApplication("eFapsApp-Assets")
 public abstract class AquisitionCost_Base
     extends LifecycleCostAbstract
 {

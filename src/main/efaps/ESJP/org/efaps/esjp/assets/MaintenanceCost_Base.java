@@ -23,7 +23,7 @@ package org.efaps.esjp.assets;
 
 import org.efaps.admin.event.Parameter;
 import org.efaps.admin.event.Return;
-import org.efaps.admin.program.esjp.EFapsRevision;
+import org.efaps.admin.program.esjp.EFapsApplication;
 import org.efaps.admin.program.esjp.EFapsUUID;
 import org.efaps.util.EFapsException;
 
@@ -35,7 +35,7 @@ import org.efaps.util.EFapsException;
  * @version $Id$
  */
 @EFapsUUID("2b5d1fd2-86ac-413d-b72b-d636b885d7f6")
-@EFapsRevision("$Rev$")
+@EFapsApplication("eFapsApp-Assets")
 public abstract class MaintenanceCost_Base
     extends LifecycleCostAbstract
 {

@@ -30,7 +30,6 @@ import org.efaps.admin.program.esjp.EFapsUUID;
  */
 @EFapsUUID("88f00103-a7c4-43f0-857b-0f6917b2101b")
 @EFapsApplication("eFapsApp-Assets")
-
 public class Asset
     extends Asset_Base
 {

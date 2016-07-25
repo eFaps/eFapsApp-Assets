@@ -22,7 +22,7 @@ package org.efaps.esjp.assets.documents;
 
 import org.efaps.admin.event.Parameter;
 import org.efaps.admin.event.Return;
-import org.efaps.admin.program.esjp.EFapsRevision;
+import org.efaps.admin.program.esjp.EFapsApplication;
 import org.efaps.admin.program.esjp.EFapsUUID;
 import org.efaps.esjp.ci.CIAssets;
 import org.efaps.util.EFapsException;
@@ -34,7 +34,7 @@ import org.efaps.util.EFapsException;
  * @version $Id$
  */
 @EFapsUUID("3d92d505-3a75-437e-818d-ec1abe052cbe")
-@EFapsRevision("$Rev$")
+@EFapsApplication("eFapsApp-Assets")
 public abstract class MaintenanceOrder_Base
     extends AbstractAssetsDocument
 {
