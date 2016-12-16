@@ -30,8 +30,8 @@
             <menu>Assets_AssetTree_Documents_Menu</menu>
             <table>Assets_DocumentsTable</table>
             <evaluate program="org.efaps.esjp.common.uitable.MultiPrint">
-                <property name="Types">Assets_Assets2DocumentAbstract</property>
-                <property name="LinkFroms">FromAbstractLink</property>
+                <property name="Type">Assets_Assets2DocumentAbstract</property>
+                <property name="LinkFrom">FromAbstractLink</property>
             </evaluate>           
         </target>
         <!-- properties -->

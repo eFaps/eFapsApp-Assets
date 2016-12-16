@@ -14,13 +14,10 @@
  See the License for the specific language governing permissions and
  limitations under the License.
 
- Author:          The eFaps Team
- Revision:        $Rev$
- Last Changed:    $Date$
- Last Changed By: $Author$
 
---><ui-command xmlns="http://www.efaps.org/xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.efaps.org/xsd http://www.efaps.org/xsd/eFaps_1.0.xsd">
-
+-->
+<ui-command xmlns="http://www.efaps.org/xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.efaps.org/xsd http://www.efaps.org/xsd/eFaps_1.0.xsd">
     <uuid>cb89ac14-07ba-453e-9dc6-04ef60bc23e5</uuid>
     <file-application>eFapsApp-Assets</file-application>
     <file-revision>$Rev$</file-revision>
@@ -36,8 +33,8 @@
             <menu>Assets_MaintenanceRequestTree_Position_Menu</menu>
             <table>Assets_MaintenanceRequestPositionTable</table>
             <evaluate program="org.efaps.esjp.common.uitable.MultiPrint">
-                <property name="Types01">Assets_MaintenanceRequestPosition</property>
-                <property name="LinkFroms">MaintenanceRequestLink</property>
+                <property name="Type">Assets_MaintenanceRequestPosition</property>
+                <property name="LinkFrom">MaintenanceRequestLink</property>
             </evaluate>
         </target>
         <!-- properties -->

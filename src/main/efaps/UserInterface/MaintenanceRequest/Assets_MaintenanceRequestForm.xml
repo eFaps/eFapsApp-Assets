@@ -138,7 +138,7 @@
             <table>Assets_MaintenanceRequestPositionTable</table>
             <evaluate program="org.efaps.esjp.common.uitable.MultiPrint">
                 <property name="Type01">Assets_MaintenanceRequestPosition</property>
-                <property name="LinkFroms">Assets_MaintenanceRequestLink</property>
+                <property name="LinkFrom">Assets_MaintenanceRequestLink</property>
             </evaluate>
         </field>
         <field character="Heading" name="headingAssetsNote">

@@ -137,8 +137,8 @@
             <property name="ModeEdit">NONE</property>
             <table>Assets_MaintenanceOrderPositionTable</table>
             <evaluate program="org.efaps.esjp.common.uitable.MultiPrint">
-                <property name="Types">Assets_MaintenanceOrderPosition</property>
-                <property name="LinkFroms">Assets_MaintenanceOrderLink</property>
+                <property name="Type">Assets_MaintenanceOrderPosition</property>
+                <property name="LinkFrom">Assets_MaintenanceOrderLink</property>
             </evaluate>
         </field>
         <field character="Heading" name="headingAssetsNote">
