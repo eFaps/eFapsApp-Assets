@@ -65,7 +65,7 @@ public abstract class Asset_Base
                                                throws EFapsException
             {
                 super.add2basicInsert(_parameter, _insert);
-                if (Assets.ASSETUSENUMBERGEN.get()) {
+                if (Assets.ASSET_USENUMBERGEN.get()) {
                     final AbstractCommand command = (AbstractCommand) _parameter.get(ParameterValues.UIOBJECT);
                     _insert.add(CIAssets.AssetAbstract.Name,
                                     new Naming().fromNumberGenerator(_parameter,

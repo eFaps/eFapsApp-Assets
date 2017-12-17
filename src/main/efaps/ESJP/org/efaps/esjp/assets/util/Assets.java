@@ -45,35 +45,35 @@ public final class Assets
 
     /** See description. */
     @EFapsSysConfAttribute
-    public static final BooleanSysConfAttribute MAINTORACTIVATE = new BooleanSysConfAttribute()
+    public static final BooleanSysConfAttribute MAINTOR_ACTIVATE = new BooleanSysConfAttribute()
                     .sysConfUUID(SYSCONFUUID)
                     .key(BASE + "MaintenanceOrder.Activate")
                     .description("Activate Maintenance Order.");
 
     /** See description. */
     @EFapsSysConfAttribute
-    public static final BooleanSysConfAttribute MAINTREQACTIVATE = new BooleanSysConfAttribute()
+    public static final BooleanSysConfAttribute MAINTREQ_ACTIVATE = new BooleanSysConfAttribute()
                     .sysConfUUID(SYSCONFUUID)
                     .key(BASE + "MaintenanceRequest.Activate")
                     .description("Activate Maintenance Order.");
 
     /** See description. */
     @EFapsSysConfAttribute
-    public static final BooleanSysConfAttribute LIFECYCLECOSTACTIVATE = new BooleanSysConfAttribute()
+    public static final BooleanSysConfAttribute LIFECYCLECOST_ACTIVATE = new BooleanSysConfAttribute()
                     .sysConfUUID(SYSCONFUUID)
                     .key(BASE + "LifecycleCost.Activate")
                     .description("Activate Maintenance Order.");
 
     /** See description. */
     @EFapsSysConfAttribute
-    public static final BooleanSysConfAttribute DEPRACTIVATE = new BooleanSysConfAttribute()
+    public static final BooleanSysConfAttribute DEPR_ACTIVATE = new BooleanSysConfAttribute()
                     .sysConfUUID(SYSCONFUUID)
                     .key(BASE + "Depreciation.Activate")
                     .description("Activate the mechanism for Depreciation.");
 
     /** See description. */
     @EFapsSysConfAttribute
-    public static final BooleanSysConfAttribute ASSETUSENUMBERGEN = new BooleanSysConfAttribute()
+    public static final BooleanSysConfAttribute ASSET_USENUMBERGEN = new BooleanSysConfAttribute()
                     .sysConfUUID(SYSCONFUUID)
                     .key(BASE + "Asset.UseNumberGenerator4Name")
                     .description("Use a NumberGenerator for Asset creation. (Needs Configuration of NG in Commons).");
@@ -81,9 +81,23 @@ public final class Assets
 
     /** See description. */
     @EFapsSysConfAttribute
-    public static final BooleanSysConfAttribute ASSETACTIVATECLASS = new BooleanSysConfAttribute()
+    public static final BooleanSysConfAttribute ASSET_ACTIVATECLASS = new BooleanSysConfAttribute()
                     .sysConfUUID(SYSCONFUUID)
                     .key(BASE + "Asset.ActivateClassification")
+                    .description("Activate the Classification for Assets.");
+
+    /** See description. */
+    @EFapsSysConfAttribute
+    public static final BooleanSysConfAttribute ASSET_ACTIVATEFILESTRBRWS = new BooleanSysConfAttribute()
+                    .sysConfUUID(SYSCONFUUID)
+                    .key(BASE + "Asset.ActivateFilesStructurBrowser")
+                    .description("Activate the Classification for Assets.");
+
+    /** See description. */
+    @EFapsSysConfAttribute
+    public static final BooleanSysConfAttribute ASSET_ACTIVATEFILES = new BooleanSysConfAttribute()
+                    .sysConfUUID(SYSCONFUUID)
+                    .key(BASE + "Asset.ActivateFiles")
                     .description("Activate the Classification for Assets.");
 
     /**

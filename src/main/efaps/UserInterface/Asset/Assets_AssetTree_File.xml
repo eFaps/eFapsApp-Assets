@@ -28,13 +28,19 @@
         <name>Assets_AssetTree_File</name>
         <target>
             <menu>Assets_AssetTree_File_Menu</menu>
-            <table>Archives_ArchiveTable</table>
-            <evaluate program="org.efaps.esjp.archives.ArchiveStructurBrowser">
-                <property name="Type">Archives_ArchiveRoot</property>
-                <property name="Object2ArchiveType">Assets_Asset2ArchiveAbstract</property>
-                <property name="Child_Type">Archives_ArchiveNode</property>
-                <property name="Child_LinkFrom">ParentLink</property>
+            <table>Archives_Object2FileTable</table>
+            <evaluate program="org.efaps.esjp.common.uitable.MultiPrint">
+                <property name="Type">Assets_Asset2ArchiveAbstract</property>
+                <property name="LinkFrom">FromLink</property>
             </evaluate>
+            <trigger program="org.efaps.esjp.admin.access.AccessCheck4UI"
+                method="configCheck"
+                name="Assets_AssetTree_File.UI_ACCESSCHECK"
+                event="UI_ACCESSCHECK">
+                <!-- Assets-Configuration -->
+                <property name="SystemConfig">f61b83cf-347e-4c94-b75a-6bf10858923c</property>
+                <property name="Attribute">org.efaps.assets.Asset.ActivateFiles</property>
+            </trigger>
         </target>
         <parents>
             <!-- connect via parent due to dependency to Archives Application -->
@@ -42,6 +48,5 @@
         </parents>
         <property name="Target">content</property>
         <property name="TargetShowCheckBoxes">true</property>
-        <property name="TargetStructurBrowserField">name</property>
     </definition>
 </ui-command>
