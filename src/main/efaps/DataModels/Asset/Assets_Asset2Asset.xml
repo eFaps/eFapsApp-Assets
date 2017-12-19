@@ -17,19 +17,25 @@
 -->
 <datamodel-type xmlns="http://www.efaps.org/xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="http://www.efaps.org/xsd http://www.efaps.org/xsd/eFaps_1.0.xsd">
-    <uuid>3682a5d4-4fff-4af8-b73c-be8d143ec6dd</uuid>
+    <uuid>717c1f60-c312-47e7-97a3-34e37e02420b</uuid>
     <file-application>eFapsApp-Assets</file-application>
     <definition>
         <version-expression>(version==latest)</version-expression>
-        <name>Assets_Asset2ObjectAbstract</name>
-        <parent>ERP_Object2ObjectAbstract</parent>
-        <purpose abstract="true" />
+        <name>Assets_Asset2Asset</name>
+        <parent>Assets_Asset2ProductAbstract</parent>
         <attribute>
-            <name>FromLinkAbstract</name>
+            <name>FromLink</name>
             <type>Link</type>
             <typelink>Assets_AssetAbstract</typelink>
             <sqltable>ERP_Object2ObjectAbstractSQLTable</sqltable>
             <sqlcolumn>FROMID</sqlcolumn>
+        </attribute>
+        <attribute>
+            <name>ToLink</name>
+            <type>Link</type>
+            <typelink>Assets_AssetAbstract</typelink>
+            <sqltable>ERP_Object2ObjectAbstractSQLTable</sqltable>
+            <sqlcolumn>TOID</sqlcolumn>
         </attribute>
     </definition>
 </datamodel-type>

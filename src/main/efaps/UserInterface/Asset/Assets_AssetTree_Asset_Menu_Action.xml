@@ -16,18 +16,16 @@
  limitations under the License.
 
 -->
-<ui-search xmlns="http://www.efaps.org/xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+<ui-menu xmlns="http://www.efaps.org/xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="http://www.efaps.org/xsd http://www.efaps.org/xsd/eFaps_1.0.xsd">
-    <uuid>57fc6711-33d6-4f8c-989a-9ba14f2ab87f</uuid>
+    <uuid>c35938ba-d3b2-4bb6-a023-1d512a876bd6</uuid>
     <file-application>eFapsApp-Assets</file-application>
     <definition>
         <version-expression>(version==latest)</version-expression>
-        <name>Assets_AssetTree_Location_Menu_Action_AddExisting_Search</name>
-        <default>
-            <command>Locations_LocationSearch</command>
-        </default>
+        <name>Assets_AssetTree_Asset_Menu_Action</name>
         <childs>
-            <child>Locations_LocationSearch</child>
+            <child>Assets_AssetTree_Asset_Menu_Action_AddExisting</child>
+            <child>Assets_AssetTree_Asset_Menu_Action_Disconnect</child>
         </childs>
     </definition>
-</ui-search>
+</ui-menu>

@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!--
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><!--
 
  Copyright 2003 - 2017 The eFaps Team
 
@@ -16,18 +15,22 @@
  limitations under the License.
 
 -->
-<ui-search xmlns="http://www.efaps.org/xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+<ui-table xmlns="http://www.efaps.org/xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="http://www.efaps.org/xsd http://www.efaps.org/xsd/eFaps_1.0.xsd">
-    <uuid>57fc6711-33d6-4f8c-989a-9ba14f2ab87f</uuid>
+    <uuid>f802e842-a783-4d32-a9d0-4ccc73320947</uuid>
     <file-application>eFapsApp-Assets</file-application>
     <definition>
         <version-expression>(version==latest)</version-expression>
-        <name>Assets_AssetTree_Location_Menu_Action_AddExisting_Search</name>
-        <default>
-            <command>Locations_LocationSearch</command>
-        </default>
-        <childs>
-            <child>Locations_LocationSearch</child>
-        </childs>
+        <name>Assets_Asset2AssetTable</name>
+         <field name="name">
+            <property name="SelectAlternateOID">linkto[ToLink].oid</property>
+            <property name="Select">linkto[ToLink].attribute[Name]</property>
+            <property name="Label">Assets_AssetAbstract/Name.Label</property>
+            <property name="HRef">TREE</property>
+        </field>
+        <field name="remark">
+            <property name="Select">linkto[ToLink].attribute[Remark]</property>
+            <property name="Label">Assets_AssetAbstract/Remark.Label</property>
+        </field>
     </definition>
-</ui-search>
+</ui-table>

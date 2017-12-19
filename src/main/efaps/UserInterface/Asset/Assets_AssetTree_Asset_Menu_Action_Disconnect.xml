@@ -16,18 +16,20 @@
  limitations under the License.
 
 -->
-<ui-search xmlns="http://www.efaps.org/xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+<ui-command xmlns="http://www.efaps.org/xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="http://www.efaps.org/xsd http://www.efaps.org/xsd/eFaps_1.0.xsd">
-    <uuid>57fc6711-33d6-4f8c-989a-9ba14f2ab87f</uuid>
+    <uuid>4ee5c0ca-e382-4186-a65a-3fe4e454de2b</uuid>
     <file-application>eFapsApp-Assets</file-application>
     <definition>
         <version-expression>(version==latest)</version-expression>
-        <name>Assets_AssetTree_Location_Menu_Action_AddExisting_Search</name>
-        <default>
-            <command>Locations_LocationSearch</command>
-        </default>
-        <childs>
-            <child>Locations_LocationSearch</child>
-        </childs>
+        <name>Assets_AssetTree_Asset_Menu_Action_Disconnect</name>
+        <access>
+            <role>Assets_Admin</role>
+        </access>
+        <target>
+            <execute program="org.efaps.esjp.common.uitable.CommonDelete" />
+        </target>
+        <property name="AskUser">true</property>
+        <property name="Submit">true</property>
     </definition>
-</ui-search>
+</ui-command>

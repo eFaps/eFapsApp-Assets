@@ -16,18 +16,22 @@
  limitations under the License.
 
 -->
-<ui-search xmlns="http://www.efaps.org/xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+<ui-command xmlns="http://www.efaps.org/xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="http://www.efaps.org/xsd http://www.efaps.org/xsd/eFaps_1.0.xsd">
-    <uuid>57fc6711-33d6-4f8c-989a-9ba14f2ab87f</uuid>
+    <uuid>882f85ee-333a-466e-b3e4-3092f0f00480</uuid>
     <file-application>eFapsApp-Assets</file-application>
     <definition>
         <version-expression>(version==latest)</version-expression>
-        <name>Assets_AssetTree_Location_Menu_Action_AddExisting_Search</name>
-        <default>
-            <command>Locations_LocationSearch</command>
-        </default>
-        <childs>
-            <child>Locations_LocationSearch</child>
-        </childs>
+        <name>Assets_AssetTree_Asset</name>
+        <target>
+            <menu>Assets_AssetTree_Asset_Menu</menu>
+            <table>Assets_Asset2AssetTable</table>
+            <evaluate program="org.efaps.esjp.common.uitable.MultiPrint">
+                <property name="Type">Assets_Asset2Asset</property>
+                <property name="LinkFrom">FromLink</property>
+            </evaluate>
+        </target>
+        <property name="Target">content</property>
+        <property name="TargetShowCheckBoxes">true</property>
     </definition>
-</ui-search>
+</ui-command>
