@@ -36,6 +36,7 @@
             <child>Assets_AssetTree_Documents</child>
             <child>Assets_AssetTree_Products</child>
             <child>Assets_AssetTree_Asset</child>
+            <child>Common_History_ObjectTree_HistoryLog</child>
         </childs>
         <property name="Target">content</property>
         <property name="TargetMode">view</property>

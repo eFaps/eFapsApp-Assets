@@ -1,6 +1,7 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?><!--
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!--
 
- Copyright 2003 - 2013 The eFaps Team
+ Copyright 2003 - 2017 The eFaps Team
 
  Licensed under the Apache License, Version 2.0 (the "License");
  you may not use this file except in compliance with the License.
@@ -14,15 +15,11 @@
  See the License for the specific language governing permissions and
  limitations under the License.
 
- Author:          The eFaps Team
- Revision:        $Rev$
- Last Changed:    $Date$
- Last Changed By: $Author$
-
---><datamodel-type xmlns="http://www.efaps.org/xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.efaps.org/xsd http://www.efaps.org/xsd/eFaps_1.0.xsd">
+-->
+<datamodel-type xmlns="http://www.efaps.org/xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.efaps.org/xsd http://www.efaps.org/xsd/eFaps_1.0.xsd">
     <uuid>7a15dd1c-7ffd-4f44-89d1-77e1aa6fb40e</uuid>
     <file-application>eFapsApp-Assets</file-application>
-    <file-revision>$Rev$</file-revision>
     <definition>
         <version-expression>(version==latest)</version-expression>
         <name>Assets_Location2Asset</name>
@@ -41,5 +38,19 @@
             <sqltable>Locations_Location2ObjectSQLTable</sqltable>
             <sqlcolumn>TOID</sqlcolumn>
         </attribute>
+        <trigger program="org.efaps.esjp.common.history.ConnectHistoryTrigger"
+            name="Assets_Location2Asset.INSERT_POST"
+            event="INSERT_POST">
+            <property name="Select4HistoryInstance">linkto[ToLink].instance</property>
+            <property name="Select4ConnectInstance">linkto[FromLink].instance</property>
+            <property name="Select4ConnectAttribute">linkto[FromLink].attribute[Name]</property>
+        </trigger>
+        <trigger program="org.efaps.esjp.common.history.DisconnectHistoryTrigger"
+            name="Assets_Location2Asset.DELETE_PRE"
+            event="DELETE_PRE">
+            <property name="Select4HistoryInstance">linkto[ToLink].instance</property>
+            <property name="Select4ConnectInstance">linkto[FromLink].instance</property>
+            <property name="Select4ConnectAttribute">linkto[FromLink].attribute[Name]</property>
+        </trigger>
     </definition>
 </datamodel-type>
