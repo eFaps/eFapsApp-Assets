@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <!--
 
- Copyright 2003 - 2016 The eFaps Team
+ Copyright 2003 - 2017 The eFaps Team
 
  Licensed under the Apache License, Version 2.0 (the "License");
  you may not use this file except in compliance with the License.
@@ -24,7 +24,6 @@
     <definition>
         <version-expression>(version==latest)</version-expression>
         <name>Assets_MaintenanceOrderTable</name>
-        <!-- fields -->
         <field name="type">
             <property name="Attribute">Type</property>
             <property name="HRef">${COMMONURL}/MenuTree.jsp</property>
@@ -49,22 +48,14 @@
             <property name="Attribute">Date</property>
             <property name="Label">Assets_MaintenanceOrderTable/Date.Label</property>
         </field>
-        <field name="vendorLink">
-            <property name="Attribute">Salesperson</property>
-            <property name="Label">Assets_MaintenanceOrderTable/Salesperson.Label</property>
+        <field name="dueDate">
+            <property name="Attribute">DueDate</property>
+            <property name="Label">Assets_MaintenanceOrder/DueDate.Label</property>
         </field>
-
         <field name="status">
             <property name="FilterType">PICKLIST</property>
             <property name="Attribute">StatusAbstract</property>
             <property name="Label">Assets_MaintenanceOrderTable/Status.Label</property>
-        </field>
-        <field name="buttonOpenInNewWindow">
-            <icon>eFapsActionNewWindow</icon>
-            <property name="HRef">${COMMONURL}/MenuTree.jsp</property>
-            <property name="Target">popup</property>
-            <property name="SortAble">false</property>
-            <property name="Width">15px</property>
         </field>
     </definition>
 </ui-table>

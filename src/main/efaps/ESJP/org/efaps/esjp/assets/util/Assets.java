@@ -25,6 +25,10 @@ import org.efaps.admin.program.esjp.EFapsUUID;
 import org.efaps.api.annotation.EFapsSysConfAttribute;
 import org.efaps.api.annotation.EFapsSystemConfiguration;
 import org.efaps.esjp.admin.common.systemconfiguration.BooleanSysConfAttribute;
+import org.efaps.esjp.admin.common.systemconfiguration.EnumSysConfAttribute;
+import org.efaps.esjp.admin.common.systemconfiguration.StringSysConfAttribute;
+import org.efaps.esjp.common.jasperreport.StandartReport_Base.JasperMime;
+import org.efaps.esjp.sales.util.Sales;
 import org.efaps.util.cache.CacheReloadException;
 
 /**
@@ -55,14 +59,14 @@ public final class Assets
     public static final BooleanSysConfAttribute MAINTREQ_ACTIVATE = new BooleanSysConfAttribute()
                     .sysConfUUID(SYSCONFUUID)
                     .key(BASE + "MaintenanceRequest.Activate")
-                    .description("Activate Maintenance Order.");
+                    .description("Activate Request Order.");
 
     /** See description. */
     @EFapsSysConfAttribute
     public static final BooleanSysConfAttribute LIFECYCLECOST_ACTIVATE = new BooleanSysConfAttribute()
                     .sysConfUUID(SYSCONFUUID)
                     .key(BASE + "LifecycleCost.Activate")
-                    .description("Activate Maintenance Order.");
+                    .description("Activate Lifecycle-Cost.");
 
     /** See description. */
     @EFapsSysConfAttribute
@@ -78,7 +82,6 @@ public final class Assets
                     .key(BASE + "Asset.UseNumberGenerator4Name")
                     .description("Use a NumberGenerator for Asset creation. (Needs Configuration of NG in Commons).");
 
-
     /** See description. */
     @EFapsSysConfAttribute
     public static final BooleanSysConfAttribute ASSET_ACTIVATECLASS = new BooleanSysConfAttribute()
@@ -91,14 +94,29 @@ public final class Assets
     public static final BooleanSysConfAttribute ASSET_ACTIVATEFILESTRBRWS = new BooleanSysConfAttribute()
                     .sysConfUUID(SYSCONFUUID)
                     .key(BASE + "Asset.ActivateFilesStructurBrowser")
-                    .description("Activate the Classification for Assets.");
+                    .description("Activate FilesS tructurBrowser for Assets.");
 
     /** See description. */
     @EFapsSysConfAttribute
     public static final BooleanSysConfAttribute ASSET_ACTIVATEFILES = new BooleanSysConfAttribute()
                     .sysConfUUID(SYSCONFUUID)
                     .key(BASE + "Asset.ActivateFiles")
-                    .description("Activate the Classification for Assets.");
+                    .description("Activate Files for Assets.");
+
+    /** See description. */
+    @EFapsSysConfAttribute
+    public static final StringSysConfAttribute MAINTEORDER_JASPERREPORT = new StringSysConfAttribute()
+                    .sysConfUUID(Sales.SYSCONFUUID)
+                    .key(BASE + "MaintenanceOrder.JasperReport")
+                    .description("Name of the jasperReport for MaintenanceOrder");
+
+    /** See description. */
+    @EFapsSysConfAttribute
+    public static final EnumSysConfAttribute<JasperMime> MAINTEORDER_MIME = new EnumSysConfAttribute<JasperMime>()
+                    .sysConfUUID(Sales.SYSCONFUUID)
+                    .key(BASE + "MaintenanceOrder.Mime")
+                    .clazz(JasperMime.class)
+                    .description("Mime for the jasperReport for UsageReport");
 
     /**
      * Singelton.

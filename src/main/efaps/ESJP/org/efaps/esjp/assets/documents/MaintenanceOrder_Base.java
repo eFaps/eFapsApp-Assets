@@ -1,5 +1,5 @@
 /*
- * Copyright 2003 - 2010 The eFaps Team
+ * Copyright 2003 - 2017 The eFaps Team
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -13,17 +13,18 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * Revision:        $Rev$
- * Last Changed:    $Date$
- * Last Changed By: $Author$
  */
 
 package org.efaps.esjp.assets.documents;
 
+import java.io.File;
+
 import org.efaps.admin.event.Parameter;
 import org.efaps.admin.event.Return;
+import org.efaps.admin.event.Return.ReturnValues;
 import org.efaps.admin.program.esjp.EFapsApplication;
 import org.efaps.admin.program.esjp.EFapsUUID;
+import org.efaps.ci.CIType;
 import org.efaps.esjp.ci.CIAssets;
 import org.efaps.util.EFapsException;
 
@@ -31,26 +32,65 @@ import org.efaps.util.EFapsException;
  * TODO comment!
  *
  * @author The eFaps Team
- * @version $Id$
  */
 @EFapsUUID("3d92d505-3a75-437e-818d-ec1abe052cbe")
 @EFapsApplication("eFapsApp-Assets")
 public abstract class MaintenanceOrder_Base
     extends AbstractAssetsDocument
 {
-        /**
-     * @param _parameter Parameter as passed from the eFaps API.
+    /**
+     * Method for create a new Credit.
+     *
+     * @param _parameter Parameter as passed from eFaps API.
      * @return new Return.
      * @throws EFapsException on error.
      */
     public Return create(final Parameter _parameter)
         throws EFapsException
     {
+        final Return ret = new Return();
         final CreatedDoc createdDoc = createDoc(_parameter);
+        createPositions(_parameter, createdDoc);
         connectAsset2Document(_parameter, createdDoc, CIAssets.Assets2MaintenanceOrder);
-        //createPositions(_parameter, createdDoc);
-        // executeProcess(_parameter, createdDoc);
-        return new Return();
+        connect2Derived(_parameter, createdDoc);
+        connect2Object(_parameter, createdDoc);
+
+        final File file = createReport(_parameter, createdDoc);
+        if (file != null) {
+            ret.put(ReturnValues.VALUES, file);
+            ret.put(ReturnValues.TRUE, true);
+        }
+        ret.put(ReturnValues.INSTANCE, createdDoc.getInstance());
+        return ret;
     }
 
+    /**
+     * Edit.
+     *
+     * @param _parameter Parameter from the eFaps API.
+     * @return new Return.
+     * @throws EFapsException on error.
+     */
+    public Return edit(final Parameter _parameter)
+        throws EFapsException
+    {
+        final Return ret = new Return();
+        final EditedDoc editDoc = editDoc(_parameter);
+        updatePositions(_parameter, editDoc);
+        updateConnection2Object(_parameter, editDoc);
+
+        final File file = createReport(_parameter, editDoc);
+        if (file != null) {
+            ret.put(ReturnValues.VALUES, file);
+            ret.put(ReturnValues.TRUE, true);
+        }
+        return ret;
+    }
+
+    @Override
+    public CIType getCIType()
+        throws EFapsException
+    {
+        return CIAssets.MaintenanceOrder;
+    }
 }

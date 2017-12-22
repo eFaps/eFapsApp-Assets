@@ -1,6 +1,7 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?><!--
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!--
 
- Copyright 2003 - 2012 The eFaps Team
+ Copyright 2003 - 2017 The eFaps Team
 
  Licensed under the Apache License, Version 2.0 (the "License");
  you may not use this file except in compliance with the License.
@@ -14,17 +15,11 @@
  See the License for the specific language governing permissions and
  limitations under the License.
 
- Author:          The eFaps Team
- Revision:        $Rev$
- Last Changed:    $Date$
- Last Changed By: $Author$
-
---><ui-command xmlns="http://www.efaps.org/xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.efaps.org/xsd http://www.efaps.org/xsd/eFaps_1.0.xsd">
-
+-->
+<ui-command xmlns="http://www.efaps.org/xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.efaps.org/xsd http://www.efaps.org/xsd/eFaps_1.0.xsd">
     <uuid>0f7f2fab-7b99-40ce-bd89-245ef6c8e365</uuid>
     <file-application>eFapsApp-Assets</file-application>
-    <file-revision>$Rev$</file-revision>
-
     <definition>
         <version-expression>(version==latest)</version-expression>
         <name>Assets_MaintenanceOrderMyDesk_Menu_Action_Create</name>
@@ -32,17 +27,19 @@
             <role>Assets_Admin</role>
             <role>Assets_Modifier</role>
         </access>
-        <!-- target definitions -->
         <target>
             <form>Assets_MaintenanceOrderForm</form>
             <execute method="create" program="org.efaps.esjp.assets.documents.MaintenanceOrder">
                 <property name="StatusGroup">Assets_MaintenanceOrderStatus</property>
                 <property name="PositionType">Assets_MaintenanceOrderPosition</property>
-                <property name="Status">Slope</property>
+                <property name="Status">Draft</property>
                 <property name="UseNumberGenerator4Name">true</property>
+                <!-- Assets-Configuration -->
+                <property name="JasperConfig">f61b83cf-347e-4c94-b75a-6bf10858923c</property>
+                <property name="JasperConfigReport">org.efaps.assets.MaintenanceOrder.JasperReport</property>
+                <property name="JasperConfigMime">org.efaps.assets.MaintenanceOrder.Mime</property>
             </execute>
         </target>
-        <!-- properties -->
         <property name="Target">modal</property>
         <property name="TargetCreateType">Assets_MaintenanceOrder</property>
         <property name="TargetMode">create</property>

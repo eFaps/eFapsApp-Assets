@@ -1,6 +1,7 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?><!--
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!--
 
- Copyright 2003 - 2010 The eFaps Team
+ Copyright 2003 - 2017 The eFaps Team
 
  Licensed under the Apache License, Version 2.0 (the "License");
  you may not use this file except in compliance with the License.
@@ -14,49 +15,14 @@
  See the License for the specific language governing permissions and
  limitations under the License.
 
- Author:          The eFaps Team
- Revision:        $Rev$
- Last Changed:    $Date$
- Last Changed By: $Author$
-
---><access-set xmlns="http://www.efaps.org/xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.efaps.org/xsd http://www.efaps.org/xsd/eFaps_1.0.xsd">
+-->
+<access-set xmlns="http://www.efaps.org/xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.efaps.org/xsd http://www.efaps.org/xsd/eFaps_1.0.xsd">
     <uuid>12f353e1-6eba-4930-9e73-424dc394083d</uuid>
     <file-application>eFapsApp-Assets</file-application>
-    <file-revision>$Rev$</file-revision>
     <definition>
-    <version-expression>(version==latest)</version-expression>
-    <name>Assets_Admin</name>
-   <!--  <access-type>show</access-type>
-    <access-type>read</access-type>
-    <access-type>modify</access-type>
-    <access-type>checkout</access-type>
-    <access-type>checkin</access-type>
-    <access-type>create</access-type>
-    <access-type>statusBoost</access-type>
-    <access-type>statusModify</access-type>
-    <access-type>delete</access-type>
-
-    <type>Assets_Maintenance_Order</type>
-    <type>Assets_Maintenance_Request</type>
-    <type>Assets_Maintenance_Simple</type>
-
-    <status group="Assets_maintenanceOrderStatus">
-        <key>Approved</key>
-        <key>Slope</key>
-    </status>
-
-    <status group="Assets_maintenanceRequestStatus">
-        <key>Approved</key>
-        <key>Slope</key>
-    </status>
-    <status group="Assets_AssetSimpleStatus">
-        <key>Open</key>
-        <key>Depreciated</key>
-        <key>Sold</key>
-    </status>
-
-
-
-    <role>Assets_Admin</role>  -->
+        <version-expression>(version==latest)</version-expression>
+        <name>Assets_Admin</name>
+        <role>Assets_Admin</role>  -->
     </definition>
 </access-set>

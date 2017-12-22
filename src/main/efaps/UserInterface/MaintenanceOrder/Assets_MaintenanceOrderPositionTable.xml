@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <!--
 
- Copyright 2003 - 2016 The eFaps Team
+ Copyright 2003 - 2017 The eFaps Team
 
  Licensed under the Apache License, Version 2.0 (the "License");
  you may not use this file except in compliance with the License.
@@ -28,30 +28,49 @@
             <property name="Attribute">Quantity</property>
             <property name="Label">Assets_MaintenanceOrderPosition/Quantity.Label</property>
             <property name="ModeCreate">EDITABLE</property>
+            <property name="ModeEdit">EDITABLE</property>
+            <property name="Align">right</property>
         </field>
-        <field name="maintenance">
-            <property name="Label">Assets_MaintenanceOrderPosition/Maintenance.Label</property>
+        <field name="product">
+            <property name="SelectAlternateOID">linkto[Product].oid</property>
+            <property name="Select">linkto[Product].attribute[Name]</property>
+            <property name="HRef">TREE</property>
+            <property name="Label">Assets_MaintenanceOrderPosition/Product.Label</property>
             <property name="ModeCreate">EDITABLE</property>
-            <property name="UIProvider">org.efaps.admin.datamodel.ui.StringUI</property>
+            <property name="ModeEdit">EDITABLE</property>
+            <trigger program="org.efaps.esjp.assets.documents.MaintenanceOrder"
+                method="autoComplete4Product"
+                name="Assets_MaintenanceOrderPositionTable.product.UI_FIELD_AUTOCOMPLETE"
+                event="UI_FIELD_AUTOCOMPLETE" >
+                <!-- Assets-Configuration  -->
+                <property name="PropertiesConfig">f61b83cf-347e-4c94-b75a-6bf10858923c</property>
+                <property name="PropertiesConfigAttribute">org.efaps.sales.OrderOutbound.ProductAutoComplete</property>
+            </trigger>
+            <trigger program="org.efaps.esjp.assets.documents.MaintenanceOrder"
+                method="updateFields4Product"
+                name="Assets_MaintenanceOrderPositionTable.product.UI_FIELD_UPDATE"
+                event="UI_FIELD_UPDATE" />
         </field>
-        <field name="maintenanceDesc">
-            <property name="Columns">90</property>
+        <field name="productDesc">
             <property name="ModeCreate">EDITABLE</property>
-            <property name="Label">Assets_MaintenanceOrderPosition/MaintenanceDesc.Label</property>
+            <property name="ModeEdit">EDITABLE</property>
+            <property name="Attribute">ProductDesc</property>
+            <property name="Label">Assets_MaintenanceOrderPosition/ProductDesc.Label</property>
             <property name="Width">10</property>
-            <property name="UIProvider">org.efaps.admin.datamodel.ui.StringUI</property>
         </field>
         <field name="uoM">
             <property name="ModeCreate">EDITABLE</property>
+            <property name="ModeEdit">EDITABLE</property>
             <property name="ModeView">NONE</property>
+            <property name="ModePrint">NONE</property>
             <property name="Attribute">UoM</property>
             <property name="Label">Assets_MaintenanceOrderPosition/UoM.Label</property>
         </field>
         <field name="uom4View">
-            <property name="Width">1</property>
             <property name="ModeCreate">NONE</property>
+            <property name="ModeEdit">NONE</property>
+            <property name="Select">linkto[UoM].attribute[Name]</property>
             <property name="Label">Assets_MaintenanceOrderPosition/UoM.Label</property>
-            <property name="UIProvider">org.efaps.admin.datamodel.ui.StringUI</property>
         </field>
     </definition>
 </ui-table>
