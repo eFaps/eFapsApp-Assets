@@ -1,7 +1,6 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!--
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><!--
 
-  Copyright 2003 - 2016 The eFaps Team
+  Copyright 2003 - 2017 The eFaps Team
 
   Licensed under the Apache License, Version 2.0 (the "License");
   you may not use this file except in compliance with the License.
@@ -17,28 +16,17 @@
 
 -->
 <ui-menu xmlns="http://www.efaps.org/xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://www.efaps.org/xsd http://www.efaps.org/xsd/eFaps_1.0.xsd">
-    <uuid>73d20d4f-d7da-4536-88a2-9a10c0793732</uuid>
+    xsi:schemaLocation="http://www.efaps.org/xsd http://www.efaps.org/xsd/eFaps_1.0.xsd">
+    <uuid>b5aa10af-6851-4b44-a479-0559e2261d5a</uuid>
     <file-application>eFapsApp-Assets</file-application>
     <definition>
         <version-expression>(version==latest)</version-expression>
-        <name>Assets_AssetTree</name>
+        <name>Assets_EventScheduleTree</name>
         <target>
-            <menu>Assets_AssetTree_Menu</menu>
-            <form>Assets_AssetForm</form>
+            <menu>Assets_EventScheduleTree_Menu</menu>
+            <form>Assets_EventScheduleForm</form>
         </target>
-        <type>Assets_AssetAbstract</type>
-        <childs>
-            <child>Assets_AssetTree_EventSchedule</child>
-            <child>Assets_AssetTree_Depreciation</child>
-            <child>Assets_AssetTree_LifecycleCost</child>
-            <child>Assets_AssetTree_Employee</child>
-            <child>Assets_AssetTree_Location</child>
-            <child>Assets_AssetTree_Documents</child>
-            <child>Assets_AssetTree_Products</child>
-            <child>Assets_AssetTree_Asset</child>
-            <child>Common_History_ObjectTree_HistoryLog</child>
-        </childs>
+        <type>Assets_EventSchedule</type>
         <property name="Target">content</property>
         <property name="TargetMode">view</property>
     </definition>

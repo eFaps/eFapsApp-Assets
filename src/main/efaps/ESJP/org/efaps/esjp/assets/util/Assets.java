@@ -77,6 +77,13 @@ public final class Assets
 
     /** See description. */
     @EFapsSysConfAttribute
+    public static final BooleanSysConfAttribute EVENTSCHED_ACTIVATE = new BooleanSysConfAttribute()
+                    .sysConfUUID(SYSCONFUUID)
+                    .key(BASE + "EventSchedule.Activate")
+                    .description("Activate the mechanism for Event Scheduling.");
+
+    /** See description. */
+    @EFapsSysConfAttribute
     public static final BooleanSysConfAttribute ASSET_USENUMBERGEN = new BooleanSysConfAttribute()
                     .sysConfUUID(SYSCONFUUID)
                     .key(BASE + "Asset.UseNumberGenerator4Name")
