@@ -26,7 +26,7 @@
         <attribute>
             <name>Status</name>
             <type>Status</type>
-            <typelink>Projects_EventScheduleStatus</typelink>
+            <typelink>Assets_EventScheduleStatus</typelink>
             <sqltable>ERP_EventScheduleAbstractSQLTable</sqltable>
             <sqlcolumn>STATUS</sqlcolumn>
             <trigger event="RANGE_VALUE" name="Assets_EventSchedule.Status.RANGE_VALUE"
