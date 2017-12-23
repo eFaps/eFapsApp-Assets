@@ -17,41 +17,47 @@
 -->
 <ui-form xmlns="http://www.efaps.org/xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="http://www.efaps.org/xsd http://www.efaps.org/xsd/eFaps_1.0.xsd">
-    <uuid>67d5811a-d35e-418c-a8e6-8c51659d9693</uuid>
+    <uuid>af9795bb-d22b-42a6-8a52-ecfa32876b25</uuid>
     <file-application>eFapsApp-Assets</file-application>
     <definition>
         <version-expression>(version==latest)</version-expression>
-        <name>Assets_EventScheduleForm</name>
+        <name>Assets_EventScheduleDateForm</name>
         <field name="eventDefinition">
             <property name="ModeEdit">READONLY</property>
             <property name="ModeCreate">EDITABLE</property>
             <property name="ModePrint">NONE</property>
             <property name="SelectAlternateOID">linkto[DefinitionLinkAbstract].oid</property>
             <property name="Select">linkto[DefinitionLinkAbstract].attribute[Name]</property>
-            <property name="HRef">${COMMONURL}/MenuTree.jsp</property>
+            <property name="HRef">TREE</property>
             <property name="UIProvider">org.efaps.admin.datamodel.ui.StringUI</property>
             <property name="Label">Assets_EventScheduleForm.eventDefinition.Label</property>
             <property name="Required">true</property>
-            <trigger event="UI_FIELD_AUTOCOMPLETE" method="autoComplete4EventDefinition"
+            <trigger event="UI_FIELD_AUTOCOMPLETE" method="autoComplete"
                 name="Assets_EventScheduleForm.eventDefinition.UI_FIELD_AUTOCOMPLETE"
-                program="org.efaps.esjp.assets.EventSchedule">
+                program="org.efaps.esjp.common.uiform.Field">
                 <property name="Type">ERP_EventDefinitionStandart</property>
+                <property name="SearchAttribute">Name</property>
+                <property name="Select4VALUE">attribute[Name]</property>
+                <property name="Select4CHOICE">attribute[Name]</property>
             </trigger>
-        </field>
-        <field name="date">
-            <property name="Attribute">Date</property>
-            <property name="ModeCreate">EDITABLE</property>
-            <property name="ModeEdit">EDITABLE</property>
         </field>
         <field name="name">
             <property name="Attribute">Name</property>
             <property name="ModeCreate">EDITABLE</property>
             <property name="ModeEdit">EDITABLE</property>
+            <property name="Required">true</property>
+        </field>
+         <field name="date">
+            <property name="Attribute">Date</property>
+            <property name="ModeCreate">EDITABLE</property>
+            <property name="ModeEdit">EDITABLE</property>
+            <property name="Required">true</property>
         </field>
         <field name="description">
             <property name="Attribute">Description</property>
             <property name="ModeCreate">EDITABLE</property>
             <property name="ModeEdit">EDITABLE</property>
+            <property name="Width">60</property>
         </field>
         <field character="Group" name="createGroup">
             <property name="GroupCount">2</property>

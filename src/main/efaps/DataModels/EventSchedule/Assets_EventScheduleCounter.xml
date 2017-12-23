@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!--
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><!--
 
  Copyright 2003 - 2017 The eFaps Team
 
@@ -15,19 +14,24 @@
  See the License for the specific language governing permissions and
  limitations under the License.
 
-
 -->
-<ui-menu xmlns="http://www.efaps.org/xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+<datamodel-type xmlns="http://www.efaps.org/xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="http://www.efaps.org/xsd http://www.efaps.org/xsd/eFaps_1.0.xsd">
-    <uuid>bc914ef3-d88d-4f69-ba55-96d0405de95b</uuid>
+    <uuid>95288e89-765b-4c51-a4fb-64f4805e6bd0</uuid>
     <file-application>eFapsApp-Assets</file-application>
     <definition>
         <version-expression>(version==latest)</version-expression>
-        <name>Assets_AssetTree_EventSchedule_Menu_Action</name>
-        <childs>
-            <child>Assets_AssetTree_EventSchedule_Menu_Action_CreateEventCounter</child>
-            <child>Assets_AssetTree_EventSchedule_Menu_Action_CreateEventDate</child>
-            <child>Assets_AssetTree_EventSchedule_Menu_Action_Delete</child>
-        </childs>
+        <name>Assets_EventScheduleCounter</name>
+        <parent>Assets_EventScheduleAbstract</parent>
+        <attribute>
+            <name>Status</name>
+            <type>Status</type>
+            <typelink>Assets_EventScheduleStatus</typelink>
+            <sqltable>ERP_EventScheduleAbstractSQLTable</sqltable>
+            <sqlcolumn>STATUS</sqlcolumn>
+            <trigger event="RANGE_VALUE" name="Assets_EventScheduleCounter.Status.RANGE_VALUE"
+                program="org.efaps.esjp.admin.datamodel.StatusValue">
+            </trigger>
+        </attribute>
     </definition>
-</ui-menu>
+</datamodel-type>

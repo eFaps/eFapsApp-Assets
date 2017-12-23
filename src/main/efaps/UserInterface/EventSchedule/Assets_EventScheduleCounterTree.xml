@@ -21,12 +21,12 @@
     <file-application>eFapsApp-Assets</file-application>
     <definition>
         <version-expression>(version==latest)</version-expression>
-        <name>Assets_EventScheduleTree</name>
+        <name>Assets_EventScheduleCounterTree</name>
         <target>
-            <menu>Assets_EventScheduleTree_Menu</menu>
-            <form>Assets_EventScheduleForm</form>
+            <menu>Assets_EventScheduleCounterTree_Menu</menu>
+            <form>Assets_EventScheduleCounterForm</form>
         </target>
-        <type>Assets_EventSchedule</type>
+        <type>Assets_EventScheduleCounter</type>
         <property name="Target">content</property>
         <property name="TargetMode">view</property>
     </definition>

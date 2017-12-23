@@ -14,24 +14,19 @@
  See the License for the specific language governing permissions and
  limitations under the License.
 
+
 -->
-<datamodel-type xmlns="http://www.efaps.org/xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+<ui-command xmlns="http://www.efaps.org/xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="http://www.efaps.org/xsd http://www.efaps.org/xsd/eFaps_1.0.xsd">
-    <uuid>e6c0aa9e-9aa1-4ae0-842f-8d2d3830a636</uuid>
+    <uuid>2f7f0b66-cbef-417c-a352-199cfd080358</uuid>
     <file-application>eFapsApp-Assets</file-application>
     <definition>
         <version-expression>(version==latest)</version-expression>
-        <name>Assets_EventSchedule</name>
-        <parent>ERP_EventScheduleAbstract</parent>
-        <attribute>
-            <name>Status</name>
-            <type>Status</type>
-            <typelink>Assets_EventScheduleStatus</typelink>
-            <sqltable>ERP_EventScheduleAbstractSQLTable</sqltable>
-            <sqlcolumn>STATUS</sqlcolumn>
-            <trigger event="RANGE_VALUE" name="Assets_EventSchedule.Status.RANGE_VALUE"
-                program="org.efaps.esjp.admin.datamodel.StatusValue">
-            </trigger>
-        </attribute>
+        <name>Assets_AssetTree_EventSchedule_Menu_Action_Delete</name>
+        <target>
+            <execute program="org.efaps.esjp.common.uitable.CommonDelete" />
+        </target>
+        <property name="AskUser">true</property>
+        <property name="Submit">true</property>
     </definition>
-</datamodel-type>
+</ui-command>

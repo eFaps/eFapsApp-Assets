@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!--
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><!--
 
  Copyright 2003 - 2017 The eFaps Team
 
@@ -17,17 +16,18 @@
 
 
 -->
-<ui-menu xmlns="http://www.efaps.org/xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+<ui-command xmlns="http://www.efaps.org/xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="http://www.efaps.org/xsd http://www.efaps.org/xsd/eFaps_1.0.xsd">
-    <uuid>bc914ef3-d88d-4f69-ba55-96d0405de95b</uuid>
+    <uuid>5a3d11b2-1a64-481e-b45b-fd1ee6369b1a</uuid>
     <file-application>eFapsApp-Assets</file-application>
     <definition>
         <version-expression>(version==latest)</version-expression>
-        <name>Assets_AssetTree_EventSchedule_Menu_Action</name>
-        <childs>
-            <child>Assets_AssetTree_EventSchedule_Menu_Action_CreateEventCounter</child>
-            <child>Assets_AssetTree_EventSchedule_Menu_Action_CreateEventDate</child>
-            <child>Assets_AssetTree_EventSchedule_Menu_Action_Delete</child>
-        </childs>
+        <name>Assets_EventScheduleDateTree_Menu_Action_Edit</name>
+        <target>
+            <form>Assets_EventScheduleDateForm</form>
+            <execute program="org.efaps.esjp.common.uiform.Edit" />
+        </target>
+        <property name="Target">modal</property>
+        <property name="TargetMode">edit</property>
     </definition>
-</ui-menu>
+</ui-command>

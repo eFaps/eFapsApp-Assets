@@ -22,22 +22,20 @@
     <file-application>eFapsApp-Assets</file-application>
     <definition>
         <version-expression>(version==latest)</version-expression>
-        <name>Assets_AssetTree_EventSchedule_Menu_Action_CreateEvent</name>
+        <name>Assets_AssetTree_EventSchedule_Menu_Action_CreateEventDate</name>
         <access>
             <role>Assets_Admin</role>
             <role>Assets_Modifier</role>
         </access>
         <target>
-            <form>Assets_EventScheduleForm</form>
-            <execute method="create" program="org.efaps.esjp.assets.EventSchedule">
-                <property name="ConnectType">Assets_Asset2EventSchedule</property>
-                <property name="ConnectParentAttribute">FromLink</property>
-                <property name="ConnectChildAttribute">ToLink</property>
-            </execute>
+            <form>Assets_EventScheduleDateForm</form>
+            <execute method="create" program="org.efaps.esjp.assets.EventSchedule"/>
         </target>
         <property name="Target">modal</property>
         <property name="TargetMode">create</property>
-        <property name="TargetCreateType">Assets_EventSchedule</property>
+
+        <property name="TargetCreateType">Assets_EventScheduleDate</property>
+        <property name="TargetConnectAttribute">Assets_EventScheduleAbstract/AssetLink</property>
         <property name="WindowHeight">460</property>
         <property name="WindowWidth">700</property>
         <property name="TargetDefaultMenu">none</property>

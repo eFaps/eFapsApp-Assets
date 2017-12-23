@@ -26,10 +26,10 @@
         <name>Assets_AssetTree_EventSchedule</name>
         <target>
             <menu>Assets_AssetTree_EventSchedule_Menu</menu>
-            <table>Assets_Asset2EventScheduleTable</table>
+            <table>Assets_EventScheduleTable</table>
             <evaluate program="org.efaps.esjp.common.uitable.MultiPrint">
-                <property name="Type">Assets_Asset2EventSchedule</property>
-                <property name="LinkFrom">FromLink</property>
+                <property name="Type">Assets_EventScheduleAbstract</property>
+                <property name="LinkFrom">AssetLink</property>
             </evaluate>
             <trigger program="org.efaps.esjp.admin.access.AccessCheck4UI" method="configCheck"
                 name="Assets_AssetTree_EventSchedule.UI_ACCESSCHECK" event="UI_ACCESSCHECK">
