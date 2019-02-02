@@ -1,5 +1,5 @@
 /*
- * Copyright 2003 - 2015 The eFaps Team
+ * Copyright 2003 - 2019 The eFaps Team
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -32,8 +32,6 @@ import org.efaps.esjp.sales.util.Sales;
 import org.efaps.util.cache.CacheReloadException;
 
 /**
- * TODO comment!
- *
  * @author The eFaps Team
  */
 @EFapsUUID("6bf8791a-a1d1-47d1-ac63-7cd93e6df22a")
@@ -46,6 +44,13 @@ public final class Assets
 
     /** Assets-Configuration. */
     public static final UUID SYSCONFUUID = UUID.fromString("f61b83cf-347e-4c94-b75a-6bf10858923c");
+
+    /** See description. */
+    @EFapsSysConfAttribute
+    public static final BooleanSysConfAttribute ACTIVATE = new BooleanSysConfAttribute()
+                    .sysConfUUID(SYSCONFUUID)
+                    .key(BASE + "Activate")
+                    .description("Main switch to activate/deactivate Assets.");
 
     /** See description. */
     @EFapsSysConfAttribute
