@@ -1,6 +1,7 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?><!--
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!--
 
-  Copyright 2003 - 2013 The eFaps Team
+  Copyright 2003 - 2019 The eFaps Team
 
   Licensed under the Apache License, Version 2.0 (the "License");
   you may not use this file except in compliance with the License.
@@ -14,29 +15,23 @@
   See the License for the specific language governing permissions and
   limitations under the License.
 
-  Author:          The eFaps Team
-  Revision:        $Rev$
-  Last Changed:    $Date$
-  Last Changed By: $Author$
-
 -->
 <ui-form xmlns="http://www.efaps.org/xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="http://www.efaps.org/xsd http://www.efaps.org/xsd/eFaps_1.0.xsd">
     <uuid>a102ff8a-a4fd-4bcb-98b7-32ff1e005aa8</uuid>
     <file-application>eFapsApp-Assets</file-application>
-    <file-revision>$Rev$</file-revision>
     <definition>
         <version-expression>(version==latest)</version-expression>
         <name>Assets_AssetsDocumentSearchForm</name>
-        <!-- fields -->
-         <field name="type">
+        <field name="type">
             <property name="Attribute">Type</property>
             <property name="Label">Assets_AssetsDocumentSearchForm.type.Label</property>
             <property name="Columns">15</property>
             <property name="ModeSearch">EDITABLE</property>
+            <property name="UIType">SNIPPLET</property>
             <trigger program="org.efaps.esjp.common.uisearch.Search" method="typeFieldValue"
                 name="Assets_AssetsDocumentSearchForm.type.UI_FIELD_VALUE" event="UI_FIELD_VALUE">
-                <property name="Types">ERP_DocumentAbstract</property>
+                <property name="Type">ERP_DocumentAbstract</property>
             </trigger>
         </field>
         <field name="name">
