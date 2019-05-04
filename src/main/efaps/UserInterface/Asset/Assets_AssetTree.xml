@@ -33,6 +33,7 @@
             <child>Assets_AssetTree_Depreciation</child>
             <child>Assets_AssetTree_LifecycleCost</child>
             <child>Assets_AssetTree_Employee</child>
+            <child>Assets_AssetTree_Contact</child>
             <child>Assets_AssetTree_Location</child>
             <child>Assets_AssetTree_Documents</child>
             <child>Assets_AssetTree_Products</child>

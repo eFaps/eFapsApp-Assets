@@ -117,6 +117,13 @@ public final class Assets
 
     /** See description. */
     @EFapsSysConfAttribute
+    public static final BooleanSysConfAttribute ASSET_ACTIVATECONTACTS = new BooleanSysConfAttribute()
+                    .sysConfUUID(SYSCONFUUID)
+                    .key(BASE + "Asset.ActivateContacts")
+                    .description("Activate Contacts for Assets.");
+
+    /** See description. */
+    @EFapsSysConfAttribute
     public static final StringSysConfAttribute MAINTEORDER_JASPERREPORT = new StringSysConfAttribute()
                     .sysConfUUID(Sales.SYSCONFUUID)
                     .key(BASE + "MaintenanceOrder.JasperReport")
