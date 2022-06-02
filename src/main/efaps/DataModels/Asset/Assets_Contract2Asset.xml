@@ -28,7 +28,7 @@
             <name>ToLink</name>
             <type>Link</type>
             <typelink>Assets_AssetAbstract</typelink>
-            <sqltable>Sales_Contract2ObjectSQLTable</sqltable>
+            <sqltable>Sales_EFile2ObjectSQLTable</sqltable>
             <sqlcolumn>TOID</sqlcolumn>
         </attribute>
     </definition>
